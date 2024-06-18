@@ -14,8 +14,8 @@ p {
 }
 main {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   width: 100vw;
-  height: 10vh;
+  height: 100vh;
 }
