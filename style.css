@@ -22,23 +22,33 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
-  background-color: var(--bg);
 }
 #mainTitle {
-  font-size: clamp(6rem, 3.4359rem + 8.2051vw, 10rem);
+  font-size: clamp(6rem, 3.4359rem + 8.2051vw, 8rem);
   color: var(--text);
   font-weight: 800;
-  letter-spacing: -0.4rem;
+  letter-spacing: -0.2rem;
+}
+#whoIam{
+  font-size: 4.5rem;
+  font-weight: 800;
+  letter-spacing: 0.1rem;
+  color: rgba(0, 0, 0, 0.756);
 }
 span {
   color: #ff0000;
 }
 main {
   display: flex;
+  background-color: var(--bg);
+  padding: 1rem;
+  text-align: center;
   justify-content: center;
-  align-items: center;
   flex-direction: column;
+  max-height: 100vh;
+  position: relative;
   height: 100vh;
+  width: 100%;
 }
 
 /* Nav */
@@ -64,10 +74,11 @@ nav {
 }
 
 #projectSection {
-  padding-block: min(20vh, 2rem);
-  width: min(76.5rem, 90%);
+  padding: 1rem;
+  width: 100%;
   margin-inline: auto;
   color: var(--text);
+  background-color: var(--bg);
 }
 .ProjectTechStack {
   display: flex;
