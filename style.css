@@ -1,21 +1,177 @@
+:root {
+  --bg: #9a9a9a;
+  --text: #ffffffcf;
+  --secondary:#613dc1;
+  --accent: #ffffff;
+  --arrow: #000;
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Gilroy";
-  background-color: #e5e5e5;
+  font-family: "Gilroy", sans-serif;
 }
 body {
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg);
 }
 p {
   font-size: clamp(3rem, 1.7179rem + 4.1026vw, 5rem);
+  color: var(--text);
+  font-weight: 800;
+  letter-spacing: .1rem;
+}
+.projectTitle {
+  font-size: clamp(1.8rem, 1.6077rem + 0.6154vw, 2.1rem);
+  font-weight: 500;
+  color: var(--text);
+  letter-spacing: 0.1rem;
+}
+.projectDesc{
+  width: 100%;
+  font-size: 1.2rem;
 }
 main {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vw;
-  height: 100vh;
+  flex-direction: column;
+}
+section {
+  padding-block: min(20vh, 2rem);
+  width: min(76.5rem, 90%);
+  margin-inline: auto;
+  color: var(--text);
+}
+.ProjectTechStack{
+  display: flex;
+  gap: .7rem;
+  width: 100%;
+}
+.projectDetails{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: .2rem;
+}
+section h2 {
+  text-transform: capitalize;
+  letter-spacing: 0.025em;
+  text-align: center;
+  font-size: clamp(2rem, 1.8125rem + 0.75vw, 2.6rem);
+}
+section a {
+  display: inline-block;
+  text-decoration: none;
+}
+section .projectContainer {
+  /* margin-top: 2em; */
+  display: flex;
+  padding: 1rem 0;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 5rem;
+  width: 100%;
+}
+
+/*card*/
+section .projectContainer .card-inner {
+  position: relative;
+  width: clamp(18.75rem, 10.7372rem + 25.641vw, 31.25rem);
+  height: clamp(15rem, 13.1818rem + 7.2727vw, 18rem);
+  border-radius: 1.25rem;
+  border-bottom-right-radius: 0;
+  overflow: hidden;
+}
+/* Arrow Circle */
+section .projectContainer .card .card-inner > .box .icon .iconBox {
+  background: var(--accent);
+}
+
+section .projectContainer .card-inner .box {
+  width: 100%;
+  height: 100%;
+  background: var(--bg);
+  border-radius: 1.25rem;
+  overflow: hidden;
+}
+
+/* Project Img Box */
+section .projectContainer .card-inner .box .imgBox {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  aspect-ratio: 5/3;
+}
+
+/* Project Image */
+section .projectContainer .card-inner .box .imgBox img {
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+}
+
+section .projectContainer .card-inner .box .icon:hover .iconBox {
+  transform: scale(1.1) rotate(45deg);
+}
+
+/* Invereted Corner Border Radius */
+section .projectContainer .card-inner .box .icon::before {
+  position: absolute;
+  content: "";
+  bottom: 0.375rem;
+  left: -1.25rem;
+  background: transparent;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-bottom-right-radius: 1.25rem;
+  box-shadow: 0.313rem 0.313rem 0 0.313rem var(--bg);
+}
+
+section .projectContainer .card-inner .box .icon::after {
+  position: absolute;
+  content: "";
+  top: -1.25rem;
+  right: 0.375rem;
+  background: transparent;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-bottom-right-radius: 1.25rem;
+  box-shadow: 0.313rem 0.313rem 0 0.313rem var(--bg);
+}
+
+/* Icon */
+section .projectContainer .card-inner .box .icon {
+  position: absolute;
+  bottom: -0.375rem;
+  right: -0.375rem;
+  width: clamp(4.5rem, 3.5385rem + 3.0769vw, 6rem);
+  height: clamp(4.5rem, 3.5385rem + 3.0769vw, 6rem);
+  background: var(--bg);
+  border-top-left-radius: 50%;
+}
+section .projectContainer .card-inner .box .icon .iconBox {
+  position: absolute;
+  inset: 0.625rem;
+  background: var(--bg);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s ease-out;
+}
+section .projectContainer .card-inner .box .icon .iconBox svg {
+  fill: var(--arrow);
+}
+
+/* Media Queries */
+@media screen and (width<500px) {
+  section .projectContainer .card-inner {
+    max-height: 25lvh;
+    width: 90vw;
+  }
 }
