@@ -1,7 +1,9 @@
 :root {
-  --bg: #9a9a9a;
-  --text: #ffffffcf;
-  --secondary:#613dc1;
+  --bg: #dad7cd;
+  --text: #1f1f1f;
+  --pTitle: #1b1b1b;
+  --pdesc: #3d3d3d;
+  --secondary: #613dc1;
   --accent: #ffffff;
   --arrow: #000;
 }
@@ -22,16 +24,17 @@ p {
   font-size: clamp(3rem, 1.7179rem + 4.1026vw, 5rem);
   color: var(--text);
   font-weight: 800;
-  letter-spacing: .1rem;
+  letter-spacing: 0.1rem;
 }
 .projectTitle {
   font-size: clamp(1.8rem, 1.6077rem + 0.6154vw, 2.1rem);
   font-weight: 500;
-  color: var(--text);
+  color: var(--pTitle);
   letter-spacing: 0.1rem;
 }
-.projectDesc{
+.projectDesc {
   width: 100%;
+  color: var(--pdesc);
   font-size: 1.2rem;
 }
 main {
@@ -46,16 +49,16 @@ section {
   margin-inline: auto;
   color: var(--text);
 }
-.ProjectTechStack{
+.ProjectTechStack {
   display: flex;
-  gap: .7rem;
+  gap: 0.7rem;
   width: 100%;
 }
-.projectDetails{
+.projectDetails {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: .2rem;
+  gap: 0.2rem;
 }
 section h2 {
   text-transform: capitalize;
@@ -91,6 +94,7 @@ section .projectContainer .card-inner {
 section .projectContainer .card .card-inner > .box .icon .iconBox {
   background: var(--accent);
 }
+
 
 section .projectContainer .card-inner .box {
   width: 100%;
