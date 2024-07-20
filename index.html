@@ -10,16 +10,34 @@
     />
     <title>Portfolio</title>
     <link rel="shortcut icon" type="image" href="./Images/Logo.png" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"> 
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body >
+    <div >
     <nav>
-      <div class="navbar"></div>
+      <div class="navbar">
+        <a href="" class="projecthref">Projects</a>
+        <div class="socialLinks">
+          <a href="https://www.instagram.com/2.0_27/" target="_blank" class="iconBox">
+            <svg class="svgIcon" width="30" height="30">
+              <use xlink:href="Icons.svg#Instagram"></use></svg
+          ></a>
+          <a href="https://github.com/Algoture" target="_blank" class="iconBox">
+            <svg class="svgIcon" width="30" height="30">
+              <use xlink:href="Icons.svg#github"></use></svg
+          ></a>
+          <a href="https://www.linkedin.com/in/umesh27/" target="_blank" class="iconBox">
+            <svg class="svgIcon" width="30" height="30">
+              <use xlink:href="Icons.svg#linkedIn"></use></svg
+          ></a>
+        </div>
+      </div>
     </nav>
     <main>
       <p id="mainTitle">
-        Hii<span> !</span> I'm Umesh<span>.</span><br />
-        <p id="whoIam">A Developer Who Loves Creating Cool Stuff<span>.</span> </p>
+        Hii<span class="redMain"> !</span> I'm Umesh<span class="redMain">.</span><br />
+        <p id="whoIam">A Developer Who Loves Creating Cool Stuff<span class="redMain">.</span> </p>
         <!-- <span id="whoIam"
           >&nbsp; Engineer<span>.</span>&nbsp;Developer<span>.</span>&nbsp;Desginer<span>.</span>
         </span> -->
@@ -149,6 +167,10 @@
         </div>
       </div>
     </section>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="script.js"></script>
+  </div>
   </body>
 </html>
