@@ -18,7 +18,12 @@
   scroll-behavior: smooth;
   font-family: "Gilroy", sans-serif;
 }
-
+.githubContri{
+  background-color: var(--bg);
+}
+.githubContri img{
+  width: 100%;
+}
 body {
   width: 100%;
   height: 100%;
@@ -136,7 +141,7 @@ nav {
   display: flex;
   padding: 1rem 0;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   gap: 5rem;
   width: 100%;
