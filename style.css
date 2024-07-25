@@ -2,10 +2,11 @@
   color: rgb(0, 152, 149);
 }
 :root {
-  --bg: #dad7cd;
-  --text: #1f1f1f;
-  --pTitle: #1b1b1b;
-  --pdesc: #3d3d3d;
+  --bg: #b6bac5;
+  --text: #1d1d1d;
+  --pTitle: #2d2d2d;
+  --pdesc: #2b2b2b;
+  --whoIam:#2f2f2f;
   --secondary: #613dc1;
   --accent: #ffffff;
   --arrow: #000;
@@ -31,6 +32,9 @@ body {
   overflow-x: hidden;
   flex-direction: column;
 }
+[data-scroll-container] {
+  overflow: hidden;
+}
 #mainTitle {
   font-size: clamp(6rem, 3.4359rem + 8.2051vw, 8rem);
   color: var(--text);
@@ -41,21 +45,23 @@ body {
   font-size: clamp(2rem, 0.3974rem + 5.1282vw, 4.5rem);
   font-weight: 800;
   letter-spacing: 0.1rem;
-  color: rgba(0, 0, 0, 0.756);
+  color: var(--whoIam);
 }
 .redMain {
   color: #ff0000;
 }
 main {
   display: flex;
+  border: var(--bg);
   background-color: var(--bg);
   padding: 1rem;
   text-align: center;
   justify-content: center;
   flex-direction: column;
-  max-height: 100vh;
-  position: relative;
+  /* max-height: 100vh; */
+  /* position: relative; */
   height: 100vh;
+    
   width: 100%;
 }
 
