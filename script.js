@@ -25,29 +25,29 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   ScrollTrigger.addEventListener("refresh", () => scroller.update());
   ScrollTrigger.refresh();
-  gsap.to("#whoIam", {
+  // gsap.to("#mainTitle", {
+  //   scrollTrigger: {
+  //     trigger: "#mainTitle",
+  //     scroller: "[data-scroll-container]",
+  //     markers: false,
+  //     scrub: 1,
+  //     start: "top 30%",
+  //     end: "bottom 20%",
+  //     ease: "power1.inOut",
+  //   },
+  //   x: 50,
+  //   duration: 4,
+  // });
+  gsap.from("#arrowsvg", {
     scrollTrigger: {
-      trigger: "#whoIam",
+      trigger: "#arrowsvg",
       scroller: "[data-scroll-container]",
       markers: false,
       scrub: 1,
-      start: "top 30%",
+      start: "top 90%",
       end: "bottom 20%",
       ease: "power1.inOut",
     },
-    x: 100,
-  });
-  gsap.from("#mainTitle", {
-    scrollTrigger: {
-      trigger: "#mainTitle",
-      scroller: "[data-scroll-container]",
-      markers: false,
-      scrub: 1,
-      start: "top 30%",
-      end: "bottom 20%",
-      ease: "power1.inOut",
-    },
-    x: 100,
-    duration: 4,
+    rotate:90,
   });
 });
