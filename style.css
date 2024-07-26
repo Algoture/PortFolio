@@ -2,14 +2,15 @@
   color: rgb(0, 152, 149);
 }
 :root {
-  --bg: #393939;
-  --text: #f9f8f6;
-  --pTitle: #acacac;
-  --pdesc: #d0d0d0;
-  --whoIam: #cbcbcb;
+  --bg: #212529;
+  --text: #d3d3d3;
+  --pTitle: #c2c2c2;
+  --pdesc: #c0c0c0;
+  --whoIam: #575757;
   --secondary: #613dc1;
-  --accent: #ffffff;
-  --arrow: #000;
+  --accent: #cecece;
+  --arrow: #000000;
+  --nav:#bebebe8a;
 }
 * {
   margin: 0;
@@ -30,6 +31,7 @@ body {
   height: 100%;
   display: flex;
   overflow-x: hidden;
+  background-color: var(--bg);
   flex-direction: column;
 }
 [data-scroll-container] {
@@ -54,12 +56,12 @@ body {
   cursor: pointer;
 }
 .redMain {
-  color: #ff0000;
+  color: #ef233c;
 }
 main {
   display: flex;
   position: relative;
-  background-color: var(--bg);
+  background: var(--bg);
   padding: 1rem;
   text-align: center;
   justify-content: center;
@@ -72,12 +74,12 @@ main {
 
 /* Sound  */
 #soundButton {
-  position: absolute;
-  top: 1rem;
-  color: var(--text);
   border: none;
-  background-color: var(--bg);
-  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+  background-color: transparent;
   cursor: pointer;
 }
 
@@ -100,7 +102,7 @@ nav {
   border-top-right-radius: 50px;
   border-bottom-right-radius: 50px;
   border-bottom-left-radius: 50px;
-  background-color: #ffffff6c;
+  background-color: var(--nav);
   backdrop-filter: blur(4px);
   display: flex;
   padding: 0 1rem;
@@ -126,7 +128,7 @@ nav {
   width: 100%;
   margin-inline: auto;
   color: var(--text);
-  background-color: var(--bg);
+  background: var(--bg);
 }
 .ProjectTechStack {
   display: flex;
