@@ -41,7 +41,7 @@ body {
   font-size: clamp(6rem, 3.4359rem + 8.2051vw, 8rem);
   color: var(--text);
   font-weight: 800;
-  width: max-content;
+  width: fit-content;
   text-align: center;
   letter-spacing: -0.2rem;
 }
