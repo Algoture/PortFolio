@@ -20,12 +20,12 @@
   scroll-behavior: smooth;
   font-family: "Gilroy", sans-serif;
 }
-.githubContri {
+/* .githubContri {
   background-color: var(--bg);
 }
 .githubContri img {
   width: 100%;
-}
+} */
 body {
   width: 100%;
   height: 100%;
