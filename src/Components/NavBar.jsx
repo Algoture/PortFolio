@@ -1,11 +1,11 @@
+import SvgIcon from "./SvgIcon";
+
 const NavBar = () => {
   return (
     <nav>
       <div className="navbar">
         <button id="soundButton">
-          <svg id="soundSVG" width={35} height={35} fill="black">
-            <use xlinkHref="Icons.svg#soundOff" />
-          </svg>
+          <SvgIcon id="soundIcon" svg="soundOff" />
         </button>
         <a href="" className="projecthref">
           Home{" "}
@@ -16,27 +16,21 @@ const NavBar = () => {
             target="_blank"
             className="iconBox"
           >
-            <svg className="svgIcon" width={30} height={30} fill="black">
-              <use xlinkHref="Icons.svg#Instagram" />
-            </svg>
+            <SvgIcon id="" svg="Instagram" />
           </a>
           <a
             href="https://github.com/Algoture"
             target="_blank"
             className="iconBox"
           >
-            <svg className="svgIcon" width={30} height={30} fill="black">
-              <use xlinkHref="Icons.svg#github" />
-            </svg>
+            <SvgIcon id="" svg="github" />
           </a>
           <a
             href="https://www.linkedin.com/in/umesh27/"
             target="_blank"
             className="iconBox"
           >
-            <svg className="svgIcon" width={30} height={30} fill="black">
-              <use xlinkHref="Icons.svg#linkedIn" />
-            </svg>
+            <SvgIcon id="" svg="linkedIn" />
           </a>
         </div>
       </div>
