@@ -1,6 +1,5 @@
 import ProjectsCard from "./Components/ProjectsCard";
-import SvgIcon from "./Components/SvgIcon";
-import projects from "./Data";
+import {projects} from "./Data";
 const Projects = () => {
   return (
     <section id="projectSection">

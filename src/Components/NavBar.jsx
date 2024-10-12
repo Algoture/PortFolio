@@ -1,37 +1,17 @@
-import SvgIcon from "./SvgIcon";
+import { sociaLinks } from "../Data";
+import LinkWithIcon from "./LinkWithIcon";
 
 const NavBar = () => {
   return (
     <nav>
       <div className="navbar">
-        <button id="soundButton">
-          <SvgIcon id="soundIcon" svg="soundOff" />
-        </button>
         <a href="" className="projecthref">
-          Home{" "}
+          Home
         </a>
         <div className="socialLinks">
-          <a
-            href="https://www.instagram.com/2.0_27/"
-            target="_blank"
-            className="iconBox"
-          >
-            <SvgIcon id="" svg="Instagram" />
-          </a>
-          <a
-            href="https://github.com/Algoture"
-            target="_blank"
-            className="iconBox"
-          >
-            <SvgIcon id="" svg="github" />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/umesh27/"
-            target="_blank"
-            className="iconBox"
-          >
-            <SvgIcon id="" svg="linkedIn" />
-          </a>
+          {sociaLinks.map((social) => (
+            <LinkWithIcon key={social.id} to={social.link} svg={social.svg} />
+          ))}
         </div>
       </div>
     </nav>

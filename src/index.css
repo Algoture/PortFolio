@@ -81,7 +81,9 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 5px;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
   background-color: transparent;
   cursor: pointer;
 }

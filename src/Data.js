@@ -1,4 +1,4 @@
-const projects = [
+export const projects = [
   {
     id: 1,
     title: "Cinemaven",
@@ -40,4 +40,20 @@ const projects = [
     liveLink: "https://algoture.github.io/Beat-Blend/",
   },
 ];
-export default projects;
+export const sociaLinks = [
+  {
+    id: 1,
+    svg: "Instagram",
+    link: "https://www.instagram.com/2.0_27/",
+  },
+  {
+    id: 2,
+    svg: "github",
+    link: "https://github.com/Algoture",
+  },
+  {
+    id: 3,
+    svg: "linkedIn",
+    link: "https://www.linkedin.com/in/umesh27/",
+  },
+];
