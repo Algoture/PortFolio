@@ -1,51 +1,27 @@
 const projects = [
   {
     id: 1,
-    title: "Project 1",
+    title: "Cinemaven",
     description: "This is a project description",
-    image: "https://via.placeholder.com/150",
+    image: "Cinemaven.png",
   },
   {
     id: 2,
-    title: "Project 2",
+    title: "ASG Academy",
     description: "This is a project description",
-    image: "https://via.placeholder.com/150",
+    image: "ASG.png",
   },
   {
     id: 3,
-    title: "Project 3",
+    title: "Shubham Enterprises",
     description: "This is a project description",
-    image: "https://via.placeholder.com/150",
+    image: "SE.png",
   },
   {
     id: 4,
-    title: "Project 4",
+    title: "KrishiNET",
     description: "This is a project description",
-    image: "https://via.placeholder.com/150",
-  },
-  {
-    id: 5,
-    title: "Project 5",
-    description: "This is a project description",
-    image: "https://via.placeholder.com/150",
-  },
-  {
-    id: 6,
-    title: "Project 6",
-    description: "This is a project description",
-    image: "https://via.placeholder.com/150",
-  },
-  {
-    id: 7,
-    title: "Project 7",
-    description: "This is a project description",
-    image: "https://via.placeholder.com/150",
-  },
-  {
-    id: 8,
-    title: "Project 8",
-    description: "This is a project description",
-    image: "https://via.placeholder.com/150",
+    image: "KrishiNET.png",
   },
 ];
 export default projects;

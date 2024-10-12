@@ -3,6 +3,7 @@
 }
 :root {
   --bg: #fff;
+  --accentText: #ef233c;
   --text: #101010;
   --pTitle: #231313;
   --pdesc: #c0c0c0;
@@ -57,7 +58,7 @@ body {
   cursor: pointer;
 }
 .redMain {
-  color: #ef233c;
+  color: var(--accentText);
 }
 main {
   display: flex;
@@ -208,7 +209,10 @@ nav {
 }
 
 footer {
-  height: 30vh;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Cursor */
