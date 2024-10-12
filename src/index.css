@@ -11,6 +11,7 @@
   --secondary: #613dc1;
   --accent: #0c0c0c;
   --nav: #bebebe8a;
+  --radius: 1rem;
 }
 * {
   margin: 0;
@@ -136,6 +137,13 @@ nav {
   color: var(--text);
   background: var(--bg);
 }
+.projectLinks{
+  display: flex;
+  justify-content:right;
+  gap: 1rem;
+  align-items: center;
+  
+}
 .ProjectTechStack {
   display: flex;
   gap: 0.7rem;
@@ -179,13 +187,19 @@ nav {
 }
 
 /*card*/
+.card {
+  width: fit-content;
+  height: fit-content;
+  box-shadow: 10px 10px 40px #00000041, inset -10px -10px 40px #ffffff40;
+  padding: .5rem;
+  border-radius: var(--radius);
+}
 #projectSection .projectContainer .card-inner {
   position: relative;
-  border-radius: 1.25rem;
+  border-radius: var(--radius);
   width: clamp(18.75rem, 10.7372rem + 25.641vw, 31.25rem);
   height: clamp(15rem, 13.1818rem + 7.2727vw, 18rem);
   overflow: hidden;
-  box-shadow: 10px 10px 40px #00000041, inset -10px -10px 40px #ffffff40;
 }
 
 /* Project Img Box */
