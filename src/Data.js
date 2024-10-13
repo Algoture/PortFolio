@@ -4,7 +4,7 @@ export const projects = [
     title: "Cinemaven",
     description: "This is a project description",
     image: "Cinemaven.png",
-    githubLink: "https://githubLink.com/Algoture/Cinemaven",
+    githubLink: "https://github.com/Algoture/Cinemaven",
     liveLink: "https://cinemavenclient.onrender.com/",
   },
   {
@@ -12,7 +12,7 @@ export const projects = [
     title: "ASG Academy",
     description: "This is a project description",
     image: "ASG.png",
-    githubLink: "https://githubLink.com/SheshNalwar/ASG-Academy",
+    githubLink: "https://github.com/SheshNalwar/ASG-Academy",
     liveLink: "https://asg-academy.onrender.com/",
   },
   {
@@ -20,7 +20,7 @@ export const projects = [
     title: "Shubham Enterprises",
     description: "This is a project description",
     image: "SE.png",
-    githubLink: "https://githubLink.com/SheshNalwar/Shubham-Enterprises",
+    githubLink: "https://github.com/SheshNalwar/Shubham-Enterprises",
     liveLink: "https://shubhamenterprises.onrender.com/",
   },
   {
