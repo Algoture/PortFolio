@@ -48,7 +48,7 @@ const Intro = () => {
   };
 
   return (
-    <main>
+    <main className="mainBg">
       <p id="mainTitle" className="reveal-type">
         Hii<span className="redMain"> !</span> I'm{" "}
         <span data-value="Umesh" id="name" ref={nameRef}>
@@ -63,6 +63,8 @@ const Intro = () => {
       <button onClick={toggleSound} id="soundButton">
         <SvgIcon id="soundIcon" svg={soundEnabled ? "soundOn" : "soundOff"} />
       </button>
+      <div className="bgShape1"></div>
+      <div className="bgShape2"></div>
     </main>
   );
 };
