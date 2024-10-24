@@ -56,4 +56,9 @@ export const sociaLinks = [
     svg: "linkedIn",
     link: "https://www.linkedin.com/in/umesh27/",
   },
+  {
+    id: 4,
+    svg: "twitterX",
+    link: "https://x.com/lemniscatedd",
+  },
 ];

@@ -91,44 +91,13 @@ main {
   cursor: pointer;
 }
 
-/* Nav */
-nav {
-  height: 5rem;
-  display: flex;
-  width: 100%;
-  position: fixed;
-  bottom: 1rem;
-  z-index: 99;
-  justify-content: center;
-  align-items: center;
-}
-.navbar {
-  height: 80%;
-  width: 30%;
-  border-top-left-radius: 50px;
-  border-top-right-radius: 50px;
-  border-bottom-right-radius: 50px;
-  border-bottom-left-radius: 50px;
-  background-color: var(--nav);
-  backdrop-filter: blur(4px);
-  display: flex;
-  padding: 0 var(--padding);
-  justify-content: space-evenly;
-  align-items: center;
-  gap: 1rem;
-}
 .projecthref {
   color: var(--text);
   font-size: 1.5rem;
   font-weight: 500;
   font-weight: 700;
 }
-.socialLinks {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-}
+
 #aboutmeSection {
   height: 50vh;
   display: flex;
@@ -270,6 +239,53 @@ footer {
   background-color: var(--bgShape2);
   animation: moveShape2 12s infinite linear alternate;
 }
+
+/* Dock */
+.dock {
+  display: flex;
+  width: 100%;
+  position: fixed;
+  bottom: 1rem;
+  z-index: 99;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--radius);
+  left: 50%;
+  transform: translateX(-50%);
+}
+.social-links {
+  display: flex;
+  gap: -1rem;
+}
+
+.dock .dock-container {
+  padding: 3px;
+  width: fit-content;
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  background: var(--nav);
+  backdrop-filter: blur(13px);
+  -webkit-backdrop-filter: blur(13px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.dock .dock-container li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  transition: 0.2s;
+  transform-origin: 50% 100%;
+}
+.dock .dock-container li:hover {
+  margin: 0px 13px 0px 0px;
+}
+
 
 @keyframes moveShape1 {
   0% {
