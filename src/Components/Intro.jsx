@@ -57,8 +57,8 @@ const Intro = () => {
         <br />
       </p>
       <p id="whoIam">
-        A Designer by <span className="redMain">heart </span>and a Developer by
-        profession
+        A Full Stack <span className="redMain">Developer</span> & UI/UX{" "}
+        <span className="redMain">Designer</span>
       </p>
       <button onClick={toggleSound} id="soundButton">
         <SvgIcon id="soundIcon" svg={soundEnabled ? "soundOn" : "soundOff"} />

@@ -17,12 +17,14 @@ const ProjectsCard = ({ name, img, alt, desc, github, live }) => {
         </div>
       </div>
       <div className="projectDetails">
-        <p className="projectTitle">{name}</p>
-        <p className="projectDescription">{desc}</p>
-      </div>
-      <div className="projectLinks">
-        <LinkWithIcon to={github} svg="github" />
-        <LinkWithIcon to={live} svg="Globe" />
+        <div className="projectsInfoLinks">
+          <p className="projectTitle">{name}</p>
+          <div className="projectLinks">
+            <LinkWithIcon to={github} svg="github" />
+            <LinkWithIcon to={live} svg="Globe" />
+          </div>
+        </div>
+        <p className="projectDesc">{desc}</p>
       </div>
     </div>
   );
