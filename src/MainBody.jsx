@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from "react";
 import Footer from "./Components/Footer";
 import Intro from "./Components/Intro";
 import Projects from "./Projects";
-import TechStacks from "./TechStacks";
 
 const MainBody = () => {
   const scrollContainerRef = useRef(null);
@@ -19,7 +18,6 @@ const MainBody = () => {
     <div data-scroll-container ref={scrollContainerRef}>
       <Intro />
       <Projects />
-      <TechStacks />
       <Footer />
     </div>
   );
