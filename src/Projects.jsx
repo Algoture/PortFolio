@@ -3,6 +3,7 @@ import {projects} from "./Data";
 const Projects = () => {
   return (
     <section id="projectSection">
+      <p className="projectIntro">My Work</p>
       <div className="projectContainer">
         {projects.map((project) => (
           <ProjectsCard

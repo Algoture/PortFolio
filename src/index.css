@@ -285,7 +285,52 @@ footer {
 .dock .dock-container li:hover {
   margin: 0px 13px 0px 0px;
 }
-
+.projectIntro {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--text);
+  text-align: center;
+}
+.techStacks {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+}
+.techStacksItem svg {
+  width: 5rem;
+  height: 5rem;
+}
+.techStacksItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.technology {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  height: 100px;
+  width: 100px;
+  flex-wrap: wrap;
+  box-shadow: 10px 10px 40px #00000041, inset -10px -10px 40px #ffffff40;
+  border-radius: var(--radius);
+  background-color: #ffffff;
+}
+.techStacksContainer {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+}
+.techStacks img {
+  width: 50px;
+  height: 50px;
+}
 
 @keyframes moveShape1 {
   0% {
