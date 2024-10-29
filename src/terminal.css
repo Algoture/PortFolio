@@ -1,0 +1,95 @@
+#terminalDiv {
+  font-family: monospace;
+  /* background-color: #fff; */
+  color: white;
+  caret-color: white;
+  font-size: 1.25em;
+}
+.type {
+  display: flex;
+  font-family: monospace;
+}
+.fakeButtons {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  border: 1px solid #000;
+  position: relative;
+  top: 6px;
+  left: 6px;
+  margin-bottom: 5px;
+  background-color: #ff3b47;
+  border-color: #9d252b;
+  display: inline-block;
+}
+
+.fakeMinimize {
+  left: 11px;
+  margin-bottom: 5px;
+  background-color: #ffc100;
+  border-color: #9d802c;
+}
+
+.fakeZoom {
+  left: 16px;
+  margin-bottom: 5px;
+  background-color: #00d742;
+  border-color: #049931;
+}
+
+.fakeMenu {
+  width: 900px;
+  box-sizing: border-box;
+  height: 25px;
+  background-color: #bbb;
+  margin: 0 auto;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.fakeScreen {
+  background-color: #1d1d1d;
+  box-sizing: border-box;
+  width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.terminalP{
+  font-family: monospace;
+  text-align: left;
+  font-size: 1.25em;
+  white-space: normal;
+}
+
+span {
+  color: #fff;
+  font-weight: bold;
+}
+input {
+  border: none;
+  outline: none;
+  font-size: 1.25em;
+  white-space: normal;
+  font-family: monospace;
+  color: white;
+  background: #1d1d1d;
+}
+.terminalLink {
+  color: #0ff;
+  font-size: 1em;
+  white-space: normal;
+  font-family: monospace;
+  text-decoration: underline;
+}
+.projectListing {
+  color: #0f0;
+  font-weight: 500;
+  white-space: normal;
+  font-family: monospace;
+}
+.terminalLink:hover {
+  color: #ff0;
+}

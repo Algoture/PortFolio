@@ -60,6 +60,7 @@ body {
 
 #name {
   cursor: pointer;
+  color: var(--accent);
 }
 .redMain {
   color: var(--accentText);

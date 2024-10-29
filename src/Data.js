@@ -42,9 +42,9 @@ export const projects = [
 ];
 export const sociaLinks = [
   {
-    id: 1,
-    svg: "Instagram",
-    link: "https://www.instagram.com/2.0_27/",
+    id: 5,
+    svg: "terminal",
+    link: "/terminal",
   },
   {
     id: 2,
@@ -61,4 +61,30 @@ export const sociaLinks = [
     svg: "twitterX",
     link: "https://x.com/lemniscatedd",
   },
+  {
+    id: 1,
+    svg: "Instagram",
+    link: "https://www.instagram.com/2.0_27/",
+  },
+];
+export const skills = [
+  "Docker",
+  "Kubernetes",
+  "Next JS",
+  "AWS",
+  "TypeScript",
+  "Golang",
+  "React Native",
+  "Node JS",
+  "Express JS",
+  "MongoDB",
+  "SQL",
+  "Java",
+  "Redis",
+  "Clerk",
+  "GraphQL",
+  "PostgreSQL",
+  "Kafka",
+  "Tauri",
+  "Electron",
 ];
