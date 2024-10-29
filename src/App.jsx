@@ -8,7 +8,7 @@ function App() {
     <>
       <Router>
         <Routes>
-          <Route path="/terminal" element={<Terminal />} />
+          <Route path="https://umeshnagare.vercel.app/terminal" element={<Terminal />} />
           <Route path="*" element={<MainBody />} />
         </Routes>
       </Router>
