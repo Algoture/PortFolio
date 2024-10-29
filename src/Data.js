@@ -44,7 +44,7 @@ export const sociaLinks = [
   {
     id: 5,
     svg: "terminal",
-    link: "/terminal",
+    link: "https://umeshnagare.vercel.app/terminal",
   },
   {
     id: 2,
