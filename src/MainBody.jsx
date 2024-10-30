@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import Footer from "./Components/Footer";
 import Intro from "./Components/Intro";
+import AboutMe from "./Components/AboutMe";
 import Projects from "./Projects";
 
 const MainBody = () => {
@@ -17,6 +18,7 @@ const MainBody = () => {
   return (
     <div data-scroll-container ref={scrollContainerRef}>
       <Intro />
+      <AboutMe />
       <Projects />
       <Footer />
     </div>

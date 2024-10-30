@@ -1,8 +1,16 @@
+import { motion } from "framer-motion";
 import LinkWithIcon from "./LinkWithIcon";
 const ProjectsCard = ({ name, img, alt, desc, github, live }) => {
   const isPng = img.toLowerCase().endsWith(".png");
   return (
-    <div className="card">
+    <motion.div
+      initial={{ y: 20 }}
+      whileInView={{ y: 50 }}
+      viewport={{ margin: "-100px" }}
+      // onViewportEnter={() => console.log("View Enter")}
+      // onViewportLeave={() => console.log("View Leave")}
+      className="card"
+    >
       <div className="card-inner">
         <div className="box">
           <div className="imgBox">
@@ -26,7 +34,7 @@ const ProjectsCard = ({ name, img, alt, desc, github, live }) => {
         </div>
         <p className="projectDesc">{desc}</p>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

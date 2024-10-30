@@ -1,8 +1,10 @@
 const SvgIcon = ({ id, svg }) => {
   return (
-    <svg id={id} width={30} height={30} fill="black">
-      <use xlinkHref={`Icons.svg#${svg}`} />
-    </svg>
+    <div className="holaSVG">
+      <svg id={id} fill="black">
+        <use xlinkHref={`Icons.svg#${svg}`} />
+      </svg>
+    </div>
   );
 };
 

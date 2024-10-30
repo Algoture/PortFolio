@@ -1,7 +1,9 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavBar from "./Components/NavBar.jsx";
+import Dock from "./Components/Dock.jsx";
 import MainBody from "./MainBody.jsx";
 import Terminal from "./Terminal.jsx";
+
 
 function App() {
   return (
@@ -12,7 +14,7 @@ function App() {
           <Route path="*" element={<MainBody />} />
         </Routes>
       </Router>
-      <NavBar />
+      <Dock />
     </>
   );
 }

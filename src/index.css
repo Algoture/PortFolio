@@ -57,7 +57,6 @@ body {
   letter-spacing: 0.1rem;
   color: var(--whoIam);
 }
-
 #name {
   cursor: pointer;
   color: var(--accent);
@@ -92,13 +91,6 @@ main {
   cursor: pointer;
 }
 
-.projecthref {
-  color: var(--text);
-  font-size: 1.5rem;
-  font-weight: 500;
-  font-weight: 700;
-}
-
 #aboutmeSection {
   height: 50vh;
   display: flex;
@@ -121,11 +113,7 @@ main {
   gap: 0.5rem;
   align-items: center;
 }
-.ProjectTechStack {
-  display: flex;
-  gap: 0.7rem;
-  width: 100%;
-}
+
 .projectDetails {
   width: 100%;
   padding: var(--padding);
@@ -143,11 +131,7 @@ main {
   font-size: 1.1rem;
   color: var(--pdesc);
 }
-#projectSection h2 {
-  text-transform: capitalize;
-  letter-spacing: 0.025em;
-  text-align: center;
-}
+
 #projectSection a {
   display: inline-block;
   text-decoration: none;
@@ -217,7 +201,9 @@ footer {
   overflow: hidden;
   position: relative;
 }
-
+li {
+  list-style-type: none;
+}
 .bgShape1,
 .bgShape2 {
   width: 250px;
@@ -242,50 +228,49 @@ footer {
 }
 
 /* Dock */
+.social-links {
+  display: flex;
+  gap: -1rem;
+}
+.getDiv {
+  aspect-ratio: 1 / 1;
+  border-radius: 9999px;
+  width: 2.5rem;
+  /* background-color: #020202; */
+}
+
+.holaSVG {
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #868686; */
+  width: 35px;
+}
+svg{
+  height: 35px;
+  width: 35px;
+}
 .dock {
   display: flex;
-  width: 100%;
   position: fixed;
   bottom: 1rem;
   z-index: 99;
+  width: max-content;
   justify-content: center;
   align-items: center;
   border-radius: var(--radius);
   left: 50%;
   transform: translateX(-50%);
-}
-.social-links {
-  display: flex;
-  gap: -1rem;
-}
-
-.dock .dock-container {
-  padding: 3px;
-  width: fit-content;
-  height: 3.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 16px;
+  padding: 0 1rem 0.75rem 1rem;
+  gap: 1rem;
+  align-items: flex-end;
+  height: 4rem;
   background: var(--nav);
   backdrop-filter: blur(13px);
   -webkit-backdrop-filter: blur(13px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
-.dock .dock-container li {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 50px;
-  height: 50px;
-  transition: 0.2s;
-  transform-origin: 50% 100%;
-}
-.dock .dock-container li:hover {
-  margin: 0px 13px 0px 0px;
-}
 .projectIntro {
   font-size: 3rem;
   font-weight: 800;

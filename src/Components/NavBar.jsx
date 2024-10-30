@@ -30,21 +30,18 @@ const NavBar = () => {
   };
 
   return (
-    <div className="dock" onMouseLeave={handleMouseLeave}>
-      <div className="dock-container">
-        <ul className="social-links">
-          {sociaLinks.map((social, index) => (
-            <li
-              key={social.id}
-              className="social-link-item"
-              style={focusStyle(index)}
-              onMouseEnter={() => setHoveredIndex(index)}
-            >
-              <LinkWithIcon to={social.link} svg={social.svg} />
-            </li>
-          ))}
-        </ul>
-      </div>
+    <div className="dock" >
+      <ul className="social-links">
+        {sociaLinks.map((social, index) => (
+          <li
+            key={social.id}
+            className="social-link-item"
+            style={focusStyle(index)}
+          >
+            <LinkWithIcon to={social.link} svg={social.svg} />
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };
