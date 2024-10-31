@@ -1,5 +1,5 @@
-import ProjectsCard from "./Components/ProjectsCard";
-import {projects} from "./Data";
+import ProjectsCard from "./ProjectsCard";
+import {projects} from "../Data";
 const Projects = () => {
   return (
     <section id="projectSection">

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { projects, skills } from "./Data";
+import { projects, skills } from "../Data";
 import "./terminal.css";
 
 const Terminal = () => {

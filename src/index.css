@@ -12,7 +12,7 @@
   --whoIam: #575757;
   --secondary: #613dc1;
   --accent: #0c0c0c;
-  --nav: #bebebe8a;
+  --nav: #cecece90;
   --padding: 1rem;
   --radius: 1rem;
 }
@@ -225,50 +225,6 @@ li {
 .bgShape2 {
   background-color: var(--bgShape2);
   animation: moveShape2 12s infinite linear alternate;
-}
-
-/* Dock */
-.social-links {
-  display: flex;
-  gap: -1rem;
-}
-.getDiv {
-  aspect-ratio: 1 / 1;
-  border-radius: 9999px;
-  width: 2.5rem;
-  /* background-color: #020202; */
-}
-
-.holaSVG {
-  height: 35px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* background-color: #868686; */
-  width: 35px;
-}
-svg{
-  height: 35px;
-  width: 35px;
-}
-.dock {
-  display: flex;
-  position: fixed;
-  bottom: 1rem;
-  z-index: 99;
-  width: max-content;
-  justify-content: center;
-  align-items: center;
-  border-radius: var(--radius);
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 0 1rem 0.75rem 1rem;
-  gap: 1rem;
-  align-items: flex-end;
-  height: 4rem;
-  background: var(--nav);
-  backdrop-filter: blur(13px);
-  -webkit-backdrop-filter: blur(13px);
 }
 
 .projectIntro {

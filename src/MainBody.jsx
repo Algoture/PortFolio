@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import Footer from "./Components/Footer";
 import Intro from "./Components/Intro";
 import AboutMe from "./Components/AboutMe";
-import Projects from "./Projects";
+import Projects from "./Components/Projects";
 
 const MainBody = () => {
   const scrollContainerRef = useRef(null);
