@@ -1,12 +1,14 @@
 #terminalDiv {
   font-family: monospace;
-  /* background-color: #fff; */
   color: white;
   caret-color: white;
-  font-size: 1.25em;
+  text-wrap: wrap;
+  padding: 1rem;
+  /* font-size: 1rem; */
 }
 .type {
   display: flex;
+
   font-family: monospace;
 }
 .fakeButtons {
@@ -38,7 +40,6 @@
 }
 
 .fakeMenu {
-  width: 900px;
   box-sizing: border-box;
   height: 25px;
   background-color: #bbb;
@@ -50,20 +51,24 @@
 .fakeScreen {
   background-color: #1d1d1d;
   box-sizing: border-box;
-  width: 900px;
   margin: 0 auto;
   padding: 20px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
 
-.terminalP{
+.terminalP {
   font-family: monospace;
   text-align: left;
   font-size: 1.25em;
   white-space: normal;
 }
-
+.minimizedIcon{
+  outline: none;
+  background-color: transparent;
+  border: none;
+  color: white;
+}
 span {
   color: #fff;
   font-weight: bold;
