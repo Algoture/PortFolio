@@ -13,10 +13,9 @@
   display: flex;
   justify-content: center;
   background: var(--nav);
-  backdrop-filter: blur(13px);
-  -webkit-backdrop-filter: blur(13px);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
   border-radius: var(--radius);
-  /* border: 1.5px solid red; */
   padding: 1rem;
 }
 
