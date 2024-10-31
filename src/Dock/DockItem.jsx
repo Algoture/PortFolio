@@ -85,7 +85,7 @@ const DockItem = ({ id, children, ...props }) => {
         }}
         whileTap={{ scale: opened ? 1 : 0.85 }}
         whileHover={{
-          // backgroundColor: "#004bff",
+          // backgroundColor: "#95C623",
           border: "none",
         }}
         whileFocus={{

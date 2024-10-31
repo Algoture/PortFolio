@@ -4,9 +4,14 @@ const ProjectsCard = ({ name, img, alt, desc, github, live }) => {
   const isPng = img.toLowerCase().endsWith(".png");
   return (
     <motion.div
-      initial={{ y: 20 }}
-      whileInView={{ y: 50 }}
+      initial={{ y: -10 }}
+      whileInView={{ y: 10 }}
       viewport={{ margin: "-100px" }}
+      transition={{
+        ease: "linear",
+        duration: 1,
+        // y: { duration: 1 },
+      }}
       // onViewportEnter={() => console.log("View Enter")}
       // onViewportLeave={() => console.log("View Leave")}
       className="card"

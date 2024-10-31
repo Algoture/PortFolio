@@ -1,7 +1,14 @@
 const AboutMe = () => {
   return (
     <section id="aboutmeSection">
-      <h1>About Me Section</h1>
+      <p className="aboutme">
+        Since day one, I've been a{" "}
+        <span className="cleanMinimal ">tech enthusiast</span>. I design +
+        develop{" "}
+        <span className="cleanMinimal">clean, minimal digital experiences</span>{" "}
+        that blend functionality with style. Whether I'm coding smart solutions
+        or creating seamless interfaces.
+      </p>
     </section>
   );
 };
