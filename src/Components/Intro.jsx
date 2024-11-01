@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from "react";
-import SvgIcon from "./SvgIcon";
 const Intro = () => {
   const nameRef = useRef(null);
   const soundRef = useRef(new Audio("Sound2.wav"));
@@ -61,7 +60,11 @@ const Intro = () => {
         <span className="redMain">Designer</span>
       </p>
       <button onClick={toggleSound} id="soundButton">
-        <SvgIcon id="soundIcon" svg={soundEnabled ? "soundOn" : "soundOff"} />
+        <svg id="soundIcon" fill="white" width={30} height={30}>
+          <use
+            xlinkHref={`Icons.svg#${soundEnabled ? "soundOn" : "soundOff"}`}
+          />
+        </svg>
       </button>
       {/* <div className="bgShape1"></div> */}
       {/* <div className="bgShape2"></div> */}
