@@ -15,6 +15,15 @@ export const metadata = {
   verification: {
     google: "KMChJVQuClEDsBDCmU8FrVcBNwyAe4DY4qvqEtTywc8",
   },
+  keywords: [
+    "Next.js",
+    "Umesh",
+    "Nagare",
+    "Umesh Nagare Portfolio",
+    "Portfolio",
+    "Full Stack Developer",
+  ],
+  creator: "Umesh Nagare",
 };
 
 export default function RootLayout({ children }) {
