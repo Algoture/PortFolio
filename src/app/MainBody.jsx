@@ -1,30 +1,40 @@
 "use client";
-import React, { useEffect, useRef } from "react";
+
+import React, { useEffect } from "react";
 import Footer from "./Components/Footer";
 import Intro from "./Components/Intro";
 import AboutMe from "./Components/AboutMe";
 import Projects from "./Components/Projects";
-import LocomotiveScroll from "locomotive-scroll";
+import dynamic from "next/dynamic";
 import "locomotive-scroll/dist/locomotive-scroll.css";
 
+const LocomotiveScroll = dynamic(() => import("locomotive-scroll"), {
+  ssr: false,
+});
+
 const MainBody = () => {
-  const scrollContainerRef = useRef(null);
-
   useEffect(() => {
-    if (typeof window !== "undefined" && scrollContainerRef.current) {
-      const scroll = new LocomotiveScroll({
-        el: scrollContainerRef.current,
-        smooth: true,
-      });
+    let scrollInstance;
 
-      return () => {
-        scroll.destroy();
-      };
+    if (
+      typeof window !== "undefined" &&
+      document.querySelector("[data-scroll-container]")
+    ) {
+      import("locomotive-scroll").then((LocomotiveScrollModule) => {
+        scrollInstance = new LocomotiveScrollModule.default({
+          el: document.querySelector("[data-scroll-container]"),
+          smooth: true,
+        });
+      });
     }
+
+    return () => {
+      if (scrollInstance) scrollInstance.destroy();
+    };
   }, []);
 
   return (
-    <div data-scroll-container ref={scrollContainerRef}>
+    <div data-scroll-container>
       <Intro />
       <AboutMe />
       <Projects />

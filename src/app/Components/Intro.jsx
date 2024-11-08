@@ -1,15 +1,21 @@
+"use client";
 import React, { useEffect, useRef, useState } from "react";
 
 const Intro = () => {
   const nameRef = useRef(null);
-  const soundRef = useRef(new Audio("Sound2.wav"));
+  const soundRef = useRef(null);
   const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   const intervalRef = useRef(null);
   const [soundEnabled, setSoundEnabled] = useState(false);
 
   useEffect(() => {
+    if (typeof window !== "undefined") {
+      soundRef.current = new Audio("Sound2.wav");
+    }
+
     const nameElement = nameRef.current;
     nameElement.dataset.value = nameElement.innerText;
+
     const handleMouseOver = (event) => {
       let iteration = 0;
       clearInterval(intervalRef.current);
@@ -27,16 +33,19 @@ const Intro = () => {
         }
         iteration += 1 / 4;
       }, 40);
-      if (soundEnabled) {
+
+      if (soundEnabled && soundRef.current) {
         soundRef.current
           .play()
           .catch((error) => console.error("Audio play failed:", error));
       }
     };
+
     nameElement.addEventListener("mouseover", handleMouseOver);
+
     return () => {
       nameElement.removeEventListener("mouseover", handleMouseOver);
-      clearInterval(intervalRef.current); 
+      clearInterval(intervalRef.current);
     };
   }, [soundEnabled]);
 
