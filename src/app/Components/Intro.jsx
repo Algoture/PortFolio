@@ -1,9 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
+
 const Intro = () => {
   const nameRef = useRef(null);
   const soundRef = useRef(new Audio("Sound2.wav"));
   const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  let interval = null;
+  const intervalRef = useRef(null);
   const [soundEnabled, setSoundEnabled] = useState(false);
 
   useEffect(() => {
@@ -12,8 +13,8 @@ const Intro = () => {
 
     const handleMouseOver = (event) => {
       let iteration = 0;
-      clearInterval(interval);
-      interval = setInterval(() => {
+      clearInterval(intervalRef.current);
+      intervalRef.current = setInterval(() => {
         event.target.innerText = event.target.innerText
           .split("")
           .map((letter, index) =>
@@ -23,7 +24,7 @@ const Intro = () => {
           )
           .join("");
         if (iteration >= event.target.dataset.value.length) {
-          clearInterval(interval);
+          clearInterval(intervalRef.current);
         }
         iteration += 1 / 4;
       }, 40);
@@ -33,12 +34,10 @@ const Intro = () => {
           .catch((error) => console.error("Audio play failed:", error));
       }
     };
-
     nameElement.addEventListener("mouseover", handleMouseOver);
-
     return () => {
       nameElement.removeEventListener("mouseover", handleMouseOver);
-      clearInterval(interval);
+      clearInterval(intervalRef.current); 
     };
   }, [soundEnabled]);
 
@@ -49,7 +48,7 @@ const Intro = () => {
   return (
     <main className="mainBg">
       <p id="mainTitle" className="reveal-type">
-        Hi<span className="redMain"> !</span> I'm{" "}
+        Hi<span className="redMain"> !</span> I&apos;m{" "}
         <span data-value="Umesh" id="name" ref={nameRef}>
           Umesh
         </span>

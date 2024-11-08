@@ -1,3 +1,4 @@
+"use client";
 import {
   motion,
   useAnimationControls,
@@ -14,11 +15,9 @@ const DockItem = ({ id, children, ...props }) => {
   const ref = useRef(null);
   const mouse = useMouse();
   const dock = useDock();
-
   const [elCenterX, setElCenterX] = useState(0);
   const [opened, setOpened] = useState(false);
   const controls = useAnimationControls();
-
   const dimension = useTransform(mouse.position.x, (mouseX) => {
     return (
       40 +

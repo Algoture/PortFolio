@@ -11,11 +11,12 @@ const MainBody = () => {
   const scrollContainerRef = useRef(null);
 
   useEffect(() => {
-    if (scrollContainerRef.current) {
+    if (typeof window !== "undefined" && scrollContainerRef.current) {
       const scroll = new LocomotiveScroll({
         el: scrollContainerRef.current,
         smooth: true,
       });
+
       return () => {
         scroll.destroy();
       };
