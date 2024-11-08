@@ -11,16 +11,15 @@ const gilroy = localFont({
 export const metadata = {
   title: "Umesh Nagare Portfolio",
   description:
-    "Umesh Nagare's Portfolio: Showcasing skills in web development, UI/UX and full-stack projects.",
+    "Umesh Nagare's Portfolio: Showcasing skills in web development, UI/UX, and full-stack projects.",
+  verification: {
+    google: "KMChJVQuClEDsBDCmU8FrVcBNwyAe4DY4qvqEtTywc8",
+  },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <meta
-        name="google-site-verification"
-        content="KMChJVQuClEDsBDCmU8FrVcBNwyAe4DY4qvqEtTywc8"
-      />
       <body className={`${gilroy.variable}`}>
         <Dock />
         {children}
