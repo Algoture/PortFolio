@@ -17,6 +17,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <meta
+        name="google-site-verification"
+        content="KMChJVQuClEDsBDCmU8FrVcBNwyAe4DY4qvqEtTywc8"
+      />
       <body className={`${gilroy.variable}`}>
         <Dock />
         {children}
