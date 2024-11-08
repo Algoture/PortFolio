@@ -10,7 +10,6 @@ const Intro = () => {
   useEffect(() => {
     const nameElement = nameRef.current;
     nameElement.dataset.value = nameElement.innerText;
-
     const handleMouseOver = (event) => {
       let iteration = 0;
       clearInterval(intervalRef.current);
