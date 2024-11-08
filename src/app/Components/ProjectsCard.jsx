@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import LinkWithIcon from "./LinkWithIcon";
+import Image from "next/image";
 const ProjectsCard = ({ name, img, alt, desc, github, live }) => {
   const isPng = img.toLowerCase().endsWith(".png");
   return (
@@ -20,7 +21,12 @@ const ProjectsCard = ({ name, img, alt, desc, github, live }) => {
         <div className="box">
           <div className="imgBox">
             {isPng ? (
-              <img src={img} alt={alt} />
+              <Image
+                fill
+                sizes="100%"
+                src={img}
+                alt={alt}
+              />
             ) : (
               <video autoPlay muted loop src={img}>
                 Your browser does not support the video tag.

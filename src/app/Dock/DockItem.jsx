@@ -35,13 +35,16 @@ const DockItem = ({ id, children, ...props }) => {
   });
 
   useEffect(() => {
-    return dimension.onChange((val) => {
+    const unsubscribe = dimension.on("change", (val) => {
       if (dock?.hovered) {
         spring.set(val);
       } else {
         spring.set(40);
       }
     });
+    return () => {
+      unsubscribe();
+    };
   }, [spring, dimension, dock?.hovered]);
 
   useEffect(() => {
@@ -81,7 +84,7 @@ const DockItem = ({ id, children, ...props }) => {
           width: spring,
           border: "none",
           borderRadius: "10px",
-          backgroundColor:"transparent"
+          backgroundColor: "transparent",
         }}
         whileTap={{ scale: opened ? 1 : 0.85 }}
         whileHover={{

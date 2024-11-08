@@ -1,5 +1,5 @@
 import ProjectsCard from "./ProjectsCard";
-import {projects} from "../Data";
+import {projects} from "../Utils/Data";
 const Projects = () => {
   return (
     <section id="projectSection">
