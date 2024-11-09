@@ -12,15 +12,13 @@ export const metadata = {
   title: "Umesh Nagare Portfolio",
   description:
     "Umesh Nagare's Portfolio: Showcasing skills in web development, UI/UX, and full-stack projects.",
-  verification: {
-    google: "KMChJVQuClEDsBDCmU8FrVcBNwyAe4DY4qvqEtTywc8",
-  },
   keywords: [
     "Next.js",
     "Umesh",
     "Nagare",
     "Umesh Nagare Portfolio",
     "Portfolio",
+    "Umesh Nagare",
     "Full Stack Developer",
   ],
   creator: "Umesh Nagare",
