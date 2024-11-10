@@ -5,7 +5,7 @@ import "./globals.css";
 const gilroy = localFont({
   src: "./fonts/SF Pro.woff",
   variable: "--font-gilroy",
-  // weight: "100 900",
+  weight: "100 900",
 });
 
 export const metadata = {
