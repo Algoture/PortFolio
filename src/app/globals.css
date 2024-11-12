@@ -66,8 +66,9 @@ main {
   text-align: center;
   justify-content: center;
   flex-direction: column;
-  /* max-height: 100vh; */
-  /* position: relative; */
+  background-image: linear-gradient(to right, #80808012 1px, transparent 1px),
+    linear-gradient(to bottom, #80808012 1px, transparent 1px);
+  background-size: 24px 24px;
   height: 100vh;
   width: 100%;
 }
@@ -91,6 +92,9 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: linear-gradient(to right, #80808012 1px, transparent 1px),
+      linear-gradient(to bottom, #80808012 1px, transparent 1px);
+    background-size: 24px 24px;
 }
 
 .aboutme {
@@ -106,7 +110,9 @@ main {
   width: 100%;
   margin-inline: auto;
   color: var(--text);
-  background: var(--bg);
+  background-image: linear-gradient(to right, #80808012 1px, transparent 1px),
+      linear-gradient(to bottom, #80808012 1px, transparent 1px);
+    background-size: 24px 24px;
 }
 .projectsInfoLinks {
   display: flex;
@@ -209,6 +215,9 @@ footer {
   width: 100%;
   overflow: hidden;
   position: relative;
+  background-image: linear-gradient(to right, #80808012 1px, transparent 1px),
+    linear-gradient(to bottom, #80808012 1px, transparent 1px);
+  background-size: 24px 24px;
 }
 li {
   list-style-type: none;
