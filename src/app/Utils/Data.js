@@ -9,11 +9,11 @@ export const projects = [
   },
   {
     id: 2,
-    title: "ASG Academy",
-    description: "A web platform for kids' skill development.",
-    image: "/ASG.png",
-    githubLink: "https://github.com/SheshNalwar/ASG-Academy",
-    liveLink: "https://asg-academy.onrender.com/",
+    title: "KrishiNET",
+    description: "Assured Contract Farming Platform",
+    image: "/KrishiNET.png",
+    githubLink: "",
+    liveLink: "https://krishinet.onrender.com/",
   },
   {
     id: 3,
@@ -25,11 +25,11 @@ export const projects = [
   },
   {
     id: 4,
-    title: "KrishiNET",
-    description: "Assured Contract Farming Platform",
-    image: "/KrishiNET.png",
-    githubLink: "",
-    liveLink: "https://krishinet.onrender.com/",
+    title: "ASG Academy",
+    description: "A web platform for kids' skill development.",
+    image: "/ASG.png",
+    githubLink: "https://github.com/SheshNalwar/ASG-Academy",
+    liveLink: "https://asg-academy.onrender.com/",
   },
   {
     id: 5,

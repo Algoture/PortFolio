@@ -45,7 +45,7 @@ body {
   text-align: center;
   width: fit-content;
   letter-spacing: 0.1rem;
-  color: var(--accentText);
+  color: rgb(189, 189, 189);
 }
 #name {
   cursor: pointer;
@@ -137,12 +137,12 @@ main {
 .projectTitle {
   font-weight: 500;
   font-size: 1.8rem;
-  color: var(--project);
+  color: rgb(41, 41, 41);
 }
 .projectDesc {
   width: 100%;
   font-size: 1.1rem;
-  color: var(--project);
+  color: rgb(86, 86, 86);
 }
 
 #projectSection a {
