@@ -41,23 +41,94 @@ export const projects = [
   },
 ];
 export const skills = [
-  "Docker",
-  "Kubernetes",
-  "Next JS",
-  "AWS",
-  "TypeScript",
-  "Golang",
-  "React Native",
-  "Node JS",
-  "Express JS",
-  "MongoDB",
-  "SQL",
-  "Java",
-  "Redis",
-  "Clerk",
-  "GraphQL",
-  "PostgreSQL",
-  "Kafka",
-  "Tauri",
-  "Electron",
+  {
+    id: 1,
+    skill: "Docker",
+    image: "/docker.png",
+  },
+  {
+    id: 2,
+    skill: "React JS",
+    image: "React",
+  },
+  {
+    id: 3,
+    skill: "Next JS",
+    image: "nextjs",
+  },
+  {
+    id: 4,
+    skill: "AWS",
+    image: "/aws.png",
+  },
+  {
+    id: 5,
+    skill: "TypeScript",
+    image: "ts",
+  },
+  {
+    id: 6,
+    skill: "Golang",
+    image: "/golang.png",
+  },
+  {
+    id: 7,
+    skill: "React Native",
+    image: "/reactnative.png",
+  },
+  {
+    id: 8,
+    skill: "Node JS",
+    image: "/nodejs.png",
+  },
+  {
+    id: 9,
+    skill: "Express JS",
+    image: "/expressjs.png",
+  },
+  {
+    id: 10,
+    skill: "MongoDB",
+    image: "/mongodb.png",
+  },
+  {
+    id: 11,
+    skill: "SQL",
+    image: "/sql.png",
+  },
+  {
+    id: 12,
+    skill: "GraphQL",
+    image: "/graphql.png",
+  },
+  {
+    id: 13,
+    skill: "PostgreSQL",
+    image: "/postgresql.png",
+  },
+  {
+    id: 14,
+    skill: "Redis",
+    image: "/redis.png",
+  },
+  {
+    id: 15,
+    skill: "Java",
+    image: "/java.png",
+  },
+  {
+    id: 16,
+    skill: "Kafka",
+    image: "/kafka.png",
+  },
+  {
+    id: 17,
+    skill: "Tauri",
+    image: "/tauri.png",
+  },
+  {
+    id: 18,
+    skill: "Electron",
+    image: "/electron.png",
+  },
 ];
