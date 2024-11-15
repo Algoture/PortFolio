@@ -6,11 +6,12 @@ import {
   LinkedInIcon,
   TerminalIcon,
   TwitterIcon,
+  DiscordIcon,
 } from "./Icons";
 import { MouseProvider } from "./MouseProvider";
 import DockItem from "./DockItem";
 import "./Dock.css";
-
+import Link from "next/link";
 const DockContext = createContext(null);
 
 export const useDock = () => {
@@ -38,49 +39,58 @@ const Dock = () => {
           >
             <ul className="dock-ul">
               <DockItem>
-                <a
+                <Link
                   className="dock-link"
                   href="https://github.com/Algoture"
                   target="_blank"
                 >
                   <GitHubIcon className="dock-icon" />
-                </a>
+                </Link>
               </DockItem>
               <DockItem>
-                <a
+                <Link
                   className="dock-link"
                   href="https://umeshnagare.vercel.app/terminal"
                   target="_blank"
                 >
                   <TerminalIcon className="dock-icon" />
-                </a>
+                </Link>
               </DockItem>
               <DockItem>
-                <a
+                <Link
                   className="dock-link"
                   href="https://x.com/lemniscatedd"
                   target="_blank"
                 >
                   <TwitterIcon className="dock-icon" />
-                </a>
+                </Link>
               </DockItem>
               <DockItem>
-                <a
+                <Link
                   className="dock-link"
                   href="https://www.instagram.com/2.0_27/"
                   target="_blank"
                 >
                   <InstaIcon className="dock-icon" />
-                </a>
+                </Link>
               </DockItem>
               <DockItem>
-                <a
+                <Link
                   className="dock-link"
                   href="https://www.linkedin.com/in/umesh27/"
                   target="_blank"
                 >
                   <LinkedInIcon className="dock-icon" />
-                </a>
+                </Link>
+              </DockItem>
+              <DockItem>
+                <Link
+                  className="dock-link"
+                  href="https://discord.com/users/790565393659330591"
+                  target="_blank"
+                >
+                  <DiscordIcon className="dock-icon" />
+                </Link>
               </DockItem>
             </ul>
           </nav>

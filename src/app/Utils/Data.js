@@ -40,33 +40,6 @@ export const projects = [
     liveLink: "https://algoture.github.io/Beat-Blend/",
   },
 ];
-export const sociaLinks = [
-  {
-    id: 5,
-    svg: "terminal",
-    link: "https://umeshnagare.vercel.app/terminal",
-  },
-  {
-    id: 2,
-    svg: "github",
-    link: "https://github.com/Algoture",
-  },
-  {
-    id: 3,
-    svg: "linkedIn",
-    link: "https://www.linkedin.com/in/umesh27/",
-  },
-  {
-    id: 4,
-    svg: "twitterX",
-    link: "https://x.com/lemniscatedd",
-  },
-  {
-    id: 1,
-    svg: "Instagram",
-    link: "https://www.instagram.com/2.0_27/",
-  },
-];
 export const skills = [
   "Docker",
   "Kubernetes",
