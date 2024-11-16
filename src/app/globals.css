@@ -3,10 +3,10 @@
 }
 :root {
   --bg: #0b1215;
-  --accentText: #e9e9e9;
+  --accentText: #d3d3d3;
   --project: #000;
-  --secondary: #00ff00;
-  --accent: #00ff00;
+  --secondary: #00ff00cd;
+  --accent: #00ff00cd;
   --nav: #ffffff42;
   --padding: 1rem;
   --radius: 28px;
@@ -137,7 +137,7 @@ main {
 .projectTitle {
   font-weight: 500;
   font-size: 1.8rem;
-  color: rgb(41, 41, 41);
+  color: rgb(36, 36, 36);
 }
 .projectDesc {
   width: 100%;
