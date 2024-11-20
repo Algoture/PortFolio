@@ -1,3 +1,4 @@
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import localFont from "next/font/local";
 import Dock from "./Dock/Dock";
 import "./globals.css";
@@ -30,6 +31,7 @@ export default function RootLayout({ children }) {
       <body className={`${gilroy.variable}`}>
         <Dock />
         {children}
+        <SpeedInsights />
       </body>
     </html>
   );
