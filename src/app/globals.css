@@ -31,6 +31,9 @@ body {
 [data-scroll-container] {
   overflow: hidden;
 }
+svg:hover{
+  fill: white;
+}
 #mainTitle {
   font-size: clamp(6rem, 3.4359rem + 8.2051vw, 8rem);
   color: var(--accentText);
