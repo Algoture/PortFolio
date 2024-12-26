@@ -6,7 +6,7 @@
 }
 
 .project-card {
-  /* background-color: #f9f9f9; */
+  background-color: var(--card);
   border-radius: 8px;
   padding: 1rem;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -27,22 +27,14 @@
 
 .card-header h3 {
   margin: 0;
-  font-size: 1.25rem;
-  color: #f1f1f1;
+  font-size: 1.5rem;
+  color: #fdfdfd;
 
-}
-
-.project-year {
-  background-color: #007bff;
-  color: #fff;
-  font-size: 0.875rem;
-  padding: 0.25rem 0.5rem;
-  border-radius: 4px;
 }
 
 .description {
   font-size: 1rem;
-  color: #f1f1f1;
+  color: #d0d0d0;
   margin: 0.5rem 0 1rem;
 }
 
@@ -73,8 +65,8 @@
 }
 
 .tech-stack li {
-  background-color: #f1f1f1;
-  color: #333;
+  background-color: #008d60;
+  color: #e6e6e6;
   padding: 0.25rem 0.5rem;
   border-radius: 4px;
   font-size: 0.875rem;
@@ -87,11 +79,12 @@
 }
 
 .links a {
+  padding: .5rem 1rem;
+  border-radius: 5px;
+  box-shadow: 0px 2px 3px -1px rgba(211, 211, 211, 0.579), 0px 1px 0px 0px rgba(152, 152, 152, 0.681), 0px 0px 0px 1px rgba(25, 28, 33, .08);
+  background-color: var(--accent);
   text-decoration: none;
-  color: #007bff;
+  color: black;
   font-weight: 500;
 }
 
-.links a:hover {
-  text-decoration: underline;
-}

@@ -78,8 +78,6 @@ const Intro = () => {
       <Link href="https://x.com/lemniscatedd" target="_blank" className="btn">
         Let&apos;s Connect
       </Link>
-      {/* <div className="bgShape1"></div> */}
-      {/* <div className="bgShape2"></div> */}
     </main>
   );
 };

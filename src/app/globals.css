@@ -3,11 +3,12 @@
 }
 :root {
   --bg: #0b1215;
-  --accentText: #ffffffe0;
+  --accentText: #f0f0f0e0;
   --project: #000;
   --secondary: #00ff00cd;
-  --accent: #00ff00cd;
+  --accent: #00ff00;
   --nav: #ffffff42;
+  --card:#0B6E4F;
   --padding: 1rem;
   --radius: 28px;
 }
@@ -104,7 +105,7 @@ main {
   cursor: pointer;
   border: none;
   border-radius: 10px;
-  color: white;
+  color: black;
   width: fit-content;
   background-color: var(--accent);
   position: absolute;
@@ -133,6 +134,10 @@ footer p {
   color: white;
   margin-left: 2rem;
   text-align: right;
+}
+footer a {
+  color: var(--accent);
+  cursor: pointer;
 }
 .dot-mask {
   position: absolute;

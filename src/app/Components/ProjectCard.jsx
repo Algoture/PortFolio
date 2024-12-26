@@ -23,7 +23,6 @@ const ProjectCard = () => {
           >
             <div className="card-header">
               <h3>{project.title}</h3>
-              <span className="project-year">{project.year}</span>
             </div>
             <p className="description">{project.description}</p>
             {isPng ? (
@@ -48,7 +47,6 @@ const ProjectCard = () => {
             )}
 
             <div className="tech-stack">
-              <h4>Tech Stack:</h4>
               <ul>
                 {project.techStack.map((tech, index) => (
                   <li key={index}>{tech}</li>
@@ -63,13 +61,13 @@ const ProjectCard = () => {
               >
                 Source
               </Link>
-              <a
+              <Link
                 href={project.liveLink}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Live
-              </a>
+                Demo
+              </Link>
             </div>
           </motion.div>
         );

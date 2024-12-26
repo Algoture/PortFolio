@@ -6,7 +6,6 @@ export const projects = [
     image: "/Cinemaven.png",
     githubLink: "https://github.com/Algoture/Cinemaven",
     liveLink: "https://cinemavenclient.onrender.com/",
-    year: 2023,
     techStack: ["MERN", "REST API", "Firebase", "SCSS"],
   },
   {
@@ -17,7 +16,6 @@ export const projects = [
     image: "/KrishiNET.png",
     githubLink: "https://github.com/Algoture/KrishiNET",
     liveLink: "https://krishinet.onrender.com/",
-    year: 2024,
     techStack: ["React.js", "Tailwind CSS", "Appwrite"],
   },
   {
@@ -27,7 +25,6 @@ export const projects = [
     image: "/SE.png",
     githubLink: "https://github.com/SheshNalwar/Shubham-Enterprises",
     liveLink: "https://shubhamenterprises.onrender.com/",
-    year: 2023,
     techStack: ["React.js", "CSS"],
   },
   {
@@ -37,7 +34,6 @@ export const projects = [
     image: "/ASG.png",
     githubLink: "https://github.com/SheshNalwar/ASG-Academy",
     liveLink: "https://asg-academy.onrender.com/",
-    year: 2023,
     techStack: ["React.js", "CSS", "Sanity Studio"],
   },
   {
@@ -47,7 +43,6 @@ export const projects = [
     image: "/BeatBlend.mp4",
     githubLink: "https://github.com/Algoture/Beat-Blend",
     liveLink: "https://algoture.github.io/Beat-Blend/",
-    year: 2022,
     techStack: ["HTML5", "CSS3", "JavaScript"],
   },
 ];
