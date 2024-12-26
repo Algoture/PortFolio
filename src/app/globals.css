@@ -126,10 +126,10 @@ footer {
   width: 100%;
   display: flex;
   padding: 0 2rem;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: center;
 }
-footer p{
+footer p {
   color: white;
   margin-left: 2rem;
   text-align: right;
@@ -188,5 +188,8 @@ li {
   }
   #whoIam {
     text-align: center;
+  }
+  .btn {
+    transform: translate(-50%, 200%);
   }
 }
