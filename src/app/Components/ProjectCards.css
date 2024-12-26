@@ -8,6 +8,7 @@
 .project-card {
   background-color: var(--card);
   border-radius: 8px;
+  height: fit-content;
   padding: 1rem;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s, box-shadow 0.2s;
