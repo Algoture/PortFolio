@@ -2,26 +2,33 @@ export const projects = [
   {
     id: 1,
     title: "Cinemaven",
-    description: "An OTT Platform",
+    description: "An OTT platform where entertainment meets innovation.",
     image: "/Cinemaven.png",
     githubLink: "https://github.com/Algoture/Cinemaven",
     liveLink: "https://cinemavenclient.onrender.com/",
+    year: 2023,
+    techStack: ["MERN", "REST API", "Firebase", "SCSS"],
   },
   {
     id: 2,
     title: "KrishiNET",
-    description: "Assured Contract Farming Platform",
+    description:
+      "Assured Contract Farming: Empowering Farmers with Tech-Driven Solutions",
     image: "/KrishiNET.png",
-    githubLink: "",
+    githubLink: "https://github.com/Algoture/KrishiNET",
     liveLink: "https://krishinet.onrender.com/",
+    year: 2024,
+    techStack: ["React.js", "Tailwind CSS", "Appwrite"],
   },
   {
     id: 3,
     title: "Shubham Enterprises",
-    description: "A web platform for reliable loan services.",
+    description: "Simplifying loan services with a user-centered web platform.",
     image: "/SE.png",
     githubLink: "https://github.com/SheshNalwar/Shubham-Enterprises",
     liveLink: "https://shubhamenterprises.onrender.com/",
+    year: 2023,
+    techStack: ["React.js", "CSS"],
   },
   {
     id: 4,
@@ -30,16 +37,21 @@ export const projects = [
     image: "/ASG.png",
     githubLink: "https://github.com/SheshNalwar/ASG-Academy",
     liveLink: "https://asg-academy.onrender.com/",
+    year: 2023,
+    techStack: ["React.js", "CSS", "Sanity Studio"],
   },
   {
     id: 5,
     title: "Beat Blend",
-    description: "A minimal Designed Music Player",
+    description: "A sleek, intuitive music player for the modern listener.",
     image: "/BeatBlend.mp4",
     githubLink: "https://github.com/Algoture/Beat-Blend",
     liveLink: "https://algoture.github.io/Beat-Blend/",
+    year: 2022,
+    techStack: ["HTML5", "CSS3", "JavaScript"],
   },
 ];
+
 export const skills = [
   {
     id: 1,

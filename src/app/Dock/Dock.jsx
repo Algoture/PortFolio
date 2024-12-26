@@ -29,7 +29,7 @@ const Dock = () => {
 
   return (
     <MouseProvider>
-      <footer className="dock-footer">
+      <nav className="dock-footer">
         <DockContext.Provider value={{ hovered, width }}>
           <nav
             ref={ref}
@@ -95,7 +95,7 @@ const Dock = () => {
             </ul>
           </nav>
         </DockContext.Provider>
-      </footer>
+      </nav>
     </MouseProvider>
   );
 };
