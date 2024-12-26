@@ -76,7 +76,7 @@ const Intro = () => {
         </svg>
       </button>
       <Link href="https://x.com/lemniscatedd" target="_blank" className="btn">
-        Let's Connect
+        Let&apos;s Connect
       </Link>
       {/* <div className="bgShape1"></div> */}
       {/* <div className="bgShape2"></div> */}
