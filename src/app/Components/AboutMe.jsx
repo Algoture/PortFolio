@@ -6,8 +6,9 @@ const AboutMe = () => {
         <span className="cleanMinimal ">tech enthusiast</span>. I design +
         develop{" "}
         <span className="cleanMinimal">clean, minimal digital experiences</span>{" "}
-        that blend functionality with style. Whether I&apos;m coding smart solutions
-        or creating seamless interfaces.
+        that blend functionality with style. I specialize in blending
+        functionality with stylish design. Let&apos;s create something
+        remarkable together!
       </p>
     </section>
   );

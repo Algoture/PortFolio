@@ -4,9 +4,9 @@ import React, { useEffect } from "react";
 import Footer from "./Components/Footer";
 import Intro from "./Components/Intro";
 import AboutMe from "./Components/AboutMe";
-import Projects from "./Components/Projects";
 import dynamic from "next/dynamic";
 import "locomotive-scroll/dist/locomotive-scroll.css";
+import ProjectCard from "./Components/ProjectCard";
 
 const LocomotiveScroll = dynamic(() => import("locomotive-scroll"), {
   ssr: false,
@@ -37,7 +37,8 @@ const MainBody = () => {
     <div data-scroll-container>
       <Intro />
       <AboutMe />
-      <Projects />
+      <p className="projectIntro">Some Things I&apos;ve Built</p>
+      <ProjectCard />
       <Footer />
     </div>
   );

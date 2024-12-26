@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 
 const Intro = () => {
@@ -63,8 +64,9 @@ const Intro = () => {
         <br />
       </p>
       <p id="whoIam">
-        A Full Stack <span className="redMain">Developer</span> & UI/UX{" "}
-        <span className="redMain">Designer</span>
+        Crafting Clean, <span className="redMain">Minimal</span> Digital
+        Solutions as a Full Stack <span className="redMain">Developer</span> &
+        UI/UX <span className="redMain">Designer</span>
       </p>
       <button onClick={toggleSound} id="soundButton">
         <svg id="soundIcon" fill="white" width={30} height={30}>
@@ -73,6 +75,9 @@ const Intro = () => {
           />
         </svg>
       </button>
+      <Link href="https://x.com/lemniscatedd" target="_blank" className="btn">
+        Let's Connect
+      </Link>
       {/* <div className="bgShape1"></div> */}
       {/* <div className="bgShape2"></div> */}
     </main>
