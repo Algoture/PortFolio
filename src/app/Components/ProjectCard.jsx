@@ -3,6 +3,7 @@ import { projects } from "../Utils/Data";
 import "./ProjectCards.css";
 import Image from "next/image";
 import Link from "next/link";
+import { GitHubIcon } from "../Dock/Icons";
 
 const ProjectCard = () => {
   return (
@@ -59,6 +60,7 @@ const ProjectCard = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
+                <GitHubIcon className="" width={20} height={20}/>
                 Source
               </Link>
               <Link

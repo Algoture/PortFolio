@@ -37,7 +37,7 @@ const MainBody = () => {
     <div data-scroll-container>
       <Intro />
       <AboutMe />
-      <p className="projectIntro">Some Things I&apos;ve Built</p>
+      <p className="projectIntro">Some cool things I&apos;ve Built</p>
       <ProjectCard />
       <Footer />
     </div>

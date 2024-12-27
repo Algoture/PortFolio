@@ -30,7 +30,7 @@ export const projects = [
   {
     id: 4,
     title: "ASG Academy",
-    description: "A web platform for kids' skill development.",
+    description: "ASG Academy boosts kids' skills through interactive learning.",
     image: "/ASG.png",
     githubLink: "https://github.com/SheshNalwar/ASG-Academy",
     liveLink: "https://asg-academy.onrender.com/",
@@ -41,7 +41,7 @@ export const projects = [
     id: 5,
     title: "Role Master",
     description:
-      "A powerful admin panel designed to streamline role-based access control ",
+      "A powerful admin panel for efficient role-based access control.",
     image: "/RoleMaster.png",
     githubLink: "https://github.com/Algoture/RoleMaster",
     liveLink: "",

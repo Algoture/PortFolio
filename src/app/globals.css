@@ -8,7 +8,7 @@
   --secondary: #00ff00cd;
   --accent: #00ff00;
   --nav: #ffffff42;
-  --card: #0b6e4f;
+  --card: #80808082;
   --padding: 1rem;
   --radius: 28px;
 }
@@ -99,15 +99,18 @@ main {
   background-size: 24px 24px;
 }
 .btn {
-  padding: 0.5rem 1rem;
+  padding: 1rem 1rem;
   cursor: pointer;
   border: none;
+  font-size: large;
   border-radius: 10px;
   color: black;
   width: fit-content;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
   background-color: var(--accent);
   position: absolute;
-  top: 70%;
+  top: 60%;
   left: 50%;
   /* all: unset; */
   transform: translate(-50%, 100%);
@@ -176,7 +179,7 @@ li {
   list-style-type: none;
 }
 .projectIntro {
-  font-size: 3rem;
+  font-size: clamp(1.8rem, 1.4939rem + 1.6327vw, 2.8rem);
   font-weight: 800;
   color: var(--accent);
   text-align: center;
@@ -191,6 +194,6 @@ li {
     text-align: center;
   }
   .btn {
-    transform: translate(-50%, 200%);
+    transform: translate(-50%, 240%);
   }
 }
