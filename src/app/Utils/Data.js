@@ -36,8 +36,19 @@ export const projects = [
     liveLink: "https://asg-academy.onrender.com/",
     techStack: ["React.js", "CSS", "Sanity Studio"],
   },
+  ,
   {
     id: 5,
+    title: "Role Master",
+    description:
+      "A powerful admin panel designed to streamline role-based access control ",
+    image: "/RoleMaster.png",
+    githubLink: "https://github.com/Algoture/RoleMaster",
+    liveLink: "",
+    techStack: ["Next.js", "Tailwind CSS", "json-server", "REST API"],
+  },
+  {
+    id: 6,
     title: "Beat Blend",
     description: "A sleek, intuitive music player for the modern listener.",
     image: "/BeatBlend.mp4",

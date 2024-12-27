@@ -8,7 +8,7 @@
   --secondary: #00ff00cd;
   --accent: #00ff00;
   --nav: #ffffff42;
-  --card:#0B6E4F;
+  --card: #0b6e4f;
   --padding: 1rem;
   --radius: 28px;
 }
@@ -26,6 +26,9 @@ body {
   height: 100%;
   display: flex;
   overflow-x: hidden;
+  background-image: linear-gradient(to right, #80808012 1px, transparent 1px),
+    linear-gradient(to bottom, #80808012 1px, transparent 1px);
+  background-size: 24px 24px;
   background-color: var(--bg);
   flex-direction: column;
 }
@@ -69,9 +72,6 @@ main {
   text-align: center;
   justify-content: center;
   flex-direction: column;
-  background-image: linear-gradient(to right, #80808012 1px, transparent 1px),
-    linear-gradient(to bottom, #80808012 1px, transparent 1px);
-  background-size: 24px 24px;
   height: 100vh;
   width: 100%;
 }
@@ -96,8 +96,6 @@ main {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  background-image: linear-gradient(to right, #80808012 1px, transparent 1px),
-    linear-gradient(to bottom, #80808012 1px, transparent 1px);
   background-size: 24px 24px;
 }
 .btn {
@@ -172,9 +170,7 @@ footer a {
   width: 100%;
   overflow: hidden;
   position: relative;
-  background-image: linear-gradient(to right, #80808012 1px, transparent 1px),
-    linear-gradient(to bottom, #80808012 1px, transparent 1px);
-  background-size: 24px 24px;
+  background: transparent;
 }
 li {
   list-style-type: none;
