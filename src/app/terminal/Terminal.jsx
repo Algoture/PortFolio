@@ -1,6 +1,6 @@
-"use client"
+"use client";
 import { useState } from "react";
-import { projects, skills } from "../Data";
+import { projects, skills } from "@/app/Utils/Data";
 import "./terminal.css";
 
 const Terminal = () => {
@@ -50,7 +50,7 @@ const Terminal = () => {
         newOutput = [...newOutput, "Displaying Skills..."];
         setCurrentDirectory("C:\\Umesh\\skills");
         skills.forEach((skill) => {
-          newOutput.push(`- ${skill}`);
+          newOutput.push(`- ${skill.skill}`);
         });
         break;
       case "cd ..":
@@ -76,7 +76,7 @@ const Terminal = () => {
   return (
     <div id="terminalDiv">
       {minimized ? (
-        <button onClick={() => setMinimized(false)} className="minimizedIcon">
+        <button onClick={() => setMinimized(false)} className="btn">
           Terminal
         </button>
       ) : (
@@ -114,7 +114,7 @@ const Terminal = () => {
               </p>
             ))}
             <div className="type">
-              <p  className="terminalP">{`PS ${currentDirectory}>`}</p>&nbsp;
+              <p className="terminalP">{`PS ${currentDirectory}>`}</p>&nbsp;
               <input
                 type="text"
                 value={command}

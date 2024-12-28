@@ -1,11 +1,11 @@
 ::selection {
-  color: rgb(0, 152, 149);
+  color: var(--accent);
 }
 :root {
   --bg: #0b1215;
-  --accentText: #f0f0f0e0;
+  --accentText: #d0c3c3e0;
+  --subText: #71717a;
   --project: #000;
-  --secondary: #00ff00cd;
   --accent: #00ff00;
   --nav: #ffffff42;
   --card: #80808082;
@@ -18,7 +18,7 @@
   box-sizing: border-box;
   text-decoration: none;
   scroll-behavior: smooth;
-  font-family: "Gilroy", sans-serif;
+  font-family: "SF Pro", sans-serif;
 }
 
 body {
@@ -35,13 +35,10 @@ body {
 [data-scroll-container] {
   overflow: hidden;
 }
-svg:hover {
-  fill: white;
-}
 #mainTitle {
   font-size: clamp(6rem, 3.4359rem + 8.2051vw, 8rem);
   color: white;
-  font-weight: 800;
+  font-weight: 400;
   width: fit-content;
   text-align: center;
   letter-spacing: -0.3rem;
@@ -51,14 +48,13 @@ svg:hover {
   text-align: left;
   width: fit-content;
   letter-spacing: 0.1rem;
-  color: rgb(207, 207, 207);
+  color: var(--subText);
 }
 #name {
   cursor: pointer;
   color: var(--accent);
 }
 .redMain {
-  font-weight: bold;
   color: var(--accent);
 }
 .cleanMinimal {
@@ -180,8 +176,8 @@ li {
 }
 .projectIntro {
   font-size: clamp(1.8rem, 1.4939rem + 1.6327vw, 2.8rem);
-  font-weight: 800;
-  color: var(--accent);
+  /* font-weight: 800; */
+  color: var(--accentText);
   text-align: center;
 }
 /* Media Queries */

@@ -2,7 +2,7 @@ export const projects = [
   {
     id: 1,
     title: "Cinemaven",
-    description: "An OTT platform where entertainment meets innovation.",
+    description: "An OTT platform to binge watch latest movies trailers and teasers.",
     image: "/Cinemaven.png",
     githubLink: "https://github.com/Algoture/Cinemaven",
     liveLink: "https://cinemavenclient.onrender.com/",
@@ -45,7 +45,7 @@ export const projects = [
     image: "/RoleMaster.png",
     githubLink: "https://github.com/Algoture/RoleMaster",
     liveLink: "",
-    techStack: ["Next.js", "Tailwind CSS", "json-server", "REST API"],
+    techStack: ["Next.js", "json-server", "REST API"],
   },
   {
     id: 6,
