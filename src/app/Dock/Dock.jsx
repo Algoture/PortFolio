@@ -7,6 +7,7 @@ import {
   TerminalIcon,
   TwitterIcon,
   DiscordIcon,
+  HomeIcon,
 } from "./Icons";
 import { MouseProvider } from "./MouseProvider";
 import DockItem from "./DockItem";
@@ -48,11 +49,7 @@ const Dock = () => {
                 </Link>
               </DockItem>
               <DockItem>
-                <Link
-                  className="dock-link"
-                  href="https://umeshnagare.vercel.app/terminal"
-                  target="_blank"
-                >
+                <Link className="dock-link" href="/terminal">
                   <TerminalIcon className="dock-icon" />
                 </Link>
               </DockItem>
@@ -63,6 +60,11 @@ const Dock = () => {
                   target="_blank"
                 >
                   <TwitterIcon className="dock-icon" />
+                </Link>
+              </DockItem>
+              <DockItem>
+                <Link className="dock-link" href="/">
+                  <HomeIcon className="dock-icon" />
                 </Link>
               </DockItem>
               <DockItem>
