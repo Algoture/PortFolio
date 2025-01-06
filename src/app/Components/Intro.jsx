@@ -75,7 +75,7 @@ const Intro = () => {
           />
         </svg>
       </button>
-      <Link href="https://x.com/lemniscatedd" target="_blank" className="btn">
+      <Link href="https://x.com/umeshn22" target="_blank" className="btn">
         Let&apos;s Connect
       </Link>
     </main>

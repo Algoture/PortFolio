@@ -56,7 +56,7 @@ const Dock = () => {
               <DockItem>
                 <Link
                   className="dock-link"
-                  href="https://x.com/lemniscatedd"
+                  href="https://x.com/umeshn22"
                   target="_blank"
                 >
                   <TwitterIcon className="dock-icon" />
