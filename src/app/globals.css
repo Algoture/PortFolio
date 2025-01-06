@@ -95,10 +95,10 @@ main {
   background-size: 24px 24px;
 }
 .btn {
-  padding: 1rem 1rem;
+  padding: .7rem;
   cursor: pointer;
   border: none;
-  font-size: large;
+  /* font-size: no; */
   border-radius: 10px;
   color: black;
   width: fit-content;
@@ -106,7 +106,7 @@ main {
   -webkit-backdrop-filter: blur(15px);
   background-color: var(--accent);
   position: absolute;
-  top: 60%;
+  top: 65%;
   left: 50%;
   /* all: unset; */
   transform: translate(-50%, 100%);

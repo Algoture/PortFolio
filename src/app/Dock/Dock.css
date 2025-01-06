@@ -6,7 +6,7 @@
   width: 100%;
   justify-content: center;
   align-items: center;
-  height: 5rem;
+  /* height: 5rem; */
 }
 
 .dock-nav {
@@ -16,15 +16,15 @@
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
   border-radius: var(--radius);
-  padding: 1rem;
+  padding: .5rem;
 }
 
 .dock-ul {
   display: flex;
-  height: 2.5rem;
+  height: 2.2rem;
   align-items: flex-end;
   justify-content: center;
-  gap: 0.80rem;
+  gap: 0.70rem;
 }
 
 .dock-link {
