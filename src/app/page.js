@@ -1,9 +1,13 @@
-import MainBody from "./MainBody";
+import Footer from "./Components/Footer";
+import Intro from "./Components/Intro";
+import ProjectCard from "./Components/ProjectCard";
 
 export default function Home() {
   return (
     <>
-      <MainBody />
+      <Intro />
+      <ProjectCard />
+      <Footer />
     </>
   );
 }

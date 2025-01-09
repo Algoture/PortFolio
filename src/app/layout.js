@@ -28,7 +28,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${gilroy.variable}`}>
+      <body className={`${gilroy.variable} `}>
         <Nav />
         {children}
         <SpeedInsights />

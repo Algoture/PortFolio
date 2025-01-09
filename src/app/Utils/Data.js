@@ -2,7 +2,8 @@ export const projects = [
   {
     id: 1,
     title: "Cinemaven",
-    description: "An OTT platform to binge watch latest movies trailers and teasers.",
+    description:
+      "An OTT platform to binge watch latest movies trailers and teasers.",
     image: "/Cinemaven.png",
     githubLink: "https://github.com/Algoture/Cinemaven",
     liveLink: "https://cinemavenclient.onrender.com/",
@@ -11,8 +12,7 @@ export const projects = [
   {
     id: 2,
     title: "KrishiNET",
-    description:
-      "Assured Contract Farming: Empowering Farmers with Tech-Driven Solutions",
+    description: "A platform to connect Farmers with Buyers and Investors.",
     image: "/KrishiNET.png",
     githubLink: "https://github.com/Algoture/KrishiNET",
     liveLink: "https://krishinet.onrender.com/",
@@ -30,7 +30,8 @@ export const projects = [
   {
     id: 4,
     title: "ASG Academy",
-    description: "ASG Academy boosts kids' skills through interactive learning.",
+    description:
+      "ASG Academy boosts kids' skills through interactive learning.",
     image: "/ASG.png",
     githubLink: "https://github.com/SheshNalwar/ASG-Academy",
     liveLink: "https://asg-academy.onrender.com/",
