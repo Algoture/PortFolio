@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import {
   DiscordIcon,
@@ -8,6 +9,7 @@ import {
   TerminalIcon,
   TwitterIcon,
 } from "./Icons";
+import { motion } from "framer-motion";
 
 const links = [
   {
@@ -53,20 +55,48 @@ const links = [
 ];
 
 const Nav = () => {
+  const containerVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        staggerChildren: 0.1,
+        duration: 0.5,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: { opacity: 1, scale: 1 },
+  };
   return (
     <section id="dock">
-      <nav>
+      <motion.nav
+        initial="hidden"
+        animate="visible"
+        variants={containerVariants}
+      >
         {links.map(({ href, target, Icon, name }, index) => (
-          <Link
+          <motion.div
             key={index}
-            aria-label={name}
-            href={href}
-            target={target || undefined}
+            variants={itemVariants}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+            className="flex items-center justify-center"
           >
-            <Icon className="md:size-7 size-9" />
-          </Link>
+            <Link
+              aria-label={name}
+              href={href}
+              target={target || undefined}
+              className="text-gray-700 hover:text-gray-900 transition-colors"
+            >
+              <Icon className="md:size-7 size-9" />
+            </Link>
+          </motion.div>
         ))}
-      </nav>
+      </motion.nav>
     </section>
   );
 };
