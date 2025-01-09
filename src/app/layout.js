@@ -1,7 +1,7 @@
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import localFont from "next/font/local";
-import Dock from "./Dock/Dock";
 import "./globals.css";
+import Nav from "./Components/Nav";
 
 const gilroy = localFont({
   src: "./fonts/SF Pro.woff",
@@ -29,7 +29,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${gilroy.variable}`}>
-        <Dock />
+        <Nav />
         {children}
         <SpeedInsights />
       </body>

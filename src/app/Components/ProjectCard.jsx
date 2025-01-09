@@ -3,7 +3,7 @@ import { projects } from "../Utils/Data";
 import "./ProjectCards.css";
 import Image from "next/image";
 import Link from "next/link";
-import { GitHubIcon } from "../Dock/Icons";
+import { GitHubIcon } from "./Icons";
 
 const ProjectCard = () => {
   return (
@@ -26,27 +26,6 @@ const ProjectCard = () => {
               <h3>{project.title}</h3>
             </div>
             <p className="description">{project.description}</p>
-            {isPng ? (
-              <Image
-                src={project.image}
-                alt={`${project.title} Thumbnail`}
-                className="project-image"
-                layout="responsive"
-                width={16}
-                height={9}
-              />
-            ) : (
-              <video
-                className="project-image"
-                autoPlay
-                muted
-                loop
-                src={project.image}
-              >
-                Your browser does not support the video tag.
-              </video>
-            )}
-
             <div className="tech-stack">
               <ul>
                 {project.techStack.map((tech, index) => (
@@ -60,7 +39,7 @@ const ProjectCard = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <GitHubIcon className="" width={20} height={20}/>
+                <GitHubIcon className="" width={17} height={17} />
                 Source
               </Link>
               <Link
