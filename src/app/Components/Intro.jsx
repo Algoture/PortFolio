@@ -1,11 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
-import SvgIcon from "./SvgIcon";
 
 const Intro = () => {
   return (
-    <main className="flex flex-col gap-2 bg-transparent ">
+    <main className="flex flex-col mx-4 gap-2 bg-transparent ">
       <motion.div
         initial={{ opacity: 0, y: 0 }}
         whileInView={{ opacity: 1, y: 5 }}

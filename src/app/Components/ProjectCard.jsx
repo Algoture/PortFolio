@@ -4,7 +4,6 @@ import { projects } from "../Utils/Data";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import SvgIcon from "./SvgIcon";
 
 const ProjectCard = () => {
   return (
@@ -12,11 +11,11 @@ const ProjectCard = () => {
       <motion.h1
         initial={{ opacity: 0, y: 0 }}
         whileInView={{ opacity: 1, y: 5 }}
-        className="text-white pl-4 text-3xl font-semibold my-1"
+        className="text-white pl-8 text-3xl font-semibold my-1"
       >
         Projects
       </motion.h1>
-      <div className="project-grid px-4">
+      <div className="project-grid px-8">
         {projects.map((project) => {
           return (
             <motion.div
