@@ -3,6 +3,8 @@ import { GitHubIcon, GlobeIcon } from "./Icons";
 import { projects } from "../Utils/Data";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
+import SvgIcon from "./SvgIcon";
 
 const ProjectCard = () => {
   return (
@@ -22,41 +24,58 @@ const ProjectCard = () => {
               whileInView={{ opacity: 1, y: 5 }}
               viewport={{ margin: "10px" }}
               key={project.id}
-              className="project-card flex flex-col gap-3 rounded-lg"
+              className="project-card flex flex-col gap-3  rounded-lg"
             >
-              <div>
-                <p className="text-white text-xl font-bold">{project.title}</p>
-                <p className="text-slate-300 text-sm">{project.description}</p>
-              </div>
-              <div className="">
-                <ul className="text-slate-400 flex flex-wrap gap-3">
-                  {project.techStack.map((tech, index) => (
-                    <li
-                      key={index}
-                      className="px-2 py-1 text-xs border text-slate-300 rounded-lg"
-                    >
-                      {tech}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="flex gap-2">
-                <Link
-                  href={project.githubLink}
-                  target="_blank"
-                  className="projectlink"
-                >
-                  <GitHubIcon className="fill-slate-800" width={17} height={17} />
-                  Source
-                </Link>
-                <Link
-                  href={project.liveLink}
-                  target="_blank"
-                  className="projectlink"
-                >
-                  <GlobeIcon width={17} height={17} />
-                  Website
-                </Link>
+              <Image
+                src={project.image}
+                alt={`${project.title} project image`}
+                width={300}
+                height={200}
+                className="size-full rounded-t-lg object-fill"
+              />
+              <div className="flex flex-col gap-2 px-2 pb-2">
+                <div>
+                  <p className="text-white text-lg tracking-tight font-semibold">
+                    {project.title}
+                  </p>
+                  <p className="text-[#a3a3a3] text-sm leading-4">
+                    {project.description}
+                  </p>
+                </div>
+                <div className="">
+                  <ul className="text-slate-400 flex flex-wrap gap-3">
+                    {project.techStack.map((tech, index) => (
+                      <li
+                        key={index}
+                        className="px-1.5 py-0.5 text-xs bg-slate-100  text-gray-950 rounded-md"
+                      >
+                        {tech}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="flex gap-2">
+                  <Link
+                    href={project.githubLink}
+                    target="_blank"
+                    className="projectlink"
+                  >
+                    <GitHubIcon
+                      className="fill-slate-800"
+                      width={17}
+                      height={17}
+                    />
+                    Source
+                  </Link>
+                  <Link
+                    href={project.liveLink}
+                    target="_blank"
+                    className="projectlink"
+                  >
+                    <GlobeIcon width={17} height={17} />
+                    Website
+                  </Link>
+                </div>
               </div>
             </motion.div>
           );

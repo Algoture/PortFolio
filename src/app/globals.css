@@ -11,7 +11,7 @@
   --project: #000;
   --accent: #00ff00;
   --nav: #ffffff42;
-  --card: #80808082;
+  --card: hsl(0, 0%, 15%);
   --padding: 1rem;
 }
 * {
@@ -119,9 +119,6 @@ nav {
 
 .project-card {
   background-color: var(--card);
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
-  padding: 1rem;
   display: flex;
   flex-direction: column;
 }

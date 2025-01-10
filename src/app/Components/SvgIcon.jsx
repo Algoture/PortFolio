@@ -1,7 +1,7 @@
-const SvgIcon = ({ id, svg }) => {
+const SvgIcon = () => {
   return (
-    <svg id={id} fill="black" width={30} height={30}>
-      <use xlinkHref={`Icons.svg#${svg}`} />
+    <svg width={30} height={30}>
+      <use xlinkHref={`/Icons.svg#React`} />
     </svg>
   );
 };
