@@ -16,7 +16,7 @@ const Intro = () => {
           <br />
         </p>
         <p className=" text-white text-xl">Full Stack Design Developer</p>
-        <p className="text-zinc-500 text-lg mt-1">
+        <p className="text-zinc-400 text-lg mt-1">
           I design + develop clean, minimal digital experiences.
         </p>
       </motion.div>

@@ -11,7 +11,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        accent:"var(--accent)",
+        accent: "var(--accent)",
+        navIcon: "var(--navIcon)",
+        stroke: "var(--strokeWidth)",
       },
     },
   },

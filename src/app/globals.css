@@ -10,8 +10,10 @@
   --subText: #d7d7d7;
   --project: #000;
   --accent: #00ff00;
-  --nav: #ffffff42;
-  --card: hsl(0, 0%, 15%);
+  --nav: #212427a3;
+  --navIcon: #FAF9F6;
+  --strokeWidth:#F8F8FF;
+  --card: rgba(40, 40, 40, 0.185);
   --padding: 1rem;
 }
 * {
@@ -102,12 +104,13 @@ footer a {
 nav {
   display: flex;
   background: var(--nav);
+  padding: 0.5rem;
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
-  padding: 0.5rem;
   justify-content: space-evenly;
   align-items: center;
   gap: 0.7rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 9999px;
 }
 
@@ -119,6 +122,10 @@ nav {
 
 .project-card {
   background-color: var(--card);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
   display: flex;
   flex-direction: column;
 }
@@ -133,7 +140,7 @@ nav {
 }
 
 .projectlink {
-  @apply flex items-center gap-1 text-xs font-semibold px-2 py-1 rounded-lg bg-accent text-slate-800;
+  @apply flex items-center gap-1 md:text-xs text-sm font-semibold px-2 py-1 rounded-lg bg-accent text-slate-800;
 }
 
 /* Scroll Bar */

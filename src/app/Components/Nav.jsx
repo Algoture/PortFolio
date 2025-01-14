@@ -16,41 +16,41 @@ const links = [
     href: "https://github.com/Algoture",
     name: "GitHub",
     target: "_blank",
-    Icon: GitHubIcon,
+    Icon: <GitHubIcon className="md:size-6 size-8 fill-navIcon" />,
   },
   {
     href: "/terminal",
     name: "Terminal",
-    Icon: TerminalIcon,
+    Icon: <TerminalIcon className="md:size-6 size-8 fill-navIcon" />,
   },
   {
     href: "https://x.com/umeshn22",
     name: "Twitter",
     target: "_blank",
-    Icon: TwitterIcon,
+    Icon: <TwitterIcon className="md:size-6 size-8 fill-navIcon"/>,
   },
   {
     href: "/",
     name: "Home",
-    Icon: HomeIcon,
+    Icon: <HomeIcon className="md:size-6 size-8 "/>,
   },
   {
     href: "https://www.instagram.com/2.0_27/",
     name: "Instagram",
     target: "_blank",
-    Icon: InstaIcon,
+    Icon: <InstaIcon className="md:size-6 size-8 fill-navIcon"/>,
   },
   {
     href: "https://www.linkedin.com/in/umesh27/",
     name: "LinkedIn",
     target: "_blank",
-    Icon: LinkedInIcon,
+    Icon: <LinkedInIcon className="md:size-6 size-8 fill-navIcon"/>,
   },
   {
     href: "https://discord.com/users/790565393659330591",
     name: "Discord",
     target: "_blank",
-    Icon: DiscordIcon,
+    Icon: <DiscordIcon className="md:size-6 size-8 fill-navIcon"/>,
   },
 ];
 
@@ -90,9 +90,9 @@ const Nav = () => {
               aria-label={name}
               href={href}
               target={target || undefined}
-              className="text-gray-700 hover:text-gray-900 transition-colors"
+              className="text-gray-800"
             >
-              <Icon className="md:size-7 size-9" />
+              {Icon}
             </Link>
           </motion.div>
         ))}

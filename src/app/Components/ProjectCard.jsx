@@ -60,7 +60,7 @@ const ProjectCard = () => {
                     className="projectlink"
                   >
                     <GitHubIcon
-                      className="fill-slate-800"
+                      className="fill-slate-800 md:size-4 size-5"
                       width={17}
                       height={17}
                     />
@@ -71,7 +71,11 @@ const ProjectCard = () => {
                     target="_blank"
                     className="projectlink"
                   >
-                    <GlobeIcon width={17} height={17} />
+                    <GlobeIcon
+                      width={17}
+                      height={17}
+                      className=" md:size-4 size-5"
+                    />
                     Website
                   </Link>
                 </div>
