@@ -13,6 +13,7 @@
   --nav: #212427a3;
   --navIcon: #FAF9F6;
   --strokeWidth:#F8F8FF;
+  --border:1px solid rgba(255, 255, 255, 0.18);
   --card: rgba(40, 40, 40, 0.185);
   --padding: 1rem;
 }
@@ -110,7 +111,7 @@ nav {
   justify-content: space-evenly;
   align-items: center;
   gap: 0.7rem;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: var(--border);
   border-radius: 9999px;
 }
 
@@ -125,7 +126,7 @@ nav {
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: var(--border);
   display: flex;
   flex-direction: column;
 }
