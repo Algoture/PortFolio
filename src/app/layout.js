@@ -1,13 +1,6 @@
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import localFont from "next/font/local";
 import "./globals.css";
 import Nav from "./Components/Nav";
-
-const gilroy = localFont({
-  src: "./fonts/SF Pro.woff",
-  variable: "--font-gilroy",
-  weight: "100 900",
-});
 
 export const metadata = {
   title: "Umesh Nagare Portfolio",
@@ -28,7 +21,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${gilroy.variable} `}>
+      <body>
         <Nav />
         {children}
         <SpeedInsights />
