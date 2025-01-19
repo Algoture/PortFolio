@@ -1,30 +1,33 @@
 "use client";
 import { GitHubIcon, GlobeIcon } from "./Icons";
-import { projects } from "../Utils/Data";
+import { projects, transition, variants } from "../Utils/Data";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 
 const ProjectCard = () => {
+  
   return (
     <>
       <motion.h1
-        initial={{ opacity: 0, y: 0 }}
-        whileInView={{ opacity: 1, y: 5 }}
-        className="text-white pl-8 text-3xl font-semibold my-1"
-      >
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        transition={transition}
+        variants={variants}
+        className="text-white pl-8 text-3xl font-semibold my-1">
         Projects
       </motion.h1>
       <div className="project-grid px-8">
         {projects.map((project) => {
           return (
             <motion.div
-              initial={{ opacity: 0, y: 0 }}
-              whileInView={{ opacity: 1, y: 5 }}
-              viewport={{ margin: "10px" }}
+              initial="hidden"
+              whileInView="visible"
+              transition={{ staggerChildren: 0.04 }}
+              variants={variants}
               key={project.id}
-              className="project-card flex flex-col gap-3  rounded-lg"
-            >
+              className="project-card flex flex-col gap-3  rounded-lg">
               <Image
                 src={project.image}
                 alt={`${project.title} project image`}
@@ -46,8 +49,7 @@ const ProjectCard = () => {
                     {project.techStack.map((tech, index) => (
                       <li
                         key={index}
-                        className="px-1.5 py-0.5 text-xs bg-slate-100  text-gray-950 rounded-md"
-                      >
+                        className="px-1.5 py-0.5 text-xs bg-slate-100  text-gray-950 rounded-md">
                         {tech}
                       </li>
                     ))}
@@ -57,8 +59,7 @@ const ProjectCard = () => {
                   <Link
                     href={project.githubLink}
                     target="_blank"
-                    className="projectlink"
-                  >
+                    className="projectlink">
                     <GitHubIcon
                       className="fill-slate-800 md:size-4 size-5"
                       width={17}
@@ -69,8 +70,7 @@ const ProjectCard = () => {
                   <Link
                     href={project.liveLink}
                     target="_blank"
-                    className="projectlink"
-                  >
+                    className="projectlink">
                     <GlobeIcon
                       width={17}
                       height={17}

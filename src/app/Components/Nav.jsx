@@ -10,6 +10,7 @@ import {
   TwitterIcon,
 } from "./Icons";
 import { motion } from "framer-motion";
+import { transition, variants } from "../Utils/Data";
 
 const links = [
   {
@@ -67,31 +68,27 @@ const Nav = () => {
     },
   };
 
-  const itemVariants = {
-    hidden: { opacity: 0, scale: 0.8 },
-    visible: { opacity: 1, scale: 1 },
-  };
+  
   return (
     <section id="dock">
       <motion.nav
         initial="hidden"
         animate="visible"
-        variants={containerVariants}
-      >
+        transition={{ staggerChildren: 0.04 }}
+        variants={variants}>
         {links.map(({ href, target, Icon, name }, index) => (
           <motion.div
             key={index}
-            variants={itemVariants}
+            variants={variants}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
-            className="flex items-center justify-center"
-          >
+            transition={transition}
+            className="flex items-center justify-center">
             <Link
               aria-label={name}
               href={href}
               target={target || undefined}
-              className="text-gray-800"
-            >
+              className="text-gray-800">
               {Icon}
             </Link>
           </motion.div>
