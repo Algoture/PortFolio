@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
+import CountUp from "../Components/CountUp";
 
 const Page = () => {
   const [data, setData] = useState({
@@ -40,12 +41,8 @@ const Page = () => {
     <div className="p-4">
       <div>
         <div className="grid md:grid-cols-4 sm:grid-cols-1 gap-4">
-          <StatCard
-            title="Total Contributions"
-            value={data.totalContributions}
-            streak={false}
-          />
-          <StatCard title="Streak" streak={true} value={data.currentStreak} />
+          <Count value={data.totalContributions} streak={false} title="Total Contributions" />
+          <Count value={data.currentStreak} streak={true} title="Streak" />
           <StatCard
             title="Last Contribution Date"
             value={data.lastContributionDate}
@@ -73,5 +70,17 @@ const StatCard = ({ title, value, streak }) => {
     </div>
   );
 };
+
+const Count = ({ value,title,streak }) => {
+  return (
+    <div className="bg-white p-4 rounded-lg text-center">
+      <p className="text-2xl font-bold ">
+        {streak ? "🔥" : ""}
+        <CountUp to={value} from={0} duration={1} /> {streak ? "days" : ""}
+      </p>
+      <h2 className="text-lg font-semibold text-gray-800">{title}</h2>
+    </div>
+  );
+}
 
 export default Page;
