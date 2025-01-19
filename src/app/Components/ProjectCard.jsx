@@ -18,7 +18,7 @@ const ProjectCard = () => {
         className="text-white pl-8 text-3xl font-semibold my-1">
         Projects
       </motion.h1>
-      <div className="project-grid px-8">
+      <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4 px-8">
         {projects.map((project) => {
           return (
             <motion.div

@@ -115,11 +115,6 @@ nav {
   border-radius: 9999px;
 }
 
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 3rem;
-}
 
 .project-card {
   background-color: var(--card);
