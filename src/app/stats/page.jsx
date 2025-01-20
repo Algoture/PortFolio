@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import CountUp from "../Components/CountUp";
+import { BlockchainIcon, FireIcon } from "../Components/Icons";
 
 const Page = () => {
   const [data, setData] = useState({
@@ -41,46 +42,47 @@ const Page = () => {
     <div className="p-4">
       <div>
         <div className="grid md:grid-cols-4 sm:grid-cols-1 gap-4">
-          <Count value={data.totalContributions} streak={false} title="Total Contributions" />
-          <Count value={data.currentStreak} streak={true} title="Streak" />
+          <Count
+            value={data.totalContributions}
+            streak={false}
+            title="Total Contributions"
+          />
+          <Count
+            value={data.currentStreak}
+            streak={true}
+            title="Current Streak"
+          />
           <StatCard
             title="Last Contribution Date"
             value={data.lastContributionDate}
-            streak={false}
           />
-          <StatCard
-            title="Most Active Day"
-            streak={false}
-            value={data.mostActiveDay}
-          />
+          <StatCard title="Most Active Day" value={data.mostActiveDay} />
         </div>
       </div>
     </div>
   );
 };
 
-const StatCard = ({ title, value, streak }) => {
+const StatCard = ({ title, value }) => {
   return (
     <div className="bg-white p-4 rounded-lg text-center">
-      <p className="text-2xl font-bold ">
-        {streak ? "🔥" : ""}
-        {value} {streak ? "days" : ""}
-      </p>
-      <h2 className="text-lg font-semibold text-gray-800">{title}</h2>
+      <BlockchainIcon className="inline-block size-12 fill-accent" />
+      <p className="text-2xl font-bold ">{value}</p>
+      <h2 className="text-lg font-semibold text-gray-400">{title}</h2>
     </div>
   );
 };
 
-const Count = ({ value,title,streak }) => {
+const Count = ({ value, title, streak }) => {
   return (
     <div className="bg-white p-4 rounded-lg text-center">
+      <FireIcon className="inline-block size-12  fill-accent" />
       <p className="text-2xl font-bold ">
-        {streak ? "🔥" : ""}
         <CountUp to={value} from={0} duration={1} /> {streak ? "days" : ""}
       </p>
-      <h2 className="text-lg font-semibold text-gray-800">{title}</h2>
+      <h2 className="text-lg font-semibold text-gray-500">{title}</h2>
     </div>
   );
-}
+};
 
 export default Page;
