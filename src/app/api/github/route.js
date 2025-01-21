@@ -47,26 +47,41 @@ export async function GET() {
     data.data.user.contributionsCollection.contributionCalendar.weeks;
 
   const days = allWeeks.flatMap((week) => week.contributionDays);
-  // const rateLimit = data.data.rateLimit;
 
   let currentStreak = 0;
-  const today = new Date().toISOString().split("T")[0];
+  let highestStreak = 0;
+  let highestStreakStart = null;
+  let highestStreakEnd = null;
+
+  let streakStart = null;
   let lastContributionDate = null;
   const contributionCountsByDay = {};
 
-  for (let i = days.length - 1; i >= 0; i--) {
+  for (let i = 0; i < days.length; i++) {
     const { date, contributionCount } = days[i];
+    const formattedDate = new Date(date)
+      .toLocaleDateString("en-GB", {
+        day: "2-digit",
+        month: "2-digit",
+        year: "numeric",
+      })
+      .replace(/\//g, "-");
 
-    if (contributionCount > 0 && !lastContributionDate) {
-      lastContributionDate = date;
-    }
-
-    if (new Date(date) <= new Date(today)) {
-      if (contributionCount > 0) {
-        currentStreak++;
-      } else if (new Date(date).toISOString().split("T")[0] !== today) {
-        break;
+    if (contributionCount > 0) {
+      if (currentStreak === 0) {
+        streakStart = formattedDate;
       }
+      currentStreak++;
+
+      if (currentStreak > highestStreak) {
+        highestStreak = currentStreak;
+        highestStreakStart = streakStart;
+        highestStreakEnd = formattedDate;
+      }
+
+      lastContributionDate = formattedDate;
+    } else {
+      currentStreak = 0;
     }
 
     const dayOfWeek = new Date(date).toLocaleString("en-US", {
@@ -88,5 +103,8 @@ export async function GET() {
     currentStreak,
     lastContributionDate,
     mostActiveDay,
+    highestStreak,
+    highestStreakStart,
+    highestStreakEnd,
   });
 }

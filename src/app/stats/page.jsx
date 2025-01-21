@@ -9,6 +9,9 @@ const Page = () => {
     currentStreak: 0,
     lastContributionDate: "",
     mostActiveDay: "",
+    highestStreak: 0,
+    highestStreakStart: 0,
+    highestStreakEnd:0,
   });
   const [loading, setLoading] = useState(true);
 
@@ -48,6 +51,11 @@ const Page = () => {
             title="Total Contributions"
           />
           <Count
+            value={data.highestStreak}
+            streak={true}
+            title="Highest Streak"
+          />
+          <Count
             value={data.currentStreak}
             streak={true}
             title="Current Streak"
@@ -55,6 +63,14 @@ const Page = () => {
           <StatCard
             title="Last Contribution Date"
             value={data.lastContributionDate}
+          />
+          <StatCard
+            title="Highest Streak Start"
+            value={data.highestStreakStart}
+          />
+          <StatCard
+            title="Highest Streak End"
+            value={data.highestStreakEnd}
           />
           <StatCard title="Most Active Day" value={data.mostActiveDay} />
         </div>
