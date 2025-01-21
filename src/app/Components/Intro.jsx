@@ -4,9 +4,8 @@ import { motion } from "framer-motion";
 import { transition, variants } from "../Utils/Data";
 
 const Intro = () => {
-  
   return (
-    <main className="flex flex-col mx-4 gap-2 bg-transparent ">
+    <main className="flex flex-col mt-[10vh] mx-4 p-4 gap-2 justify-center w-full">
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -16,7 +15,7 @@ const Intro = () => {
         <motion.p
           transition={transition}
           variants={variants}
-          className="text-white text-5xl font-bold">
+          className="dark:text-white text-slate-800 text-5xl font-bold">
           Hi<span className="text-accent"> !</span> I&apos;m{" "}
           <span className="text-accent">Umesh</span>
           <br />
@@ -24,7 +23,7 @@ const Intro = () => {
         <motion.p
           transition={transition}
           variants={variants}
-          className=" text-white text-xl">
+          className=" dark:text-white text-gray-800 text-xl">
           Full Stack Design Developer
         </motion.p>
         <motion.p

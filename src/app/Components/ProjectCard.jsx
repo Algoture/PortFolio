@@ -15,7 +15,7 @@ const ProjectCard = () => {
         viewport={{ once: true }}
         transition={transition}
         variants={variants}
-        className="text-white pl-8 text-3xl font-semibold my-1">
+        className="dark:text-white text-slate-800 pl-8 text-3xl font-semibold my-1">
         Projects
       </motion.h1>
       <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4 px-8">
@@ -27,7 +27,7 @@ const ProjectCard = () => {
               transition={{ staggerChildren: 0.04 }}
               variants={variants}
               key={project.id}
-              className="project-card flex flex-col gap-3  rounded-lg">
+              className="dark:bg-darkcard bg-card z-0 cardBorder flex flex-col gap-3  rounded-lg">
               <Image
                 src={project.image}
                 alt={`${project.title} project image`}
@@ -37,19 +37,19 @@ const ProjectCard = () => {
               />
               <div className="flex flex-col gap-2 px-2 pb-2">
                 <div>
-                  <p className="text-white text-lg tracking-tight font-semibold">
+                  <p className="dark:text-white text-gray-800 text-lg tracking-tight font-semibold">
                     {project.title}
                   </p>
                   <p className="text-[#a3a3a3] text-sm leading-4">
                     {project.description}
                   </p>
                 </div>
-                <div className="">
-                  <ul className="text-slate-400 flex flex-wrap gap-3">
+                <div>
+                  <ul className="flex flex-wrap gap-3">
                     {project.techStack.map((tech, index) => (
                       <li
                         key={index}
-                        className="px-1.5 py-0.5 text-xs bg-slate-100  text-gray-950 rounded-md">
+                        className="px-1.5 py-0.5 text-xs bg-slate-200  text-gray-800 rounded-md">
                         {tech}
                       </li>
                     ))}

@@ -72,8 +72,7 @@ export const GlobeIcon = ({ ...props }) => {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
       fill={"none"}
-      {...props}
-    >
+      {...props}>
       <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="1.5" />
       <path
         d="M8 12C8 18 12 22 12 22C12 22 16 18 16 12C16 6 12 2 12 2C12 2 8 6 8 12Z"
@@ -100,10 +99,7 @@ export const GlobeIcon = ({ ...props }) => {
 };
 export const FireIcon = ({ ...props }) => {
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-      {...props}>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
       <path
         d="M13.8561 22C26.0783 19 19.2338 7 10.9227 2C9.9453 5.5 8.47838 6.5 5.54497 10C1.66121 14.6339 3.5895 20 8.96719 22C8.1524 21 6.04958 18.9008 7.5 16C8 15 9 14 8.5 12C9.47778 12.5 11.5 13 12 15.5C12.8148 14.5 13.6604 12.4 12.8783 10C19 14.5 16.5 19 13.8561 22Z"
         stroke="currentColor"
@@ -113,12 +109,9 @@ export const FireIcon = ({ ...props }) => {
       />
     </svg>
   );
-}
-export const BlockchainIcon = ({...props}) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-    {...props}>
+};
+export const BlockchainIcon = ({ ...props }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
     <path
       d="M12 21C12.2792 21 12.5388 20.8728 13.0579 20.6184L17.2304 18.5737C19.0768 17.6688 20 17.2164 20 16.5V7.5M12 21C11.7208 21 11.4612 20.8728 10.9421 20.6184L6.76956 18.5737C4.92319 17.6688 4 17.2164 4 16.5V7.5M12 21V12"
       stroke="currentColor"
@@ -130,6 +123,33 @@ export const BlockchainIcon = ({...props}) => (
       d="M10.9421 3.38159C11.4612 3.1272 11.7208 3 12 3C12.2792 3 12.5388 3.1272 13.0579 3.38159L17.2304 5.42635C19.0768 6.33116 20 6.78357 20 7.5C20 8.21643 19.0768 8.66884 17.2304 9.57365L13.0579 11.6184C12.5388 11.8728 12.2792 12 12 12C11.7208 12 11.4612 11.8728 10.9421 11.6184L6.76956 9.57365C4.92319 8.66884 4 8.21643 4 7.5C4 6.78357 4.92319 6.33116 6.76956 5.42635L10.9421 3.38159Z"
       stroke="currentColor"
       strokeWidth="1"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+export const SunIcon = ({ ...props }) => (
+  <svg viewBox="0 0 24 24" {...props}>
+    <path
+      d="M17 12C17 14.7614 14.7614 17 12 17C9.23858 17 7 14.7614 7 12C7 9.23858 9.23858 7 12 7C14.7614 7 17 9.23858 17 12Z"
+      stroke="black"
+      fill="none"
+      strokeWidth="1.2"
+    />
+    <path
+      d="M12 2V3.5M12 20.5V22M19.0708 19.0713L18.0101 18.0106M5.98926 5.98926L4.9286 4.9286M22 12H20.5M3.5 12H2M19.0713 4.92871L18.0106 5.98937M5.98975 18.0107L4.92909 19.0714"
+      stroke="black"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+    />
+  </svg>
+);
+export const MoonIcon = ({ ...props }) => (
+  <svg viewBox="0 0 24 24" {...props}>
+    <path
+      d="M21.5 14.0784C20.3003 14.7189 18.9301 15.0821 17.4751 15.0821C12.7491 15.0821 8.91792 11.2509 8.91792 6.52485C8.91792 5.06986 9.28105 3.69968 9.92163 2.5C5.66765 3.49698 2.5 7.31513 2.5 11.8731C2.5 17.1899 6.8101 21.5 12.1269 21.5C16.6849 21.5 20.503 18.3324 21.5 14.0784Z"
+      stroke="none"
+      strokeWidth="1.5"
+      strokeLinecap="round"
       strokeLinejoin="round"
     />
   </svg>

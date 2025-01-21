@@ -91,96 +91,44 @@ export const projects = [
 export const skills = [
   {
     id: 1,
-    skill: "Docker",
-    image: "/docker.png",
+    skill: "TypeScript",
   },
   {
     id: 2,
     skill: "React JS",
-    image: "React",
   },
   {
     id: 3,
     skill: "Next JS",
-    image: "nextjs",
   },
   {
     id: 4,
-    skill: "AWS",
-    image: "/aws.png",
+    skill: "Express JS",
   },
   {
     id: 5,
-    skill: "TypeScript",
-    image: "ts",
+    skill: "MongoDB",
   },
   {
     id: 6,
-    skill: "Golang",
-    image: "/golang.png",
+    skill: "MySQL",
   },
   {
     id: 7,
-    skill: "React Native",
-    image: "/reactnative.png",
+    skill: "JavaScript",
   },
   {
     id: 8,
     skill: "Node JS",
-    image: "/nodejs.png",
   },
   {
     id: 9,
-    skill: "Express JS",
-    image: "/expressjs.png",
-  },
-  {
-    id: 10,
-    skill: "MongoDB",
-    image: "/mongodb.png",
-  },
-  {
-    id: 11,
-    skill: "SQL",
-    image: "/sql.png",
-  },
-  {
-    id: 12,
-    skill: "GraphQL",
-    image: "/graphql.png",
-  },
-  {
-    id: 13,
-    skill: "PostgreSQL",
-    image: "/postgresql.png",
-  },
-  {
-    id: 14,
-    skill: "Redis",
-    image: "/redis.png",
-  },
-  {
-    id: 15,
-    skill: "Java",
-    image: "/java.png",
-  },
-  {
-    id: 16,
-    skill: "Kafka",
-    image: "/kafka.png",
-  },
-  {
-    id: 17,
-    skill: "Tauri",
-    image: "/tauri.png",
-  },
-  {
-    id: 18,
-    skill: "Electron",
-    image: "/electron.png",
+    skill: "AWS",
   },
 ];
+
 export const transition = { duration: 1, ease: [0.25, 0.1, 0.25, 1] };
+
 export const variants = {
   hidden: { filter: "blur(10px)", transform: "translateY(20%)", opacity: 0 },
   visible: { filter: "blur(0)", transform: "translateY(0)", opacity: 1 },
