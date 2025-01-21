@@ -14,7 +14,7 @@ const Nav = () => {
 
   return (
     <div className="fixed bottom-2 right-1/2 transform translate-x-1/2 z-40">
-      <nav className="flex px-4 py-3 gap-4 rounded-full bg-accent dark:bg-gray-100 shadow-sh">
+      <nav className="flex px-3 py-2 gap-3 rounded-full bg-accent dark:bg-gray-100 shadow-sh">
         {links.map(({ href, target, Icon }, index) => (
           <Link key={index} href={href} target={target || "_self"}>
             {Icon}
@@ -28,9 +28,9 @@ const Nav = () => {
               dark ? "rotate-0" : "rotate-90"
             )}>
             {dark ? (
-              <MoonIcon className="size-5 text-black" />
+              <MoonIcon className="md:size-6 size-8 fill-black" />
             ) : (
-              <SunIcon className="size-5 text-black" />
+              <SunIcon className="md:size-6 size-8 fill-black" />
             )}
           </button>
         </div>
