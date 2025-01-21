@@ -65,9 +65,9 @@ const Page = () => {
 
 const StatCard = ({ title, value }) => {
   return (
-    <div className="bg-white p-4 rounded-lg text-center">
+    <div className="dark:bg-white bg-gray-800 p-4 rounded-lg text-center">
       <BlockchainIcon className="inline-block size-12 fill-accent" />
-      <p className="text-2xl font-bold ">{value}</p>
+      <p className="text-2xl font-bold text-white dark:text-gray-900">{value}</p>
       <h2 className="text-lg font-semibold text-gray-400">{title}</h2>
     </div>
   );
@@ -75,9 +75,9 @@ const StatCard = ({ title, value }) => {
 
 const Count = ({ value, title, streak }) => {
   return (
-    <div className="bg-white p-4 rounded-lg text-center">
-      <FireIcon className="inline-block size-12  fill-accent" />
-      <p className="text-2xl font-bold ">
+    <div className="dark:bg-white bg-gray-800 p-4 rounded-lg text-center">
+      <FireIcon className="inline-block size-12 text-gray-900  fill-accent" />
+      <p className="text-2xl font-bold text-white dark:text-gray-900">
         <CountUp to={value} from={0} duration={1} /> {streak ? "days" : ""}
       </p>
       <h2 className="text-lg font-semibold text-gray-500">{title}</h2>
