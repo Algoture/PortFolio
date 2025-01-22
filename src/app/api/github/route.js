@@ -45,66 +45,53 @@ export async function GET() {
 
   const allWeeks =
     data.data.user.contributionsCollection.contributionCalendar.weeks;
-
   const days = allWeeks.flatMap((week) => week.contributionDays);
+  days.sort((a, b) => new Date(a.date) - new Date(b.date));
+
+  const totalContributions = days.reduce(
+    (sum, day) => sum + day.contributionCount,
+    0
+  );
 
   let currentStreak = 0;
   let highestStreak = 0;
-  let highestStreakStart = null;
-  let highestStreakEnd = null;
-
   let streakStart = null;
   let lastContributionDate = null;
-  const contributionCountsByDay = {};
 
   for (let i = 0; i < days.length; i++) {
     const { date, contributionCount } = days[i];
-    const formattedDate = new Date(date)
-      .toLocaleDateString("en-GB", {
-        day: "2-digit",
-        month: "2-digit",
-        year: "numeric",
-      })
-      .replace(/\//g, "-");
-
+    const currentDate = new Date(date);
     if (contributionCount > 0) {
-      if (currentStreak === 0) {
-        streakStart = formattedDate;
+      if (lastContributionDate) {
+        const diffDays =
+          (currentDate - lastContributionDate) / (1000 * 60 * 60 * 24);
+        if (diffDays === 1) {
+          currentStreak++;
+        } else if (diffDays > 1) {
+          highestStreak = Math.max(highestStreak, currentStreak);
+          currentStreak = 1;
+          streakStart = currentDate;
+        }
+      } else {
+        currentStreak = 1;
+        streakStart = currentDate;
       }
-      currentStreak++;
-
-      if (currentStreak > highestStreak) {
-        highestStreak = currentStreak;
-        highestStreakStart = streakStart;
-        highestStreakEnd = formattedDate;
-      }
-
-      lastContributionDate = formattedDate;
+      lastContributionDate = currentDate;
     } else {
+      highestStreak = Math.max(highestStreak, currentStreak);
       currentStreak = 0;
     }
-
-    const dayOfWeek = new Date(date).toLocaleString("en-US", {
-      weekday: "long",
-    });
-    contributionCountsByDay[dayOfWeek] =
-      (contributionCountsByDay[dayOfWeek] || 0) + contributionCount;
   }
 
-  const mostActiveDay = Object.entries(contributionCountsByDay).reduce(
-    (maxDay, currentDay) => (currentDay[1] > maxDay[1] ? currentDay : maxDay),
-    ["", 0]
-  )[0];
+  highestStreak = Math.max(highestStreak, currentStreak);
 
   return NextResponse.json({
-    totalContributions:
-      data.data.user.contributionsCollection.contributionCalendar
-        .totalContributions,
-    currentStreak,
-    lastContributionDate,
-    mostActiveDay,
-    highestStreak,
-    highestStreakStart,
-    highestStreakEnd,
+    totalContributions: totalContributions,
+    // lastContributionDate: lastContributionDate,
+    highestStreak: highestStreak,
+    // currentStreak: currentStreak,
+    // days: days,
+    // highestStreakStart,
+    // highestStreakEnd,
   });
 }
