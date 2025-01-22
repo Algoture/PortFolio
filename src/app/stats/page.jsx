@@ -7,11 +7,10 @@ const Page = () => {
   const [data, setData] = useState({
     totalContributions: 0,
     currentStreak: 0,
-    lastContributionDate: "",
-    mostActiveDay: "",
+    LastContributionDate: "",
     highestStreak: 0,
     highestStreakStart: 0,
-    highestStreakEnd:0,
+    highestStreakEnd: 0,
   });
   const [loading, setLoading] = useState(true);
 
@@ -62,17 +61,13 @@ const Page = () => {
           />
           <StatCard
             title="Last Contribution Date"
-            value={data.lastContributionDate}
+            value={data.LastContributionDate}
           />
           <StatCard
             title="Highest Streak Start"
             value={data.highestStreakStart}
           />
-          <StatCard
-            title="Highest Streak End"
-            value={data.highestStreakEnd}
-          />
-          <StatCard title="Most Active Day" value={data.mostActiveDay} />
+          <StatCard title="Highest Streak End" value={data.highestStreakEnd} />
         </div>
       </div>
     </div>
@@ -83,7 +78,9 @@ const StatCard = ({ title, value }) => {
   return (
     <div className="dark:bg-white bg-gray-800 p-4 rounded-lg text-center">
       <BlockchainIcon className="inline-block size-12 fill-accent" />
-      <p className="text-2xl font-bold text-white dark:text-gray-900">{value}</p>
+      <p className="text-2xl font-bold text-white dark:text-gray-900">
+        {value}
+      </p>
       <h2 className="text-lg font-semibold text-gray-400">{title}</h2>
     </div>
   );
