@@ -17,7 +17,9 @@ export function calculateStreaks(days) {
   let yesterdayContributed = false;
   days.forEach(({ date, contributionCount }) => {
     const currentDate = new Date(date);
-    if (contributionCount > 0) {
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    if (contributionCount > 0 || currentDate.getTime() === today.getTime()) {
       if (lastContributionDate) {
         const diffDays =
           (currentDate - lastContributionDate) / (1000 * 60 * 60 * 24);
