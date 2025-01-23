@@ -14,7 +14,7 @@ const Nav = () => {
 
   return (
     <div className="fixed bottom-2 right-1/2 transform translate-x-1/2 z-40">
-      <nav className="flex px-3 py-2 gap-3 rounded-full bg-accent dark:bg-gray-100 shadow-sh">
+      <nav className="flex px-3 py-2 gap-3 rounded-full bg-white dark:bg-gray-100 shadow-sh">
         {links.map(({ href, target, Icon, name }, index) => (
           <Link key={index} href={href} target={target} aria-label={name}>
             {Icon}
