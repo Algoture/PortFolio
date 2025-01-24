@@ -75,7 +75,9 @@ body {
   @apply border dark:border-gray-800;
   border: var(--border);
 }
-
+.navIcons{
+  @apply md:size-6 size-7 fill-navIcon dark:fill-white;
+}
 .bo {
   border: 1.5px solid red;
 }
