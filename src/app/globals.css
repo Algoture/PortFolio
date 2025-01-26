@@ -7,7 +7,7 @@
   --navIcon: #000000dc;
   --strokeWidth: #f8f8ff;
   --card: hsl(0 0% 100%);
-  --darkcard: hsl(210 11.1% 3.53%);
+  --darkcard: black;
   --border: 1px solid rgba(59, 59, 59, 0.18);
 }
 body.dark {
