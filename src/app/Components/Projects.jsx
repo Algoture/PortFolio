@@ -33,7 +33,7 @@ const Projects = () => {
                 alt={`${project.title} project image`}
                 width={300}
                 height={200}
-                className="size-full rounded-t-lg object-fill"
+                className="size-full aspect-video rounded-t-lg object-fill"
               />
               <div className="flex flex-col gap-2 px-2 pb-2">
                 <div>

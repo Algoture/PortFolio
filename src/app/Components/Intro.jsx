@@ -29,7 +29,7 @@ const Intro = () => {
         <motion.p
           transition={transition}
           variants={variants}
-          className="text-zinc-400 text-lg mt-1">
+          className="text-zinc-500 dark:text-zinc-400 text-lg mt-1">
           I design + develop clean, minimal digital experiences.
         </motion.p>
       </motion.div>
