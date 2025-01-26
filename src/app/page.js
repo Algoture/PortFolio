@@ -1,13 +1,13 @@
 import Footer from "./Components/Footer";
 import Intro from "./Components/Intro";
-import ProjectCard from "./Components/ProjectCard";
+import Projects from "./Components/Projects";
 import Skills from "./Components/Skills";
 
 export default function Home() {
   return (
     <>
       <Intro />
-      <ProjectCard />
+      <Projects />
       <Skills />
       <Footer />
     </>
