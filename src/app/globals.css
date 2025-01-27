@@ -65,6 +65,9 @@ body {
   color: white;
   text-wrap: wrap;
 }
+.intro{
+  line-height: 1.4rem;
+}
 .cen {
   @apply flex items-center justify-center;
 }

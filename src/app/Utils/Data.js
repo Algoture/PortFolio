@@ -115,7 +115,7 @@ export const skills = [
   },
   {
     id: 7,
-    skill: "JavaScript",
+    skill: "TailwindCSS",
   },
   {
     id: 8,
@@ -123,7 +123,11 @@ export const skills = [
   },
   {
     id: 9,
-    skill: "AWS",
+    skill: "Framer Motion",
+  },
+  {
+    id: 10,
+    skill: "ShadCN UI",
   },
 ];
 

@@ -5,7 +5,7 @@ import { transition, variants } from "../Utils/Data";
 
 const Intro = () => {
   return (
-    <main className="flex flex-col mt-[10vh] mx-4 p-4 gap-2 justify-center w-full">
+    <main className="flex flex-col mt-[10vh] md:mx-4 sm:mx-2 p-4 gap-2 justify-center w-full">
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -23,15 +23,11 @@ const Intro = () => {
         <motion.p
           transition={transition}
           variants={variants}
-          className=" dark:text-white text-gray-800 text-xl">
-          Full Stack Design Developer
+          className=" dark:text-white text-gray-800 text-xl intro">
+          Full Stack Design Developer<br/>
+          <span className="text-zinc-500 dark:text-zinc-400 text-lg">I design + develop clean, minimal digital experiences.</span>
         </motion.p>
-        <motion.p
-          transition={transition}
-          variants={variants}
-          className="text-zinc-500 dark:text-zinc-400 text-lg mt-1">
-          I design + develop clean, minimal digital experiences.
-        </motion.p>
+        
       </motion.div>
     </main>
   );
