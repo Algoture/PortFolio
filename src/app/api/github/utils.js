@@ -13,54 +13,35 @@ export function calculateStreaks(days) {
   let streakStart = null;
   let highestStreakStart = null;
   let highestStreakEnd = null;
-  let lastContributionDate = null;
-  let yesterdayContributed = false;
-  days.forEach(({ date, contributionCount }) => {
+
+  days.forEach(({ date }, index) => {
     const currentDate = new Date(date);
-    const today = new Date();
-    today.setHours(0, 0, 0, 0);
-    if (contributionCount > 0 || currentDate.getTime() === today.getTime()) {
-      if (lastContributionDate) {
-        const diffDays =
-          (currentDate - lastContributionDate) / (1000 * 60 * 60 * 24);
-        if (diffDays === 1) {
-          currentStreak++;
-        } else if (diffDays > 1) {
-          if (currentStreak > highestStreak) {
-            highestStreak = currentStreak;
-            highestStreakStart = streakStart;
-            highestStreakEnd = lastContributionDate;
-          }
-          currentStreak = 1;
-          streakStart = currentDate;
-        }
-      } else {
-        currentStreak = 1;
-        streakStart = currentDate;
-      }
-      lastContributionDate = currentDate;
-      yesterdayContributed = true;
+    const previousDate = index > 0 ? new Date(days[index - 1].date) : null;
+
+    if (
+      previousDate &&
+      (currentDate - previousDate) / (1000 * 60 * 60 * 24) === 1
+    ) {
+      currentStreak++;
     } else {
-      if (yesterdayContributed) {
-        if (currentStreak > highestStreak) {
-          highestStreak = currentStreak;
-          highestStreakStart = streakStart;
-          highestStreakEnd = lastContributionDate;
-        }
-        currentStreak = 0;
+      if (currentStreak > highestStreak) {
+        highestStreak = currentStreak;
+        highestStreakStart = streakStart;
+        highestStreakEnd = previousDate;
       }
+      currentStreak = 1;
+      streakStart = currentDate;
     }
   });
+
   if (currentStreak > highestStreak) {
     highestStreak = currentStreak;
     highestStreakStart = streakStart;
-    highestStreakEnd = lastContributionDate;
+    highestStreakEnd = new Date(days[days.length - 1].date);
   }
   return { highestStreak, highestStreakStart, highestStreakEnd, currentStreak };
 }
-export function calculateTotalContributions(days) {
-  return days.reduce((sum, day) => sum + day.contributionCount, 0);
-}
+
 export async function fetchGitHubData() {
   const response = await fetch("https://api.github.com/graphql", {
     method: "POST",

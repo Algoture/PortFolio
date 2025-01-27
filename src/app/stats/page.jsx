@@ -7,7 +7,7 @@ const Page = () => {
   const [data, setData] = useState({
     totalContributions: 0,
     currentStreak: 0,
-    LastContributionDate: "",
+    lastContributionDate: "",
     highestStreak: 0,
     highestStreakStart: 0,
     highestStreakEnd: 0,
@@ -61,7 +61,7 @@ const Page = () => {
           />
           <StatCard
             title="Last Contribution Date"
-            value={data.LastContributionDate}
+            value={data.lastContributionDate}
           />
           <StatCard
             title="Highest Streak Start"
