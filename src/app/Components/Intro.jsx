@@ -15,7 +15,7 @@ const Intro = () => {
         <motion.p
           transition={transition}
           variants={variants}
-          className="dark:text-white text-slate-800 text-5xl tracking-tight font-bold">
+          className="dark:text-white text-black text-5xl tracking-tight font-bold">
           Hi<span className="text-accent"> !</span> I&apos;m{" "}
           <span className="text-accent">Umesh</span>
           <br />
@@ -23,9 +23,9 @@ const Intro = () => {
         <motion.p
           transition={transition}
           variants={variants}
-          className=" dark:text-white text-gray-800 text-xl intro">
+          className=" dark:text-zinc-400 text-zinc-700 text-xl intro">
           Full Stack Design Developer<br/>
-          <span className="text-zinc-500 dark:text-zinc-400 text-lg">I design + develop clean, minimal digital experiences.</span>
+          <span className="text-zinc-700 dark:text-zinc-400 text-lg">I design + develop clean, minimal digital experiences.</span>
         </motion.p>
         
       </motion.div>

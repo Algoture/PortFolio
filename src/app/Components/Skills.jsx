@@ -11,7 +11,7 @@ const Skills = () => {
         viewport={{ once: true }}
         variants={variants}
         transition={transition}
-        className=" dark:text-white text-xl  font-bold text-black text-left">
+        className=" dark:text-white text-2xl  font-bold text-black text-left">
         Tech Stack
       </motion.h1>
       <div className="flex flex-wrap gap-2 items-center ">
