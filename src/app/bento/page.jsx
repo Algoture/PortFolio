@@ -18,7 +18,7 @@ export default function Bento() {
             layout
             onClick={() => setSelected(isSelected ? null : index)}
             className={`cursor-pointer flex items-center justify-center relative
-            w-20 h-20 rounded-xl text-white font-bold shadow-lg
+            w-20 h-20 rounded-lg text-white font-bold shadow-lg
             ${isSelected ? "bg-black h-36 scale-110" : "bg-gray-400"}
           `}
             transition={{

@@ -85,7 +85,7 @@ body {
   border: 1.5px solid red;
 }
 .projectlink {
-  @apply flex items-center cursor-pointer gap-1 md:text-xs text-sm font-semibold px-2 py-1 rounded-lg bg-accent z-20 text-slate-800;
+  @apply flex items-center cursor-pointer gap-1 md:text-xs text-sm font-semibold px-2 py-1 rounded-md bg-accent z-20 text-slate-800;
 }
 
 /* Scroll Bar */
