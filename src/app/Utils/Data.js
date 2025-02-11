@@ -2,7 +2,7 @@ export const projects = [
   {
     id: 1,
     title: "KrishiNET",
-    description: "A platform to connect Farmers with Buyers and Investors.",
+    description: "A platform to connect Farmers with Buyers and Investors. Contract based farming system.",
     image: "/KrishiNET.png",
     githubLink: "https://github.com/Algoture/KrishiNET",
     liveLink: "https://krishinet.onrender.com/",

@@ -33,14 +33,14 @@ const Projects = () => {
                 alt={`${project.title} project image`}
                 width={300}
                 height={200}
-                className="size-full aspect-video rounded-t-lg object-fill"
+                className="size-full aspect-video rounded-lg object-fill"
               />
               <div className="flex flex-col gap-2 px-2 pb-2">
                 <div>
-                  <p className="dark:text-white text-gray-800 text-lg tracking-tight font-semibold">
+                  <p className="dark:text-white text-gray-800 text-xl tracking-tight font-semibold">
                     {project.title}
                   </p>
-                  <p className="text-[#595959] dark:text-[#999999] text-sm leading-4">
+                  <p className="text-neutral-600 dark:text-[#999999] text-sm leading-4">
                     {project.description}
                   </p>
                 </div>
@@ -49,7 +49,7 @@ const Projects = () => {
                     {project.techStack.map((tech, index) => (
                       <li
                         key={index}
-                        className="px-1.5 py-0.5 text-xs bg-slate-100  text-gray-700 rounded-md">
+                        className="px-1.5 py-0.5 text-xs bg-neutral-300 dark:bg-neutral-200  text-neutral-800 rounded-md">
                         {tech}
                       </li>
                     ))}
