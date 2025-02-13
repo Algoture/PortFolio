@@ -27,7 +27,7 @@ const Projects = () => {
               transition={{ staggerChildren: 0.04 }}
               variants={variants}
               key={project.id}
-              className="dark:bg-darkcard bg-card z-0 cardBorder flex flex-col  rounded-lg">
+              className="dark:bg-darkcard bg-card z-0 cardBorder dark:border-darkcard flex flex-col  rounded-lg">
               <Image
                 src={project.image}
                 alt={`${project.title} project image`}
@@ -59,7 +59,7 @@ const Projects = () => {
                   <Link
                     href={project.githubLink}
                     target="_blank"
-                    className="projectlink">
+                    className="flex items-center cursor-pointer gap-1 md:text-xs text-sm font-semibold px-2 py-1 rounded-md bg-accent z-20 text-slate-800">
                     <GitHubIcon
                       className="fill-slate-800 md:size-4 size-5"
                       width={17}
@@ -70,7 +70,7 @@ const Projects = () => {
                   <Link
                     href={project.liveLink}
                     target="_blank"
-                    className="projectlink">
+                    className="flex items-center cursor-pointer gap-1 md:text-xs text-sm font-semibold px-2 py-1 rounded-md bg-accent z-20 text-slate-800">
                     <GlobeIcon
                       width={17}
                       height={17}

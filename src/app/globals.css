@@ -1,6 +1,29 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --color-accent: var(--accent);
+  --color-card: var(--card);
+  --color-darkcard: var(--darkcard);
+  --color-nav-icon: var(--navIcon);
+  --color-stroke: var(--strokeWidth);
+
+  --shadow-sh: 0px 2px 3px -1px rgba(0, 0, 0, 0.1),
+    0px 1px 0px 0px rgba(25, 28, 33, 0.02),
+    0px 0px 0px 1px rgba(25, 28, 33, 0.08);
+}
+
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}
+
 :root {
   --bg: #f8f8ff;
   --accent: #00ff00;
@@ -20,8 +43,6 @@ body.dark {
   }
 }
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
   text-decoration: none;
   scroll-behavior: smooth;
@@ -65,27 +86,27 @@ body {
   color: white;
   text-wrap: wrap;
 }
-.intro{
+.intro {
   line-height: 1.4rem;
 }
 .cen {
-  @apply flex items-center justify-center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.skillsbtn {
-  @apply px-2 py-1 text-sm dark:bg-neutral-200 dark:text-black text-neutral-100 bg-neutral-700 cen rounded-md  focus:outline-none;
-}
-.cardBorder {
-  @apply border dark:border-gray-800;
+
+.darkCardBorder{
+  border-color: var(--darkcard);
   border: var(--border);
 }
-.navIcons{
-  @apply md:size-6 size-7 fill-navIcon dark:fill-white;
+
+.cardBorder {
+  border-color: #1f2937;
+  border: var(--border);
 }
+
 .bo {
   border: 1.5px solid red;
-}
-.projectlink {
-  @apply flex items-center cursor-pointer gap-1 md:text-xs text-sm font-semibold px-2 py-1 rounded-md bg-accent z-20 text-slate-800;
 }
 
 /* Scroll Bar */

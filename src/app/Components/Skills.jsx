@@ -23,7 +23,7 @@ const Skills = () => {
               variants={variants}
               viewport={{ once: true }}
               transition={transition}
-              className="skillsbtn"
+              className="px-2 py-1 text-sm dark:bg-neutral-200 dark:text-black text-neutral-100 bg-neutral-700 cen rounded-md  focus:outline-hidden"
               key={item.id}>
               {item.skill}
             </motion.button>

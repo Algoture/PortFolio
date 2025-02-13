@@ -25,7 +25,7 @@ const Nav = () => {
             onClick={() => darkModeHandler()}
             aria-label="Dark Mode Toggle"
             className={clsx(
-              "cen transition-all focus:outline-none",
+              "cen transition-all focus:outline-hidden cursor-pointer",
               dark ? "rotate-0" : "rotate-90"
             )}>
             {dark ? (
