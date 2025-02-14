@@ -5,10 +5,11 @@
 @theme {
   --color-accent: var(--accent);
   --color-card: var(--card);
+  --color-techstack : var(--techstack);
   --color-darkcard: var(--darkcard);
   --color-nav-icon: var(--navIcon);
   --color-stroke: var(--strokeWidth);
-
+  --color-lightborder: var(--border);
   --shadow-sh: 0px 2px 3px -1px rgba(0, 0, 0, 0.1),
     0px 1px 0px 0px rgba(25, 28, 33, 0.02),
     0px 0px 0px 1px rgba(25, 28, 33, 0.08);
@@ -28,11 +29,13 @@
   --bg: #f8f8ff;
   --accent: #00ff00;
   --navIcon: #000000dc;
-  --strokeWidth: #f8f8ff;
+  --techstack: #3b3b3b;
+  --strokeWidth: #323232da;
   --card: hsl(0 0% 100%);
   --darkcard: black;
-  --border: 1px solid rgba(59, 59, 59, 0.18);
+  --border: rgba(59, 59, 59, 0.18);
 }
+
 body.dark {
   --bg: #0b1215;
 }
@@ -94,17 +97,6 @@ body {
   align-items: center;
   justify-content: center;
 }
-
-.darkCardBorder{
-  border-color: var(--darkcard);
-  border: var(--border);
-}
-
-.cardBorder {
-  border-color: #1f2937;
-  border: var(--border);
-}
-
 .bo {
   border: 1.5px solid red;
 }

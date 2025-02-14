@@ -27,7 +27,7 @@ const Projects = () => {
               transition={{ staggerChildren: 0.04 }}
               variants={variants}
               key={project.id}
-              className="dark:bg-darkcard bg-card z-0 cardBorder dark:border-darkcard flex flex-col  rounded-lg">
+              className="dark:bg-darkcard bg-card z-0  border-lightborder dark:border-stroke border flex flex-col  rounded-lg">
               <Image
                 src={project.image}
                 alt={`${project.title} project image`}
