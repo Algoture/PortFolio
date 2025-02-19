@@ -49,7 +49,7 @@ body.dark {
   box-sizing: border-box;
   text-decoration: none;
   scroll-behavior: smooth;
-  font-family: "Inter", sans-serif;
+  font-family: "Inter";
 }
 
 body {
