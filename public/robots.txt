@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://umeshnagare.vercel.app
+
+# Sitemaps
+Sitemap: https://umeshnagare.vercel.app/sitemap.xml
