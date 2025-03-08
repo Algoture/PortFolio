@@ -9,6 +9,25 @@ export const projects = [
     techStack: ["React.js", "Tailwind CSS", "Appwrite"],
   },
   {
+    id: 2,
+    title: "Cinemaven",
+    description:
+      "An OTT platform to binge watch latest movies trailers and teasers.",
+    image: "/Cinemaven.png",
+    githubLink: "https://github.com/Algoture/Cinemaven",
+    liveLink: "https://cinemavenclient.onrender.com/",
+    techStack: ["MERN", "REST API", "Firebase", "SCSS"],
+  },
+  {
+    id: 3,
+    title: "Shubham Enterprises",
+    description: "Simplifying loan services with a user-centered web platform.",
+    image: "/SE.png",
+    githubLink: "https://github.com/SheshNalwar/Shubham-Enterprises",
+    liveLink: "https://shubhamenterprises.onrender.com/",
+    techStack: ["React.js", "CSS"],
+  },
+  {
     id: 4,
     title: "ASG Academy",
     description:
@@ -27,9 +46,7 @@ export const projects = [
     githubLink: "https://github.com/Algoture/RoleMaster",
     liveLink: "",
     techStack: ["Next.js", "json-server", "REST API"],
-  }
-];
-const unProjects = [
+  },
   {
     id: 6,
     title: "Beat Blend",
@@ -39,25 +56,9 @@ const unProjects = [
     liveLink: "https://algoture.github.io/Beat-Blend/",
     techStack: ["HTML5", "CSS3", "JavaScript"],
   },
-  {
-    id: 3,
-    title: "Shubham Enterprises",
-    description: "Simplifying loan services with a user-centered web platform.",
-    image: "/SE.png",
-    githubLink: "https://github.com/SheshNalwar/Shubham-Enterprises",
-    liveLink: "https://shubhamenterprises.onrender.com/",
-    techStack: ["React.js", "CSS"],
-  },
-  {
-    id: 2,
-    title: "Cinemaven",
-    description:
-      "An OTT platform to binge watch latest movies trailers and teasers.",
-    image: "/Cinemaven.png",
-    githubLink: "https://github.com/Algoture/Cinemaven",
-    liveLink: "https://cinemavenclient.onrender.com/",
-    techStack: ["MERN", "REST API", "Firebase", "SCSS"],
-  },
+];
+const unProjects = [
+
 ]
 export const skills = [
   {

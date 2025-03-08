@@ -12,12 +12,12 @@ const Writing = () => {
         viewport={{ once: true }}
         transition={transition}
         variants={variants}
-        className="dark:text-white mt-4 text-black md:pl-8 pl-4 text-2xl  font-bold my-1">
+        className="dark:text-white mt-4 text-black md:pl-10 pl-5 text-2xl  font-bold my-1">
         Writings
       </motion.h1>
-      <div className="md:px-8 px-4 my-1 ">
+      <div className="md:px-10 px-5 my-1 ">
         <motion.div
-          className="dark:bg-zinc-800 bg-gray-200 dark:text-white z-0 border-lightborder dark:border-stroke border p-2 rounded-lg flex justify-between"
+          className="dark:bg-zinc-800 bg-zinc-300 dark:text-white z-0 border-lightborder border p-2 rounded-lg flex justify-between"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}

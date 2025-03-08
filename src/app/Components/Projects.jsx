@@ -15,10 +15,10 @@ const Projects = () => {
         viewport={{ once: true }}
         transition={transition}
         variants={variants}
-        className="dark:text-white text-black md:pl-8 pl-4 text-3xl font-semibold my-1">
+        className="dark:text-white text-black md:pl-10 pl-5 text-3xl font-semibold my-1">
         Projects
       </motion.h1>
-      <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4 md:px-8 px-4">
+      <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4 md:px-10 px-5">
         {projects.map((project) => {
           return (
             <motion.div

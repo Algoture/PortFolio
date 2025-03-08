@@ -7,7 +7,7 @@ import { DriveIcon } from "./Icons";
 
 const Intro = () => {
   return (
-    <main className="flex flex-col mt-[10vh] md:mx-4 sm:mx-2 p-4 gap-2 justify-center w-full">
+    <main className="flex flex-col mt-[80px] px-10 gap-2 justify-center w-full">
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -26,7 +26,7 @@ const Intro = () => {
             transition={transition}
             variants={variants}
             href={resumeLink}
-            className="cen gap-1 bg-accent shadow-sh  text-neutral-900 md:p-1.5 p-1 rounded-lg  md:mr-8"
+            className="cen gap-1 bg-accent shadow-sh  text-neutral-900 md:p-1.5 p-1 rounded-lg "
             target="_blank">
             <DriveIcon className="size-5 fill-nav-icon" />
             Resume
