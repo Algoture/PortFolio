@@ -91,19 +91,19 @@ export const projects = [
 export const skills = [
   {
     id: 1,
-    skill: "TypeScript",
+    skill: "JavaScript",
   },
   {
     id: 2,
-    skill: "React JS",
+    skill: "React.js",
   },
   {
     id: 3,
-    skill: "Next JS",
+    skill: "Next.js",
   },
   {
     id: 4,
-    skill: "Express JS",
+    skill: "Express.js",
   },
   {
     id: 5,
@@ -115,19 +115,18 @@ export const skills = [
   },
   {
     id: 7,
-    skill: "TailwindCSS",
+    skill: "Tailwind",
   },
   {
     id: 8,
-    skill: "Node JS",
+    skill: "Node.js",
   },
   {
     id: 9,
     skill: "Framer Motion",
-  },
-  {
+  }, {
     id: 10,
-    skill: "ShadCN UI",
+    skill: "TypeScript",
   },
 ];
 
@@ -137,3 +136,5 @@ export const variants = {
   hidden: { filter: "blur(10px)", transform: "translateY(20%)", opacity: 0 },
   visible: { filter: "blur(0px)", transform: "translateY(0%)", opacity: 1 },
 };
+
+export const resumeLink = "https://drive.google.com/file/d/16YrNTsP6I9CM7sqypJYakazBN7hAi3i6/view?usp=sharing"

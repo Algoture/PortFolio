@@ -29,7 +29,7 @@
   --bg: #f8f8ff;
   --accent: #00ff00;
   --navIcon: #000000dc;
-  --techstack: #3b3b3b;
+  --techstack: #2d2d2d;
   --strokeWidth: #323232da;
   --card: hsl(0 0% 100%);
   --darkcard: black;
@@ -90,7 +90,7 @@ body {
   text-wrap: wrap;
 }
 .intro {
-  line-height: 1.4rem;
+  line-height: 1.2rem;
 }
 .cen {
   display: flex;
