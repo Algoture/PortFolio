@@ -7,7 +7,7 @@ import { DriveIcon } from "./Icons";
 
 const Intro = () => {
   return (
-    <main className="flex flex-col mt-[80px] px-10 gap-2 justify-center w-full">
+    <main className="flex flex-col mt-[80px] md:px-10 px-5 gap-2 justify-center w-full">
       <motion.div
         initial="hidden"
         whileInView="visible"
