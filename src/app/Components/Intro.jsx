@@ -28,7 +28,7 @@ const Intro = () => {
             href={resumeLink}
             className="cen gap-1 bg-accent shadow-sh  text-neutral-900 md:p-1.5 p-1 rounded-lg  md:mr-8"
             target="_blank">
-            <DriveIcon className="size-6 fill-nav-icon" />
+            <DriveIcon className="size-5 fill-nav-icon" />
             Resume
           </motion.a>
         </div>

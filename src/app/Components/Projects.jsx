@@ -27,13 +27,13 @@ const Projects = () => {
               transition={{ staggerChildren: 0.04 }}
               variants={variants}
               key={project.id}
-              className="dark:bg-darkcard bg-card z-0  border-lightborder dark:border-stroke border flex flex-col  rounded-lg">
+              className="dark:bg-zinc-900 bg-card z-0  border-lightborder dark:border-stroke border flex flex-col  rounded-lg">
               <Image
                 src={project.image}
                 alt={`${project.title} project image`}
                 width={300}
                 height={200}
-                className="size-full aspect-video rounded-lg object-fill"
+                className="size-full aspect-video rounded-t-lg object-fill"
               />
               <div className="flex flex-col gap-2 px-2 pb-2">
                 <div>
@@ -49,7 +49,7 @@ const Projects = () => {
                     {project.techStack.map((tech, index) => (
                       <li
                         key={index}
-                        className="px-1.5 py-0.5 text-xs bg-neutral-300 dark:bg-neutral-200  text-neutral-800 rounded-md">
+                        className="px-1.5 py-0.5 text-xs bg-gray-200 dark:bg-gray-100  text-neutral-800 rounded-md">
                         {tech}
                       </li>
                     ))}
