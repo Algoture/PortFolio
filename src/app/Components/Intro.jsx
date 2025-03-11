@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { resumeLink, transition, variants } from "../Utils/Data";
-import Link from "next/link";
 import { DriveIcon } from "./Icons";
 
 const Intro = () => {
@@ -15,13 +14,13 @@ const Intro = () => {
         transition={{ staggerChildren: 0.04 }}
         className="flex  flex-col">
         <div className="flex justify-between items-center">
-          <motion.p
+          <motion.h1
             transition={transition}
             variants={variants}
             className="dark:text-white  text-black md:text-4xl text-3xl tracking-tight font-bold">
             Umesh Nagare
             <br />
-          </motion.p>
+          </motion.h1>
           <motion.a
             transition={transition}
             variants={variants}
