@@ -15,7 +15,7 @@ export const projects = [
       "An OTT platform to binge watch latest movies trailers and teasers.",
     image: "/Cinemaven.png",
     githubLink: "https://github.com/Algoture/Cinemaven",
-    liveLink: "https://cinemavenclient.onrender.com/",
+    liveLink: "",
     techStack: ["MERN", "REST API", "Firebase", "SCSS"],
   },
   {
