@@ -17,7 +17,7 @@ const Writing = () => {
       </motion.h1>
       <div className="md:px-10 px-5 my-1 ">
         <motion.div
-          className="dark:bg-zinc-800 bg-zinc-300 dark:text-white z-0 border-lightborder border p-2 rounded-lg flex justify-between"
+          className="dark:bg-zinc-800 md:flex-row flex-col bg-gray-100 text-gray-900 dark:text-white z-0  dark:border-zinc-700 rounded-md mb-4 p-4 border border-gray-200 flex justify-between"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}

@@ -8,14 +8,14 @@ import Image from "next/image";
 const Projects = () => {
   
   return (
-    <>
+    <section className="my-4">
       <motion.h1
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
         transition={transition}
         variants={variants}
-        className="dark:text-white text-black md:pl-10 pl-5 text-3xl font-semibold my-1">
+        className="dark:text-white text-black md:pl-10 pl-5 text-3xl font-semibold ">
         Projects
       </motion.h1>
       <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4 md:px-10 px-5">
@@ -84,7 +84,7 @@ const Projects = () => {
           );
         })}
       </div>
-    </>
+    </section>
   );
 };
 
