@@ -9,6 +9,7 @@ export const metadata = {
     "Explore Umesh Nagare’s portfolio, featuring cutting-edge full-stack web development projects built with modern technologies",
   keywords: [
     "Umesh Nagare",
+    "Algoture",
     "Full Stack Developer",
     "Web Developer Portfolio",
     "Next.js Developer",
@@ -25,7 +26,7 @@ export const metadata = {
       "Showcasing cutting-edge full-stack web development projects using modern web technologies.",
     url: "https://umeshnagare.com",
     type: "website",
-    image: "https://umeshnagare.com/og-image.jpg",
+    image: "https://umeshnagare.com/",
   },
   twitter: {
     card: "summary_large_image",
