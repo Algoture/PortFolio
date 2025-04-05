@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { transition, variants } from "../Utils/Data";
+import { transition, variants, writings } from "../Utils/Data";
 import Link from "next/link";
 
 const Writing = () => {
@@ -16,20 +16,23 @@ const Writing = () => {
         Writings
       </motion.h1>
       <div className="md:px-10 px-5 my-1 ">
-        <motion.div
-          className="dark:bg-zinc-800 md:flex-row flex-col bg-gray-100 text-gray-900 dark:text-white z-0  dark:border-zinc-700 rounded-md mb-4 p-4 border border-gray-200 flex justify-between"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          transition={transition}
-          variants={variants}>
-          <Link
-            target="_blank"
-            href="https://umeshthreads.hashnode.dev/threads-and-processes-in-cpu">
-            Threads and Processes in CPU
-          </Link>
-          <p>Mar 8,2025</p>
-        </motion.div>
+        {writings.map((blogs) => {
+          return (
+            <motion.div
+              className="md:flex-row border-lightborder dark:border-stroke border flex-col hover:dark:bg-hover dark:bg-neutral-800 bg-neutral-100 text-gray-900 dark:text-white z-0  rounded-md mb-4 p-4  flex justify-between"
+              initial="hidden"
+              key={blogs.title}
+              whileInView="visible"
+              viewport={{ once: true }}
+              transition={transition}
+              variants={variants}>
+              <Link target="_blank" href={blogs.link}>
+                {blogs.title}
+              </Link>
+              <p>{blogs.date}</p>
+            </motion.div>
+          );
+        })}
       </div>
     </>
   );

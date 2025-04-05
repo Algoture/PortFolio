@@ -1,5 +1,13 @@
 export const projects = [
   {
+    id: 0,
+    title: "Vectix AI",
+    description: "AI-powered platform offering Resume Builder, Mock Tests, and Live Voice Interview features.",
+    image: "/Vectix.png",
+    githubLink: "https://github.com/Algoture/Vectix-AI",
+    liveLink: "https://krishinet.onrender.com/",
+    techStack: ["Next.js", "Tailwind CSS", "MongoDB", "Clerk Auth"],
+  }, {
     id: 1,
     title: "KrishiNET",
     description: "A platform to connect Farmers with Buyers and Investors. Contract based farming system.",
@@ -47,18 +55,13 @@ export const projects = [
     liveLink: "",
     techStack: ["Next.js", "json-server", "REST API"],
   },
-  {
-    id: 6,
-    title: "Beat Blend",
-    description: "A sleek, intuitive music player for the modern listener.",
-    image: "/Beat Blend.png",
-    githubLink: "https://github.com/Algoture/Beat-Blend",
-    liveLink: "https://algoture.github.io/Beat-Blend/",
-    techStack: ["HTML5", "CSS3", "JavaScript"],
-  },
 ];
-const unProjects = [
-
+export const writings = [
+  {
+    link: "https://umeshthreads.hashnode.dev/threads-and-processes-in-cpu",
+    title: "Threads and Processes in CPU",
+    date: "Mar 8,2025"
+  }
 ]
 export const skills = [
   {

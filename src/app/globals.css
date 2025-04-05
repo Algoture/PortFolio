@@ -5,7 +5,10 @@
 @theme {
   --color-accent: var(--accent);
   --color-card: var(--card);
-  --color-techstack : var(--techstack);
+  --color-muted: var(--muted);
+  --color-darkMuted: var(--darkMuted);
+  --color-hover:var(--hover);
+  --color-techstack: var(--techstack);
   --color-darkcard: var(--darkcard);
   --color-nav-icon: var(--navIcon);
   --color-stroke: var(--strokeWidth);
@@ -26,13 +29,25 @@
 }
 
 :root {
-  --bg: #f8f8ff;
+  --bg: #ffffff;
+  --muted: #666666;
   --accent: #00ff00;
   --navIcon: #000000dc;
   --techstack: #2d2d2d;
   --strokeWidth: #323232da;
   --card: hsl(0 0% 100%);
   --darkcard: black;
+  --hover: #1a1a1a;
+  --darkMuted:#A1A1A1;
+  --ds-gray-200: hsla(0, 0%, 12%);
+  --ds-gray-300: hsla(0, 0%, 16%);
+  --ds-gray-400: hsla(0, 0%, 18%);
+  --ds-gray-500: hsla(0, 0%, 27%);
+  --ds-gray-600: hsla(0, 0%, 53%);
+  --ds-gray-700: hsla(0, 0%, 56%);
+  --ds-gray-800: hsla(0, 0%, 49%);
+  --ds-gray-900: hsla(0, 0%, 63%);
+  --ds-gray-1000: hsla(0, 0%, 93%);
   --border: rgba(59, 59, 59, 0.18);
 }
 

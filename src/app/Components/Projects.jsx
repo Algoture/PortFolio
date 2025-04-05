@@ -27,7 +27,7 @@ const Projects = () => {
               transition={{ staggerChildren: 0.04 }}
               variants={variants}
               key={project.id}
-              className="dark:bg-zinc-900 bg-card z-0  border-lightborder dark:border-stroke border flex flex-col  rounded-lg">
+              className="dark:bg-zinc-900 bg-card z-0 border-lightborder dark:border-stroke border flex flex-col  rounded-lg">
               <Image
                 src={project.image}
                 alt={`${project.title} project image`}
@@ -40,7 +40,7 @@ const Projects = () => {
                   <p className="dark:text-white text-gray-800 text-xl tracking-tight font-semibold">
                     {project.title}
                   </p>
-                  <p className="text-neutral-600 dark:text-[#999999] text-sm leading-4">
+                  <p className="text-muted dark:text-[#A1A1A1] text-sm leading-4">
                     {project.description}
                   </p>
                 </div>
