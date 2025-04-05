@@ -5,7 +5,7 @@ export const projects = [
     description: "AI-powered platform offering Resume Builder, Mock Tests, and Live Voice Interview features.",
     image: "/Vectix.png",
     githubLink: "https://github.com/Algoture/Vectix-AI",
-    liveLink: "https://krishinet.onrender.com/",
+    liveLink: "",
     techStack: ["Next.js", "Tailwind CSS", "MongoDB", "Clerk Auth"],
   }, {
     id: 1,
