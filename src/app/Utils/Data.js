@@ -5,7 +5,7 @@ export const projects = [
     description: "AI-powered platform offering Resume Builder, Mock Tests, and Live Voice Interview features.",
     image: "/Vectix.png",
     githubLink: "https://github.com/Algoture/Vectix-AI",
-    liveLink: "https://krishinet.onrender.com/",
+    liveLink: "",
     techStack: ["Next.js", "Tailwind CSS", "MongoDB", "Clerk Auth"],
   }, {
     id: 1,
@@ -112,4 +112,4 @@ export const variants = {
   visible: { filter: "blur(0px)", transform: "translateY(0%)", opacity: 1 },
 };
 
-export const resumeLink = "https://drive.google.com/file/d/16YrNTsP6I9CM7sqypJYakazBN7hAi3i6/view?usp=sharing"
+export const resumeLink = "https://drive.google.com/file/d/1lbGEvlIsoA1kCgTFa7dTj9GLRD9I1q8L/view?usp=sharing"
