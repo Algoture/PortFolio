@@ -1,17 +1,20 @@
 "use client";
 import { motion } from "framer-motion";
-
+const totalPathLength = 120;
 const pathVariants = {
-  initial: { strokeDashoffset: 120, strokeDasharray: "40" },
+  initial: {
+    strokeDashoffset:totalPathLength,
+    strokeDasharray: `${totalPathLength} ${totalPathLength}`,
+  },
   animate: {
     strokeDashoffset: 0,
-    strokeDasharray: "80",
+    strokeDasharray: `${totalPathLength} ${totalPathLength}`,
     opacity: [0, 1, 1, 0],
   },
 };
 
 export const Box = ({ svgOptions }) => {
-  const paths = ["M1 40V1H40V40H1Z"];
+  const paths = ["M0 0H40L40 40H80"];
 
   return (
     <motion.svg
@@ -19,19 +22,19 @@ export const Box = ({ svgOptions }) => {
       xmlns="http://www.w3.org/2000/svg"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 2 }}
-      className="absolute top-0 left-0">
+      transition={{ duration: 1 }}
+      className="absolute top-[40px] left-0">
       {paths.map((path, idx) => (
         <motion.path
           d={path}
           stroke={"#00ff00"}
-          strokeWidth="2"
+          strokeWidth="1.4"
           strokeLinecap="round"
           variants={pathVariants}
           initial="initial"
           animate="animate"
           transition={{
-            duration: svgOptions?.duration || 5,
+            duration: svgOptions?.duration || 3,
             ease: "linear",
             repeat: Infinity,
             repeatType: "loop",
