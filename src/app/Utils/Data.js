@@ -61,6 +61,11 @@ export const writings = [
     link: "https://umeshthreads.hashnode.dev/threads-and-processes-in-cpu",
     title: "Threads and Processes in CPU",
     date: "Mar 8,2025"
+  },
+  {
+    link: "https://umeshrenders.hashnode.dev/understanding-csr-and-ssr-a-simple-guide",
+    title: "Understanding CSR and SSR",
+    date: "Apr 20,2025"
   }
 ]
 export const skills = [

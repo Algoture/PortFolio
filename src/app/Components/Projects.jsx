@@ -45,11 +45,11 @@ const Projects = () => {
                   </p>
                 </div>
                 <div>
-                  <ul className="flex flex-wrap gap-3">
+                  <ul className="flex flex-wrap gap-2">
                     {project.techStack.map((tech, index) => (
                       <li
                         key={index}
-                        className="px-1.5 py-0.5 text-xs bg-gray-200 dark:bg-gray-100  text-neutral-800 rounded-md">
+                        className="px-1.5 py-0.5 border-lightborder dark:border-stroke border text-xs bg-gray-100 dark:bg-darkBg dark:text-neutral-200  text-neutral-800 rounded-md">
                         {tech}
                       </li>
                     ))}
@@ -59,7 +59,7 @@ const Projects = () => {
                   <Link
                     href={project.githubLink}
                     target="_blank"
-                    className="flex items-center cursor-pointer gap-1 md:text-xs text-sm font-semibold px-2 py-1 rounded-md bg-accent z-20 text-slate-800">
+                    className="flex items-center cursor-pointer gap-1 md:text-xs text-sm font-semibold px-2 py-1 rounded-md bg-accent z-20 shadow-sh2 text-slate-800">
                     <GitHubIcon
                       className="fill-slate-800 md:size-4 size-5"
                       width={17}
@@ -70,7 +70,7 @@ const Projects = () => {
                   <Link
                     href={project.liveLink}
                     target="_blank"
-                    className="flex items-center cursor-pointer gap-1 md:text-xs text-sm font-semibold px-2 py-1 rounded-md bg-accent z-20 text-slate-800">
+                    className="flex items-center cursor-pointer gap-1 md:text-xs text-sm font-semibold px-2 py-1 rounded-md bg-accent z-20 shadow-sh2 text-slate-800">
                     <GlobeIcon
                       width={17}
                       height={17}

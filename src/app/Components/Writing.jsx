@@ -19,7 +19,7 @@ const Writing = () => {
         {writings.map((blogs) => {
           return (
             <motion.div
-              className="md:flex-row border-lightborder dark:border-stroke border flex-col hover:dark:bg-hover dark:bg-neutral-800 bg-neutral-100 text-gray-900 dark:text-white z-0  rounded-md mb-4 p-4  flex justify-between"
+              className="md:flex-row border-transparent dark:border-stroke border flex-col hover:bg-neutral-200 dark:bg-neutral-800 bg-neutral-100 text-gray-900 dark:text-white/95 z-0 shadow-sh2  rounded-md mb-4 p-4  flex justify-between"
               initial="hidden"
               key={blogs.title}
               whileInView="visible"

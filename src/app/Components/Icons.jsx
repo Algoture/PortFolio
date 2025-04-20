@@ -1,3 +1,4 @@
+// Socials
 export const GitHubIcon = ({ ...props }) => {
   return (
     <svg {...props} fill="white" viewBox="0 0 640 640">
@@ -39,6 +40,7 @@ export const DiscordIcon = ({ ...props }) => {
     </svg>
   );
 };
+// Helper Icons
 export const GlobeIcon = ({ ...props }) => {
   return (
     <svg
