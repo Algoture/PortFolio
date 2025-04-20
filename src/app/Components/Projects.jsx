@@ -6,7 +6,6 @@ import Link from "next/link";
 import Image from "next/image";
 
 const Projects = () => {
-  
   return (
     <section className="my-4">
       <motion.h1
@@ -27,7 +26,8 @@ const Projects = () => {
               transition={{ staggerChildren: 0.04 }}
               variants={variants}
               key={project.id}
-              className="dark:bg-zinc-900 bg-card z-0 border-lightborder dark:border-stroke border flex flex-col  rounded-lg">
+              className="dark:bg-zinc-950 bg-card z-0 border-lightborder dark:border-stroke border flex flex-col  rounded-lg">
+              <span className="absolute w-[40%] -bottom-px  left-0  h-px bg-gradient-to-r from-gray-500/0 via-accent to-gray-500/0 dark:from-gray-400/0 dark:via-accent/50 dark:to-gray-400/0"></span>
               <Image
                 src={project.image}
                 alt={`${project.title} project image`}
@@ -59,7 +59,7 @@ const Projects = () => {
                   <Link
                     href={project.githubLink}
                     target="_blank"
-                    className="flex items-center cursor-pointer gap-1 md:text-xs text-sm font-semibold px-2 py-1 rounded-md bg-accent z-20 shadow-sh2 text-slate-800">
+                    className="flex items-center cursor-pointer gap-1 md:text-xs text-sm font-semibold px-2 py-1 rounded-md bg-accent z-20 shadow-sh2 dark:text-slate-900 text-slate-800">
                     <GitHubIcon
                       className="fill-slate-800 md:size-4 size-5"
                       width={17}
@@ -70,7 +70,7 @@ const Projects = () => {
                   <Link
                     href={project.liveLink}
                     target="_blank"
-                    className="flex items-center cursor-pointer gap-1 md:text-xs text-sm font-semibold px-2 py-1 rounded-md bg-accent z-20 shadow-sh2 text-slate-800">
+                    className="flex items-center cursor-pointer gap-1 md:text-xs text-sm font-semibold px-2 py-1 rounded-md bg-accent z-20 shadow-sh2 dark:text-slate-950 text-slate-800">
                     <GlobeIcon
                       width={17}
                       height={17}
