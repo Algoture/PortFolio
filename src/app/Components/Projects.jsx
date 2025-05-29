@@ -23,7 +23,7 @@ const Projects = () => {
             <motion.div
               initial="hidden"
               whileInView="visible"
-              transition={{ staggerChildren: 0.04 }}
+              transition={{ staggerChildren: 0.4 }}
               variants={variants}
               key={project.id}
               className="dark:bg-zinc-950 bg-card z-0 border-lightborder dark:border-stroke border flex flex-col  rounded-lg">
