@@ -35,11 +35,11 @@ const Intro = () => {
           transition={transition}
           variants={variants}
           className=" dark:text-zinc-400 text-zinc-700 text-xl mt-2 intro">
-          A Developer based in India.
+          - Full Stack Engineer based in India.
           <br />
-          <span className="text-zinc-700 dark:text-zinc-400 text-lg intro ">
-            I design <span className="text-accent">+</span> develop clean,
-            minimal digital experiences.
+          <span className="text-zinc-700 dark:text-zinc-400 text-lg ">
+            I can Design <span className="text-accent">+</span> Develop{" "}
+            <span className="text-accent">+</span> Deploy Softwares solutions
           </span>
         </motion.p>
       </motion.div>

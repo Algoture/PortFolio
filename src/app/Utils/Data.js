@@ -117,4 +117,4 @@ export const variants = {
   visible: { filter: "blur(0px)", transform: "translateY(0%)", opacity: 1 },
 };
 
-export const resumeLink = "https://drive.google.com/file/d/1lbGEvlIsoA1kCgTFa7dTj9GLRD9I1q8L/view?usp=sharing"
+export const resumeLink = "https://drive.google.com/file/d/1teZsF4B_eM1bf56PqWAjARIdWoG2-seW/view?usp=sharing"
