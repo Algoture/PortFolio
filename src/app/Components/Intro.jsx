@@ -21,15 +21,6 @@ const Intro = () => {
             Umesh Nagare
             <br />
           </motion.h1>
-          <motion.a
-            transition={transition}
-            variants={variants}
-            href={resumeLink}
-            className="cen gap-1 bg-accent shadow-sh  text-neutral-900 md:p-1.5 p-1 rounded-lg "
-            target="_blank">
-            <DriveIcon className="size-5 fill-nav-icon" />
-            Resume
-          </motion.a>
         </div>
         <motion.p
           transition={transition}
