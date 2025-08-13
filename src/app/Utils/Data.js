@@ -6,7 +6,6 @@ export const projects = [
     image: "/Vectix.png",
     githubLink: "https://github.com/Algoture/Vectix-AI",
     liveLink: "https://vectix-ai.umeshnagare.com",
-    techStack: ["Next.js", "Tailwind CSS", "MongoDB", "Clerk Auth"],
   }, {
     id: 1,
     title: "KrishiNET",
@@ -14,7 +13,6 @@ export const projects = [
     image: "/KrishiNET.png",
     githubLink: "https://github.com/Algoture/KrishiNET",
     liveLink: "https://krishinet.onrender.com/",
-    techStack: ["React.js", "Tailwind CSS", "Appwrite"],
   },
   {
     id: 2,
@@ -24,7 +22,6 @@ export const projects = [
     image: "/Cinemaven.png",
     githubLink: "https://github.com/Algoture/Cinemaven",
     liveLink: "",
-    techStack: ["MERN", "REST API", "Firebase", "SCSS"],
   },
   {
     id: 3,
@@ -33,7 +30,6 @@ export const projects = [
     image: "/SE.png",
     githubLink: "https://github.com/SheshNalwar/Shubham-Enterprises",
     liveLink: "https://shubhamenterprises.onrender.com/",
-    techStack: ["React.js", "CSS"],
   },
   {
     id: 4,
@@ -43,7 +39,6 @@ export const projects = [
     image: "/ASG.png",
     githubLink: "https://github.com/SheshNalwar/ASG-Academy",
     liveLink: "https://asg-academy.onrender.com/",
-    techStack: ["React.js", "CSS", "Sanity Studio"],
   },
   {
     id: 5,
@@ -53,7 +48,6 @@ export const projects = [
     image: "/RoleMaster.png",
     githubLink: "https://github.com/Algoture/RoleMaster",
     liveLink: "",
-    techStack: ["Next.js", "json-server", "REST API"],
   },
 ];
 export const writings = [
@@ -116,5 +110,3 @@ export const variants = {
   hidden: { filter: "blur(10px)", transform: "translateY(20%)", opacity: 0 },
   visible: { filter: "blur(0px)", transform: "translateY(0%)", opacity: 1 },
 };
-
-export const resumeLink = "https://drive.google.com/file/d/1teZsF4B_eM1bf56PqWAjARIdWoG2-seW/view?usp=sharing"

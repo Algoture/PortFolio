@@ -1,8 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { resumeLink, transition, variants } from "../Utils/Data";
-import { DriveIcon } from "./Icons";
+import { transition, variants } from "../Utils/Data";
 
 const Intro = () => {
   return (
