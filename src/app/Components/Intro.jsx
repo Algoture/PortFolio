@@ -26,7 +26,8 @@ const Intro = () => {
           transition={transition}
           variants={variants}
           className=" text-muted/70 text-xl mt-2 intro">
-          Full Stack Engineer based in India.
+          Full Stack <span className="text-white">Engineer</span> based in
+          India.
           <br />
           <span className="text-muted/70 text-lg ">
             I love <span className="text-white">Designing </span>
