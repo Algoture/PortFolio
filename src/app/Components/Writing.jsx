@@ -12,14 +12,14 @@ const Writing = () => {
         viewport={{ once: true }}
         transition={transition}
         variants={variants}
-        className="dark:text-white mt-4 text-black md:pl-10 pl-5 text-2xl  font-bold my-1">
+        className="text-white mt-4 md:pl-10 pl-5 text-2xl  font-bold my-1">
         Writings
       </motion.h1>
       <div className="md:px-10 px-5 my-1 ">
         {writings.map((blogs) => {
           return (
             <motion.div
-              className="md:flex-row border-transparent dark:border-stroke border flex-col hover:bg-neutral-200 dark:hover:bg-neutral-700 dark:bg-zinc-900 bg-zinc-100 text-gray-900 dark:text-white/95 z-0 shadow-sh2  rounded-md mb-4 p-4  flex justify-between"
+              className="md:flex-row text-white/80 border-transparent  dark:border-stroke border flex-col hover:bg-neutral-700  bg-zinc-900 z-0 shadow-sh2  rounded-md mb-4 p-4  flex justify-between"
               initial="hidden"
               key={blogs.title}
               whileInView="visible"
@@ -29,7 +29,7 @@ const Writing = () => {
               <Link target="_blank" href={blogs.link}>
                 {blogs.title}
               </Link>
-              <p>{blogs.date}</p>
+              <p className="text-muted">{blogs.date}</p>
             </motion.div>
           );
         })}

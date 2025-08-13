@@ -31,7 +31,7 @@
 }
 
 :root {
-  --bg: #ffffff;
+  --bg: #0b1215;
   --muted: #666666;
   --accent: #00ff00;
   --shad: #00000014;
@@ -55,15 +55,6 @@
   --border: rgba(59, 59, 59, 0.18);
 }
 
-body.dark {
-  --bg: #0b1215;
-}
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: var(--bg);
-    --foreground: #ededed;
-  }
-}
 * {
   box-sizing: border-box;
   text-decoration: none;

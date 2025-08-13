@@ -17,7 +17,7 @@ const Intro = () => {
           <motion.h1
             transition={transition}
             variants={variants}
-            className="dark:text-white  text-black md:text-4xl text-3xl tracking-tight font-bold">
+            className="text-white  md:text-4xl text-3xl tracking-tight font-bold">
             Umesh Nagare
             <br />
           </motion.h1>
@@ -25,12 +25,13 @@ const Intro = () => {
         <motion.p
           transition={transition}
           variants={variants}
-          className=" dark:text-zinc-400 text-zinc-700 text-xl mt-2 intro">
-          - Full Stack Engineer based in India.
+          className=" text-muted/70 text-xl mt-2 intro">
+          Full Stack Engineer based in India.
           <br />
-          <span className="text-zinc-700 dark:text-zinc-400 text-lg ">
-            I can Design <span className="text-accent">+</span> Develop{" "}
-            <span className="text-accent">+</span> Deploy Softwares solutions
+          <span className="text-muted/70 text-lg ">
+            I love <span className="text-white">Designing </span>
+            <span className="text-accent">+</span>
+            <span className="text-white"> Developing</span> Softwares
           </span>
         </motion.p>
       </motion.div>
