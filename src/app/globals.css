@@ -31,28 +31,9 @@
 }
 
 :root {
-  --bg: #0b1215;
-  --muted: #666666;
-  --accent: #00ff00;
-  --shad: #00000014;
-  --navIcon: #000000dc;
-  --techstack: #2d2d2d;
-  --darkbg: #0a0a0a;
-  --strokeWidth: #ffffff24;
-  --card: hsl(0 0% 100%);
-  --darkcard: black;
-  --hover: #1a1a1a;
-  --darkMuted: #a1a1a1;
-  --ds-gray-200: hsla(0, 0%, 12%);
-  --ds-gray-300: hsla(0, 0%, 16%);
-  --ds-gray-400: hsla(0, 0%, 18%);
-  --ds-gray-500: hsla(0, 0%, 27%);
-  --ds-gray-600: hsla(0, 0%, 53%);
-  --ds-gray-700: hsla(0, 0%, 56%);
-  --ds-gray-800: hsla(0, 0%, 49%);
-  --ds-gray-900: hsla(0, 0%, 63%);
-  --ds-gray-1000: hsla(0, 0%, 93%);
-  --border: rgba(59, 59, 59, 0.18);
+  --bg: oklch(0.1572 0.0039 229.1);
+  --muted: oklch(0.5555 0 0);
+  --accent: oklch(0.8664 0.294827 142.4953);
 }
 
 * {
@@ -65,8 +46,8 @@
 body {
   display: flex;
   overflow-x: hidden;
-  background-image: linear-gradient(to right, #80808012 1px, transparent 1px),
-    linear-gradient(to bottom, #80808012 1px, transparent 1px);
+  background-image: linear-gradient(to right, #4a4a4a12 1px, transparent 1px),
+    linear-gradient(to bottom, #49494912 1px, transparent 1px);
   background-size: 40px 40px;
   background-color: var(--bg);
   flex-direction: column;
@@ -95,10 +76,7 @@ body {
     transparent 100%
   );
 }
-.dotH1 {
-  color: white;
-  text-wrap: wrap;
-}
+
 .intro {
   line-height: 1.2rem;
 }

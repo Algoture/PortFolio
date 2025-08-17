@@ -26,7 +26,7 @@ const Projects = () => {
               transition={{ staggerChildren: 0.4 }}
               variants={variants}
               key={project.id}
-              className="bg-zinc-950 relative z-0 group hover:border-zinc-500 border-zinc-700 border-dashed border flex flex-col">
+              className="bg-neutral-900  relative z-0 group hover:border-zinc-500 border-zinc-700 border-dashed border flex flex-col">
               <div className="size-1 group-hover:size-2.5 transform-gpu transition-all ease-out delay-100 duration-300 absolute group-hover:border-accent border-muted/20 -top-px -left-px border-t-[1.5px] border-l-[1.5px]"></div>
               <div className="size-1 group-hover:size-2.5 transform-gpu transition-all ease-out delay-100 duration-300 absolute group-hover:border-accent border-muted/20 -top-px -right-px border-t-[1.5px] border-r-[1.5px]"></div>
               <div className="size-1 group-hover:size-2.5 transform-gpu transition-all ease-out delay-100 duration-300 absolute group-hover:border-accent border-muted/20 -bottom-px -left-px border-b-[1.5px] border-l-[1.5px]"></div>
@@ -54,9 +54,9 @@ const Projects = () => {
                   <Link
                     href={project.githubLink}
                     target="_blank"
-                    className="flex items-center cursor-pointer gap-1 md:text-xs text-sm font-semibold px-2 py-1 rounded-md bg-[#3d3d3d] z-20 text-gray-100 ">
+                    className="flex items-center cursor-pointer gap-1 md:text-xs text-sm font-semibold px-2 py-1 rounded-md bg-[#3d3d3d] z-20 text-gray-300">
                     <GitHubIcon
-                      className="fill-gray-200 md:size-4 size-5"
+                      className="fill-gray-300 md:size-4 size-5"
                       width={17}
                       height={17}
                     />

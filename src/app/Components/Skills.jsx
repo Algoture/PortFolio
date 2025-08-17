@@ -11,8 +11,8 @@ const Skills = () => {
         viewport={{ once: true }}
         variants={variants}
         transition={transition}
-        className=" text-white text-2xl  font-bold text-left">
-        Tech Stack
+        className=" text-white/80 text-2xl  font-bold text-left">
+        Skills
       </motion.h1>
       <div className="flex flex-wrap gap-2 items-center ">
         {skills.map((item) => {
@@ -23,7 +23,7 @@ const Skills = () => {
               variants={variants}
               viewport={{ once: true }}
               transition={transition}
-              className="px-2 py-1 text-sm text-neutral-100 bg-techstack cen rounded-md  focus:outline-hidden"
+              className="px-2 py-1 text-sm border border-gray-800 text-neutral-300 bg-neutral-900 cen rounded-md  focus:outline-hidden"
               key={item.id}>
               {item.skill}
             </motion.button>
