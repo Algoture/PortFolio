@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://umeshnagare.vercel.app
+Host: https://umeshnagare.com
 
 # Sitemaps
-Sitemap: https://umeshnagare.vercel.app/sitemap.xml
+Sitemap: https://umeshnagare.com/sitemap.xml
