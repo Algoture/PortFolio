@@ -1,13 +1,22 @@
 export const projects = [
   {
     id: 0,
+    title: "Reelvo",
+    description: "Instagram automation, scheduling and analytics tool",
+    image: "/Reelvo.png",
+    githubLink: "https://github.com/Algoture",
+    liveLink: "https://www.reelvo.in",
+  },
+  {
+    id: 1,
     title: "Vectix AI",
     description: "AI-powered platform offering Resume Builder, Mock Tests, and Live Voice Interview features.",
     image: "/Vectix.png",
     githubLink: "https://github.com/Algoture/Vectix-AI",
     liveLink: "https://vectix-ai.umeshnagare.com",
-  }, {
-    id: 1,
+  },
+  {
+    id: 2,
     title: "KrishiNET",
     description: "A platform to connect Farmers with Buyers and Investors. Contract based farming system.",
     image: "/KrishiNET.png",
@@ -15,7 +24,7 @@ export const projects = [
     liveLink: "https://krishinet.onrender.com/",
   },
   {
-    id: 2,
+    id: 3,
     title: "Cinemaven",
     description:
       "An OTT platform to binge watch latest movies trailers and teasers.",
@@ -24,7 +33,7 @@ export const projects = [
     liveLink: "",
   },
   {
-    id: 3,
+    id: 4,
     title: "Shubham Enterprises",
     description: "Simplifying loan services with a user-centered web platform.",
     image: "/SE.png",
@@ -32,22 +41,13 @@ export const projects = [
     liveLink: "https://shubhamenterprises.onrender.com/",
   },
   {
-    id: 4,
+    id: 5,
     title: "ASG Academy",
     description:
       "ASG Academy boosts kids' skills through interactive learning.",
     image: "/ASG.png",
     githubLink: "https://github.com/SheshNalwar/ASG-Academy",
     liveLink: "https://asg-academy.onrender.com/",
-  },
-  {
-    id: 5,
-    title: "Role Master",
-    description:
-      "A powerful admin panel for efficient role-based access control.",
-    image: "/RoleMaster.png",
-    githubLink: "https://github.com/Algoture/RoleMaster",
-    liveLink: "",
   },
 ];
 export const writings = [
@@ -77,7 +77,7 @@ export const skills = [
   },
   {
     id: 4,
-    skill: "Express.js",
+    skill: "FastAPI",
   },
   {
     id: 5,
@@ -98,7 +98,8 @@ export const skills = [
   {
     id: 9,
     skill: "Framer Motion",
-  }, {
+  },
+  {
     id: 10,
     skill: "TypeScript",
   },
