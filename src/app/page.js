@@ -69,9 +69,9 @@ const Hero = () => {
       </motion.div>
 
       <div className="mt-12 ml-24 pl-6 border-l border-accent/30 relative">
-        <div className="absolute -left-[3px] top-0 w-[5px] h-[5px] bg-accent" /> {/* Little square node */}
+        <div className="absolute -left-[3px] top-0 w-[5px] h-[5px] bg-accent" />
         <p className="text-xl text-neutral-400 font-mono">
-          // ARCHITECTING DIGITAL SOLUTIONS <br />
+          {"// ARCHITECTING DIGITAL SOLUTIONS"} <br />
           <span className="text-sm text-neutral-600">TARGET: WEB_APPLICATIONS</span>
         </p>
       </div>
@@ -228,7 +228,7 @@ export default function Home() {
             <span className="text-xs text-neutral-400 tracking-widest">SYSTEM_READY</span>
           </div>
           <div className="text-[10px] text-neutral-600 font-mono hidden sm:block">
-            V.2.5.0 // STABLE BUILD
+            {"V.2.5.0 // STABLE BUILD"}
           </div>
         </header>
 

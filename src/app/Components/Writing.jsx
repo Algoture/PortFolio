@@ -56,19 +56,19 @@ const LogEntry = ({ blog, index }) => {
         href={blog.link}
         target="_blank"
         className="group relative flex items-center justify-between py-4 px-2 border-b border-neutral-800 hover:bg-neutral-900/40 transition-all duration-300">
-        <div className="absolute inset-0 bg-[#01ff00]/5 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+        <div className="absolute inset-0 bg-accent/5 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
 
         <div className="absolute left-0 top-0 bottom-0 w-1 bg-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
         <div className="flex items-center gap-4 relative z-10">
-          <div className="flex items-center justify-center w-8 h-8 rounded bg-neutral-900 border border-neutral-800 text-neutral-500 group-hover:text-[#01ff00] group-hover:border-[#01ff00] transition-colors">
+          <div className="flex items-center justify-center w-8 h-8 rounded bg-neutral-900 border border-neutral-800 text-neutral-500 group-hover:text-accent group-hover:border-accent transition-colors">
             <FileIcon className="w-4 h-4" />
           </div>
 
           <div className="flex flex-col">
             <div className="flex items-center gap-2">
-              <span className="text-[9px] text-neutral-500 font-mono group-hover:text-[#01ff00]">
-                LOG_0{index + 1} //
+              <span className="text-[9px] text-neutral-500 font-mono group-hover:text-accent">
+                LOG_0{index + 1} {"//"}
               </span>
               <h3 className="text-sm md:text-base text-neutral-300 font-mono font-bold group-hover:text-white transition-colors">
                 {blog.title}
@@ -88,7 +88,7 @@ const LogEntry = ({ blog, index }) => {
             <span className="text-neutral-700">]</span>
           </div>
 
-          <div className="text-neutral-600 group-hover:text-[#01ff00] transform group-hover:translate-x-1 transition-all duration-300">
+          <div className="text-neutral-600 group-hover:text-accent transform group-hover:translate-x-1 transition-all duration-300">
             <ArrowIcon className="w-5 h-5" />
           </div>
         </div>
@@ -102,13 +102,13 @@ const Writing = () => {
     <section className="w-full max-w-7xl mx-auto relative bg-neutral-950 border-t border-neutral-800">
       <div className="flex items-center justify-between px-6 py-4 bg-neutral-900/50 border-b border-neutral-800">
         <div className="flex items-center gap-3">
-          <div className="w-2 h-2 bg-[#01ff00] rounded-full animate-pulse" />
+          <div className="w-2 h-2 bg-accent rounded-full animate-pulse" />
           <h2 className="text-sm font-bold text-white tracking-widest uppercase">
             Archive_Logs
           </h2>
         </div>
         <div className="text-[10px] text-neutral-500 font-mono">
-          DIR: /root/users/umesh/thoughts
+          {"DIR: /root/users/umesh/thoughts"}
         </div>
       </div>
 
