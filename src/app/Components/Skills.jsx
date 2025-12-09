@@ -1,5 +1,5 @@
 "use client";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { skills } from "../Utils/Data";
 
 const SkillChip = ({ skill, index }) => {
@@ -68,9 +68,6 @@ const Skills = () => {
             <h2 className="text-2xl font-bold text-white tracking-tight">
               SYSTEM_CAPABILITIES
             </h2>
-            <p className="text-[10px] text-neutral-500 font-mono mt-1">
-              {"// INSTALLED_PACKAGES_AND_DEPENDENCIES"}
-            </p>
           </div>
 
           <div className="text-right hidden md:block">
