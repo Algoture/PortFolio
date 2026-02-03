@@ -165,9 +165,6 @@ export default function Home() {
         <section className="p-6 md:p-12 bg-neutral-950/50">
           <Writing />
         </section>
-        <section className="p-6 md:p-12 bg-neutral-950/50">
-          <Skills />
-        </section>
         <footer className="h-8 border-t border-neutral-800 bg-neutral-900 flex items-center justify-between px-4 text-[9px] text-neutral-500 uppercase tracking-widest">
           <span>Memory: 128GB</span>
           <span>Render: 10ms</span>
