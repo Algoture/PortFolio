@@ -34,7 +34,7 @@ const Hero = () => {
         <div className="space-y-4">
           <div className="w-10 h-[1px] bg-accent" />
           <p className="text-lg md:text-xl text-neutral-500 font-medium leading-relaxed tracking-tight">
-            Full Stack <span className="text-black dark:text-white">Engineer</span> & Design <span className="text-black dark:text-white">Engineer</span>
+            Full Stack <span className="text-black dark:text-white">Engineer</span><span className="text-accent">.</span>
           </p>
         </div>
       </motion.div>
