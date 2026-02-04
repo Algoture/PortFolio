@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { projects, skills } from "@/app/Utils/Data";
+import { projects } from "@/app/Utils/Data";
 import "./terminal.css";
 
 const Terminal = () => {
@@ -29,7 +29,6 @@ const Terminal = () => {
           "Available commands:",
           "cd home",
           "cd projects",
-          "cd skills",
           "cd contact",
           "cls",
         ];
@@ -44,13 +43,6 @@ const Terminal = () => {
           newOutput.push(
             `- ${project.title}: ${project.description} (Live: ${project.liveLink})`
           );
-        });
-        break;
-      case "cd skills":
-        newOutput = [...newOutput, "Displaying Skills..."];
-        setCurrentDirectory("C:\\Umesh\\skills");
-        skills.forEach((skill) => {
-          newOutput.push(`- ${skill.skill}`);
         });
         break;
       case "cd ..":
