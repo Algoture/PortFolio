@@ -1,27 +1,30 @@
 export const projects = [
   {
+    id: 1,
+    title: "AstroYantra",
+    description: "Vedic astrology API platform with Swiss Ephemeris precision",
+    githubLink: "https://github.com/Algoture",
+    liveLink: "https://astroyantra.siyoltechnologies.com",
+    primaryColor: "#f54900",
+    techStack: ["Next.js", "FastAPI", "MySQL", "Redis"],
+  },
+  {
     id: 0,
     title: "Reelvo",
     description: "Instagram automation, scheduling and analytics tool",
-    image: "/Reelvo.png",
     githubLink: "https://github.com/Algoture",
     liveLink: "https://www.reelvo.in",
-  },
-  {
-    id: 1,
-    title: "Vectix AI",
-    description: "AI-powered platform offering Resume Builder, Mock Tests, and Live Voice Interview features.",
-    image: "/Vectix.png",
-    githubLink: "https://github.com/Algoture/Vectix-AI",
-    liveLink: "https://vectix-ai.umeshnagare.com",
+    primaryColor: "#3981f6",
+    techStack: ["Next.js", "Flask", "MySQL", "Tanstack Query"],
   },
   {
     id: 2,
     title: "KrishiNET",
-    description: "A platform to connect Farmers with Buyers and Investors. Contract based farming system.",
-    image: "/KrishiNET.png",
+    description: "A platform to connect Farmers with Buyers and Investors.",
     githubLink: "https://github.com/Algoture/KrishiNET",
     liveLink: "https://krishinet.onrender.com/",
+    primaryColor: "#70e000",
+    techStack: ["Vite.js", "Appwrite", "TailwindCSS"],
   }
 ];
 export const writings = [
@@ -36,51 +39,14 @@ export const writings = [
     date: "Apr 20,2025"
   }
 ]
-export const skills = [
-  {
-    id: 1,
-    skill: "JavaScript",
-  },
-  {
-    id: 2,
-    skill: "React.js",
-  },
-  {
-    id: 3,
-    skill: "Next.js",
-  },
-  {
-    id: 4,
-    skill: "FastAPI",
-  },
-  {
-    id: 5,
-    skill: "MongoDB",
-  },
-  {
-    id: 6,
-    skill: "MySQL",
-  },
-  {
-    id: 7,
-    skill: "Tailwind",
-  },
-  {
-    id: 8,
-    skill: "Node.js",
-  },
-  {
-    id: 9,
-    skill: "Framer Motion",
-  },
-  {
-    id: 10,
-    skill: "TypeScript",
-  },
+export const socialLinks = [
+  { name: "GitHub", href: "https://github.com/Algoture" },
+  { name: "LinkedIn", href: "https://www.linkedin.com/in/umesh27/" },
+  { name: "X", href: "https://x.com/umeshn22" },
+  { name: "Instagram", href: "https://www.instagram.com/2.0_27/" },
+  { name: "Discord", href: "https://discord.com/users/790565393659330591" },
 ];
-
 export const transition = { duration: 1, ease: [0.25, 0.1, 0.25, 1] };
-
 export const variants = {
   hidden: { filter: "blur(10px)", transform: "translateY(20%)", opacity: 0 },
   visible: { filter: "blur(0px)", transform: "translateY(0%)", opacity: 1 },

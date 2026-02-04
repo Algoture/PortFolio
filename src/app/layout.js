@@ -1,28 +1,26 @@
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next"
-import Nav from "./Components/Nav";
 import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
-  title: "Umesh Nagare | Full Stack Developer & Web Portfolio",
+  title: "Umesh Nagare | Full Stack Engineer",
   description:
     "Explore Umesh Nagare’s portfolio, featuring cutting-edge full-stack web development projects built with modern technologies",
   keywords: [
     "Umesh Nagare",
     "Algoture",
-    "Full Stack Developer",
-    "Web Developer Portfolio",
-    "Next.js Developer",
-    "React.js Developer",
-    "MERN Stack Developer",
-    "Node.js Developer",
-    "Frontend Engineer",
+    "Full Stack Engineer",
     "Software Engineer Portfolio",
+    "Web Engineer Portfolio",
+    "Next.js Engineer",
+    "React.js Engineer",
+    "Node.js Engineer",
+    "Frontend Engineer",
   ],
   creator: "Umesh Nagare",
   openGraph: {
-    title: "Umesh Nagare | Full Stack Developer",
+    title: "Umesh Nagare | Full Stack Engineer",
     description:
       "Showcasing cutting-edge full-stack web development projects using modern web technologies.",
     url: "https://umeshnagare.com",
@@ -32,7 +30,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     site: "https://x.com/umeshn22",
-    title: "Umesh Nagare | Full Stack Developer",
+    title: "Umesh Nagare | Full Stack Engineer",
     description:
       "Showcasing cutting-edge full-stack web development projects using Next.js, React, and Node.js.",
     image: "https://x.com/Umeshn22/photo",
@@ -43,8 +41,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <Nav />
+      <body
+        className={`${inter.className} min-h-screen bg-white text-black dark:bg-[#050505] dark:text-white`}
+      >
         {children}
         <Analytics />
         <SpeedInsights />
