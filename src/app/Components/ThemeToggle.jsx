@@ -69,10 +69,21 @@ const ThemeToggle = () => {
     const toRgb = (c) => `rgb(${c.r}, ${c.g}, ${c.b})`;
     let colorT = isDarkRef.current ? 1 : 0;
 
-    const onMouseDown = (e) => {
+    const getPoint = (e) => {
       const rect = canvas.getBoundingClientRect();
-      const mx = clamp((e.clientX - rect.left) / scale, 10, worldWidth - 10);
-      const my = clamp((e.clientY - rect.top) / scale, 6, worldHeight - 10);
+      const point =
+        "touches" in e && e.touches.length
+          ? e.touches[0]
+          : "changedTouches" in e && e.changedTouches.length
+            ? e.changedTouches[0]
+            : e;
+      const mx = clamp((point.clientX - rect.left) / scale, 10, worldWidth - 10);
+      const my = clamp((point.clientY - rect.top) / scale, 6, worldHeight - 10);
+      return { mx, my };
+    };
+
+    const onPointerDown = (e) => {
+      const { mx, my } = getPoint(e);
       const endPoint = points.current[points.current.length - 1];
       const bodyW = 24;
       const bodyH = 36;
@@ -98,24 +109,18 @@ const ThemeToggle = () => {
       if (withinBody || nearestDist < 24) {
         mouse.current.down = true;
         mouse.current.target = withinBody ? endPoint : nearest;
+        if (e.cancelable) e.preventDefault();
       }
     };
 
-    const onMouseMove = (e) => {
-      const rect = canvas.getBoundingClientRect();
-      mouse.current.x = clamp(
-        (e.clientX - rect.left) / scale,
-        10,
-        worldWidth - 10,
-      );
-      mouse.current.y = clamp(
-        (e.clientY - rect.top) / scale,
-        6,
-        worldHeight - 10,
-      );
+    const onPointerMove = (e) => {
+      const { mx, my } = getPoint(e);
+      mouse.current.x = mx;
+      mouse.current.y = my;
+      if (mouse.current.down && e.cancelable) e.preventDefault();
     };
 
-    const onMouseUp = () => {
+    const onPointerUp = (e) => {
       if (mouse.current.down && mouse.current.y > worldHeight * 0.62) {
         setIsDark((prev) => {
           const next = !prev;
@@ -126,11 +131,23 @@ const ThemeToggle = () => {
       }
       mouse.current.down = false;
       mouse.current.target = null;
+      if (e?.cancelable) e.preventDefault();
     };
 
-    window.addEventListener("mousedown", onMouseDown);
-    window.addEventListener("mousemove", onMouseMove);
-    window.addEventListener("mouseup", onMouseUp);
+    const supportsPointer = "PointerEvent" in window;
+    if (supportsPointer) {
+      canvas.addEventListener("pointerdown", onPointerDown, { passive: false });
+      window.addEventListener("pointermove", onPointerMove, { passive: false });
+      window.addEventListener("pointerup", onPointerUp, { passive: false });
+      window.addEventListener("pointercancel", onPointerUp, { passive: false });
+    } else {
+      canvas.addEventListener("touchstart", onPointerDown, { passive: false });
+      window.addEventListener("touchmove", onPointerMove, { passive: false });
+      window.addEventListener("touchend", onPointerUp, { passive: false });
+      window.addEventListener("mousedown", onPointerDown);
+      window.addEventListener("mousemove", onPointerMove);
+      window.addEventListener("mouseup", onPointerUp);
+    }
 
     const render = () => {
       points.current.forEach((p) => {
@@ -254,9 +271,19 @@ const ThemeToggle = () => {
 
     render();
     return () => {
-      window.removeEventListener("mousedown", onMouseDown);
-      window.removeEventListener("mousemove", onMouseMove);
-      window.removeEventListener("mouseup", onMouseUp);
+      if (supportsPointer) {
+        canvas.removeEventListener("pointerdown", onPointerDown);
+        window.removeEventListener("pointermove", onPointerMove);
+        window.removeEventListener("pointerup", onPointerUp);
+        window.removeEventListener("pointercancel", onPointerUp);
+      } else {
+        canvas.removeEventListener("touchstart", onPointerDown);
+        window.removeEventListener("touchmove", onPointerMove);
+        window.removeEventListener("touchend", onPointerUp);
+        window.removeEventListener("mousedown", onPointerDown);
+        window.removeEventListener("mousemove", onPointerMove);
+        window.removeEventListener("mouseup", onPointerUp);
+      }
     };
   }, []);
 
@@ -264,7 +291,7 @@ const ThemeToggle = () => {
     <div className="fixed top-0 right-4 z-[999] pointer-events-none w-[160px] h-[260px]">
       <canvas
         ref={canvasRef}
-        className="pointer-events-auto w-full h-full block cursor-grab active:cursor-grabbing"
+        className="pointer-events-auto w-full h-full block cursor-grab active:cursor-grabbing touch-none"
       />
     </div>
   );
