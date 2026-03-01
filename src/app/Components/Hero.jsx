@@ -6,12 +6,22 @@ const Hero = () => {
     <section className="relative p-5 min-h-[80vh] min-w-[70vw] flex flex-col justify-center">
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:100px_100px] pointer-events-none" />
       <div className="absolute top-5 left-6 right-12">
-        <div className="flex justify-between md:w-1/2 text-[9px] text-neutral-400 font-mono mb-1">
+        <motion.div
+          initial={{ opacity: 0, y: -6 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="flex justify-between md:w-1/2 text-[9px] text-neutral-400 font-mono mb-1">
           <span>0.00</span>
           <span>WIDTH: AUTO</span>
           <span>100.00</span>
-        </div>
-        <div className="md:w-1/2 h-px bg-neutral-400 relative">
+        </motion.div>
+        <div className="md:w-1/2 h-px relative">
+          <motion.div
+            initial={{ scaleX: 0, filter: "blur(2px)" }}
+            animate={{ scaleX: 1, filter: "blur(0px)" }}
+            transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+            className="absolute inset-0 bg-neutral-400 origin-left"
+          />
           <div className="absolute left-0 -top-1 w-px h-2 bg-neutral-400" />
           <div className="absolute right-0 -top-1 w-px h-2 bg-neutral-400" />
         </div>
@@ -34,7 +44,9 @@ const Hero = () => {
         <div className="space-y-4">
           <div className="w-10 h-[1px] bg-accent" />
           <p className="text-lg md:text-xl text-neutral-500 font-medium leading-relaxed tracking-tight">
-            Full Stack <span className="text-black dark:text-white">Engineer</span><span className="text-accent">.</span>
+            Full Stack{" "}
+            <span className="text-black dark:text-white">Engineer</span>
+            <span className="text-accent">.</span>
           </p>
         </div>
       </motion.div>

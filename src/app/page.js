@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import { motion } from "motion/react";
 import { projects, socialLinks } from "@/app/Utils/Data";
 import Writing from "./Components/Writing";
 import { ProgressiveBlur } from "./Components/ProgressiveBlur";
@@ -22,47 +23,49 @@ export default function Home() {
               <div className="text-[10px] font-mono text-neutral-400">INDEX [0{projects.length}]</div>
             </header>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              {projects.map((project, i) => (
-                <Link
-                  key={i}
-                  href={project.liveLink}
-                  target="_blank"
-                  // style={{ "--project": project.primaryColor }}
-                  className="group relative flex flex-col justify-between p-8 min-h-[250px] rounded-2xl bg-neutral-100 dark:bg-neutral-900/40 transition-colors duration-500 ease-out overflow-hidden"
-                >
-                  <div className="project-tint absolute -right-10 -top-10 size-32 bg-[color:var(--project)]/30 opacity-0 blur-[80px] group-hover:opacity-50 transition-opacity duration-400" />
-
-                  <div className="relative z-10 flex justify-between items-start">
-                    <div>
+            <div className="relative group/grid border border-neutral-200 dark:border-neutral-900">
+              <div className="pointer-events-none absolute -left-2 -top-2 h-4 w-4 opacity-0 -translate-x-1 transition-all duration-300 group-hover/grid:opacity-100 group-hover/grid:translate-x-0">
+                <div className="absolute left-1/2 top-0 h-full w-px -translate-x-1/2 bg-accent/80" />
+                <div className="absolute top-1/2 left-0 h-px w-full -translate-y-1/2 bg-accent/80" />
+              </div>
+              <div className="pointer-events-none absolute -right-2 -bottom-2 h-4 w-4 opacity-0 translate-x-1 transition-all duration-300 group-hover/grid:opacity-100 group-hover/grid:translate-x-0">
+                <div className="absolute left-1/2 top-0 h-full w-px -translate-x-1/2 bg-accent/80" />
+                <div className="absolute top-1/2 left-0 h-px w-full -translate-y-1/2 bg-accent/80" />
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-neutral-200 dark:bg-neutral-950">
+                {projects.map((project, i) => (
+                  <Link
+                    key={i}
+                    href={project.liveLink}
+                    target="_blank"
+                    className="group/tile relative flex flex-col space-y-4 p-8 min-h-[250px] bg-white dark:bg-[#060606] transition-colors duration-300 ease-out overflow-hidden hover:bg-zinc-100 dark:hover:bg-zinc-900/70"
+                  >
+                    <div className="pointer-events-none absolute inset-0" />
+                    
+                    <div className="relative z-10 flex justify-between items-start">
                       <h3 className="text-2xl font-semibold tracking-tight transition-colors">
                         {project.title}
                       </h3>
                     </div>
-                    <div className="p-2 rounded-full bg-white dark:bg-black border border-neutral-200 dark:border-neutral-800 group-hover:bg-accent group-hover:text-white transition-all duration-500">
-                      <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M3.64645 11.3536L11.3536 3.64645M11.3536 3.64645H3.5V2.5H12.5V11.5H11.3536V3.64645Z" fill="currentColor" />
-                      </svg>
-                    </div>
-                  </div>
 
-                  <div className="relative z-10 ">
-                    <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-6">
-                      {project.description}
-                    </p>
-                    <div className="flex flex-wrap gap-2">
-                      {project.techStack?.map((tech) => (
-                        <span
-                          key={tech}
-                          className="text-[9px] px-2 py-1 rounded-full border border-neutral-200/70 dark:border-neutral-800/80 text-neutral-600 dark:text-neutral-400 font-semibold uppercase tracking-widest"
-                        >
-                          {tech}
-                        </span>
-                      ))}
+                    <div className="relative z-10 space-y-4">
+                      <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed">
+                        {project.description}
+                      </p>
+                      <div className="flex flex-wrap gap-2">
+                        {project.techStack?.map((tech) => (
+                          <span
+                            key={tech}
+                            className="text-[9px] px-2 py-1 rounded-full border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-400 font-semibold uppercase tracking-widest"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
                     </div>
-                  </div>
-                </Link>
-              ))}
+                  </Link>
+                ))}
+              </div>
             </div>
           </section>
 
