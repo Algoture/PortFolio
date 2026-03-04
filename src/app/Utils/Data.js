@@ -1,5 +1,15 @@
 export const projects = [
   {
+    id: 0, // change as needed
+    title: "Photowa",
+    description: "A zero-editor, conversational design studio for personalized Designs",
+    githubLink: "https://github.com/Algoture",
+    liveLink: "https://photowa.com",
+    primaryColor: "#7c3aed",
+    techStack: ["Next.js", "FastAPI", "MongoDB", "Fabric.js", "Redis"],
+  }
+  ,
+  {
     id: 1,
     title: "AstroYantra",
     description: "Vedic astrology API platform with Swiss Ephemeris precision",
@@ -9,22 +19,13 @@ export const projects = [
     techStack: ["Next.js", "FastAPI", "MySQL", "Redis"],
   },
   {
-    id: 0,
+    id: 2,
     title: "Reelvo",
     description: "Instagram automation, scheduling and analytics tool",
     githubLink: "https://github.com/Algoture",
     liveLink: "https://www.reelvo.in",
     primaryColor: "#3981f6",
     techStack: ["Next.js", "Flask", "MySQL", "Tanstack Query"],
-  },
-  {
-    id: 2,
-    title: "KrishiNET",
-    description: "A platform to connect Farmers with Buyers and Investors.",
-    githubLink: "https://github.com/Algoture/KrishiNET",
-    liveLink: "https://krishinet.onrender.com/",
-    primaryColor: "#70e000",
-    techStack: ["Vite.js", "Appwrite", "TailwindCSS"],
   }
 ];
 export const writings = [
