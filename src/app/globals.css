@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100..800&display=swap");
 @import "tailwindcss";
+
 @custom-variant dark (&:is(.dark *));
 
 @theme {
@@ -34,50 +34,40 @@
   --bg: rgb(11, 13, 14);
   --muted: oklch(0.5555 0 0);
   --font-jetbrains-mono: "JetBrains Mono", monospace;
+  --accent: oklch(0.48 0.12 200);
+}
+
+.b{
+  border: 1.5px dashed red;
+}
+
+.dark {
   --accent: oklch(0.8664 0.294827 142.4953);
 }
 
 * {
   box-sizing: border-box;
-  text-decoration: none;
   scroll-behavior: smooth;
 }
 
 body {
-  display: flex;
   overflow-x: hidden;
-  font-family: var(--font-jetbrains-mono);
-  flex-direction: column;
 }
-
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation-duration: 0.001ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.001ms !important;
-    scroll-behavior: auto !important;
-  }
-}
-
-.cen {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.b {
-  border: 1.5px solid red;
-}
-
 
 /* Scroll Bar */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--bg);
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgb(162, 162, 162);
+  background: #e4e4e7;
+  border-radius: 4px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #27272a;
 }

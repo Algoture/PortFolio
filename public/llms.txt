@@ -1,0 +1,42 @@
+# Umesh Nagare
+
+Umesh Nagare is an Engineer who builds software, writes articles, and solves backend problems.
+
+## Contact & Links
+- Website: https://umeshnagare.com
+- GitHub: https://github.com/Algoture
+- LinkedIn: https://www.linkedin.com/in/umesh27/
+- X (Twitter): https://x.com/umeshn22
+- Email: umesh@umeshnagare.com
+
+## Selected Projects
+
+### Photowa
+- URL: https://photowa.com
+- Year: 2026
+- Description: Conversational design studio built with an automated image-generation pipeline.
+- Technologies: FastAPI, MongoDB, Redis, Next.js
+
+### AstroYantra
+- URL: https://astroyantra.siyoltechnologies.com
+- Year: 2026
+- Description: High-precision astronomical API engine computing planetary coordinates.
+- Technologies: FastAPI, MySQL, Redis, Next.js
+
+### Reelvo
+- URL: https://www.reelvo.in
+- Year: 2025
+- Description: Instagram marketing automation and scheduling tool managing background tasks.
+- Technologies: Flask, MySQL, Next.js, Tanstack Query
+
+## Writings & Technical Articles
+
+### Understanding CSR and SSR
+- URL: https://umeshrenders.hashnode.dev/understanding-csr-and-ssr-a-simple-guide
+- Date: 20/04/2025
+- Description: A clear guide explaining Client-Side Rendering vs. Server-Side Rendering.
+
+### Threads and Processes in CPU
+- URL: https://umeshthreads.hashnode.dev/threads-and-processes-in-cpu
+- Date: 08/03/2025
+- Description: An exploration of the low-level mechanics of threads, processes, and CPU concurrency.

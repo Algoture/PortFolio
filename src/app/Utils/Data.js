@@ -1,45 +1,69 @@
+export const headerInfo = {
+  name: "Umesh Nagare",
+  role: "Engineer"
+};
+
+export const bioParagraphs = [
+  [
+    { text: "I build software, write articles, and solve backend problems." }
+  ],
+  [
+    { text: "You can find me on " },
+    { text: "GitHub", href: "https://github.com/Algoture" },
+    { text: ", " },
+    { text: "LinkedIn", href: "https://www.linkedin.com/in/umesh27/" },
+    { text: ", " },
+    { text: "X", href: "https://x.com/umeshn22" },
+    { text: ", or reach me via " },
+    { text: "email", href: "mailto:umesh@umeshnagare.com" },
+    { text: "." }
+  ]
+];
+
 export const projects = [
   {
-    id: 0, // change as needed
+    id: 0, 
     title: "Photowa",
-    description: "A zero-editor, conversational design studio for personalized Designs",
-    githubLink: "https://github.com/Algoture",
+    description: "Conversational design studio built with an automated image-generation pipeline",
     liveLink: "https://photowa.com",
-    primaryColor: "#7c3aed",
-    techStack: ["Next.js", "FastAPI", "MongoDB", "Fabric.js", "Redis"],
-  }
-  ,
+    year: "2026",
+    tech: ["FastAPI", "MongoDB", "Redis", "Next.js"]
+  },
   {
     id: 1,
     title: "AstroYantra",
-    description: "Vedic astrology API platform with Swiss Ephemeris precision",
-    githubLink: "https://github.com/Algoture",
+    description: "High-precision astronomical API engine computing planetary coordinates",
     liveLink: "https://astroyantra.siyoltechnologies.com",
-    primaryColor: "#f54900",
-    techStack: ["Next.js", "FastAPI", "MySQL", "Redis"],
+    year: "2026",
+    tech: ["Redis", "MySQL", "FastAPI", "Next.js", "Docker Compose"]
   },
   {
     id: 2,
     title: "Reelvo",
-    description: "Instagram automation, scheduling and analytics tool",
-    githubLink: "https://github.com/Algoture",
+    description: "Instagram marketing automation and scheduling tool managing background tasks",
     liveLink: "https://www.reelvo.in",
-    primaryColor: "#3981f6",
-    techStack: ["Next.js", "Flask", "MySQL", "Tanstack Query"],
+    year: "2025",
+    tech: ["Flask", "MySQL", "Next.js", "Tanstack Query"]
   }
 ];
+
 export const writings = [
-  {
-    link: "https://umeshthreads.hashnode.dev/threads-and-processes-in-cpu",
-    title: "Threads and Processes in CPU",
-    date: "Mar 8,2025"
-  },
   {
     link: "https://umeshrenders.hashnode.dev/understanding-csr-and-ssr-a-simple-guide",
     title: "Understanding CSR and SSR",
-    date: "Apr 20,2025"
+    date: "20/04",
+    year: "2025",
+    isNew: true
+  },
+  {
+    link: "https://umeshthreads.hashnode.dev/threads-and-processes-in-cpu",
+    title: "Threads and Processes in CPU",
+    date: "08/03",
+    year: "2025",
+    isNew: false
   }
-]
+];
+
 export const socialLinks = [
   { name: "GitHub", href: "https://github.com/Algoture" },
   { name: "LinkedIn", href: "https://www.linkedin.com/in/umesh27/" },
@@ -47,6 +71,7 @@ export const socialLinks = [
   { name: "Instagram", href: "https://www.instagram.com/2.0_27/" },
   { name: "Discord", href: "https://discord.com/users/790565393659330591" },
 ];
+
 export const transition = { duration: 1, ease: [0.25, 0.1, 0.25, 1] };
 export const variants = {
   hidden: { filter: "blur(10px)", transform: "translateY(20%)", opacity: 0 },

@@ -1,55 +1,45 @@
-"use client";
-import { motion } from "motion/react";
+import { headerInfo, bioParagraphs } from "../Utils/Data";
 
 const Hero = () => {
   return (
-    <section className="relative p-5 min-h-[80vh] min-w-[70vw] flex flex-col justify-center">
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:100px_100px] pointer-events-none" />
-      <div className="absolute top-5 left-6 right-12">
-        <motion.div
-          initial={{ opacity: 0, y: -6 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          className="flex justify-between md:w-1/2 text-[9px] text-neutral-400 font-mono mb-1">
-          <span>0.00</span>
-          <span>WIDTH: AUTO</span>
-          <span>100.00</span>
-        </motion.div>
-        <div className="md:w-1/2 h-px relative">
-          <motion.div
-            initial={{ scaleX: 0, filter: "blur(2px)" }}
-            animate={{ scaleX: 1, filter: "blur(0px)" }}
-            transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-            className="absolute inset-0 bg-neutral-400 origin-left"
-          />
-          <div className="absolute left-0 -top-1 w-px h-2 bg-neutral-400" />
-          <div className="absolute right-0 -top-1 w-px h-2 bg-neutral-400" />
-        </div>
+    <section className="flex flex-col pt-2 pb-4">
+      <div className="flex flex-col mb-2">
+        <img
+          src="/Me.png"
+          alt={headerInfo.name}
+          className="size-20 bg-zinc-100 dark:bg-zinc-800 rounded-full object-cover mb-4 select-none pointer-events-none"
+        />
+        <h1 className="text-[15px] font-semibold text-neutral-900 dark:text-neutral-100">
+          {headerInfo.name}
+        </h1>
+        <p className="text-[14px] text-neutral-400 dark:text-neutral-500 font-sans">
+          {headerInfo.role}
+        </p>
       </div>
 
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-        className="relative pt-8">
-        <h1 className="text-6xl md:text-8xl font-bold dark:text-white text-black tracking-tighter leading-none">
-          UMESH
-          <br />
-          <span
-            className="text-transparent bg-clip-text bg-gradient-to-r from-neutral-700 to-neutral-900 stroke-white"
-            style={{ WebkitTextStroke: "1px #737373" }}>
-            NAGARE
-          </span>
-        </h1>
-        <div className="space-y-4">
-          <div className="w-10 h-[1px] bg-accent" />
-          <p className="text-lg md:text-xl text-neutral-500 font-medium leading-relaxed tracking-tight">
-            Full Stack{" "}
-            <span className="text-black dark:text-white">Engineer</span>
-            <span className="text-accent">.</span>
+      {/* Bio Paragraphs */}
+      <div className="space-y-2 text-[15px] text-neutral-600 dark:text-neutral-300 leading-relaxed font-sans">
+        {bioParagraphs.map((para, i) => (
+          <p key={i}>
+            {para.map((chunk, j) => {
+              if (chunk.href) {
+                return (
+                  <a
+                    key={j}
+                    href={chunk.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-neutral-900 dark:text-neutral-100 underline decoration-neutral-300 dark:decoration-neutral-700 underline-offset-4 hover:decoration-accent dark:hover:decoration-accent transition-colors"
+                  >
+                    {chunk.text}
+                  </a>
+                );
+              }
+              return <span key={j}>{chunk.text}</span>;
+            })}
           </p>
-        </div>
-      </motion.div>
+        ))}
+      </div>
     </section>
   );
 };

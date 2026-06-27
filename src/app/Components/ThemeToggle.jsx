@@ -8,8 +8,16 @@ const ThemeToggle = () => {
   const points = useRef([]);
   const sticks = useRef([]);
   const mouse = useRef({ x: 0, y: 0, down: false, target: null });
+  const hasToggled = useRef(false);
 
   useEffect(() => {
+    const checkInitialTheme = () => {
+      const isHtmlDark = document.documentElement.classList.contains("dark");
+      setIsDark(isHtmlDark);
+      isDarkRef.current = isHtmlDark;
+    };
+    checkInitialTheme();
+
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
     const viewWidth = 160;
@@ -24,11 +32,11 @@ const ThemeToggle = () => {
     canvas.style.height = `${viewHeight}px`;
     ctx.setTransform(dpr * scale, 0, 0, dpr * scale, 0, 0);
 
-    const gravity = 0.9;
-    const friction = 0.996;
-    const iterations = 32;
+    const gravity = 1.3;
+    const friction = 0.965;
+    const iterations = 12;
     const segmentCount = 9;
-    const segmentLen = 18;
+    const segmentLen = 12;
 
     points.current = [];
     sticks.current = [];
@@ -36,9 +44,9 @@ const ThemeToggle = () => {
     for (let i = 0; i < segmentCount; i++) {
       points.current.push({
         x: worldWidth / 2,
-        y: 8 + i * segmentLen,
+        y: i * segmentLen,
         oldX: worldWidth / 2,
-        oldY: 8 + i * segmentLen,
+        oldY: i * segmentLen,
         pinned: i === 0,
       });
       if (i > 0) {
@@ -77,21 +85,33 @@ const ThemeToggle = () => {
           : "changedTouches" in e && e.changedTouches.length
             ? e.changedTouches[0]
             : e;
-      const mx = clamp((point.clientX - rect.left) / scale, 10, worldWidth - 10);
+      const mx = clamp(
+        (point.clientX - rect.left) / scale,
+        10,
+        worldWidth - 10,
+      );
       const my = clamp((point.clientY - rect.top) / scale, 6, worldHeight - 10);
       return { mx, my };
     };
 
     const onPointerDown = (e) => {
+      if (e.cancelable) e.preventDefault();
+
+      if (e.pointerId !== undefined) {
+        try {
+          canvas.setPointerCapture(e.pointerId);
+        } catch (err) {}
+      }
+
       const { mx, my } = getPoint(e);
       const endPoint = points.current[points.current.length - 1];
-      const bodyW = 24;
-      const bodyH = 36;
+      const bodyW = 20;
+      const bodyH = 40;
       const toggleY = Math.min(endPoint.y, worldHeight - 70);
       const withinBody =
-        mx >= endPoint.x - bodyW / 2 - 10 &&
-        mx <= endPoint.x + bodyW / 2 + 10 &&
-        my >= toggleY - 6 &&
+        mx >= endPoint.x - bodyW / 2 - 12 &&
+        mx <= endPoint.x + bodyW / 2 + 12 &&
+        my >= toggleY - 8 &&
         my <= toggleY + bodyH + 12;
 
       let nearest = null;
@@ -109,7 +129,6 @@ const ThemeToggle = () => {
       if (withinBody || nearestDist < 24) {
         mouse.current.down = true;
         mouse.current.target = withinBody ? endPoint : nearest;
-        if (e.cancelable) e.preventDefault();
       }
     };
 
@@ -121,40 +140,74 @@ const ThemeToggle = () => {
     };
 
     const onPointerUp = (e) => {
-      if (mouse.current.down && mouse.current.y > worldHeight * 0.62) {
-        setIsDark((prev) => {
-          const next = !prev;
-          isDarkRef.current = next;
-          document.documentElement.classList.toggle("dark", next);
-          return next;
-        });
+      if (e?.pointerId !== undefined) {
+        try {
+          canvas.releasePointerCapture(e.pointerId);
+        } catch (err) {}
       }
       mouse.current.down = false;
       mouse.current.target = null;
+      hasToggled.current = false;
+      points.current.forEach((p) => {
+        p.oldX = p.x;
+        p.oldY = p.y;
+      });
       if (e?.cancelable) e.preventDefault();
     };
 
-    const supportsPointer = "PointerEvent" in window;
-    if (supportsPointer) {
-      canvas.addEventListener("pointerdown", onPointerDown, { passive: false });
-      window.addEventListener("pointermove", onPointerMove, { passive: false });
-      window.addEventListener("pointerup", onPointerUp, { passive: false });
-      window.addEventListener("pointercancel", onPointerUp, { passive: false });
-    } else {
-      canvas.addEventListener("touchstart", onPointerDown, { passive: false });
-      window.addEventListener("touchmove", onPointerMove, { passive: false });
-      window.addEventListener("touchend", onPointerUp, { passive: false });
-      window.addEventListener("mousedown", onPointerDown);
-      window.addEventListener("mousemove", onPointerMove);
-      window.addEventListener("mouseup", onPointerUp);
-    }
+    const handleDown = (e) => {
+      onPointerDown(e);
+    };
+    const handleMove = (e) => {
+      onPointerMove(e);
+    };
+    const handleUp = (e) => {
+      onPointerUp(e);
+    };
+
+    canvas.addEventListener("dragstart", (e) => e.preventDefault());
+
+    canvas.addEventListener("pointerdown", handleDown, { passive: false });
+    canvas.addEventListener("mousedown", handleDown);
+    canvas.addEventListener("touchstart", handleDown, { passive: false });
+
+    window.addEventListener("pointermove", handleMove, { passive: false });
+    window.addEventListener("mousemove", handleMove);
+    window.addEventListener("touchmove", handleMove, { passive: false });
+
+    window.addEventListener("pointerup", handleUp, { passive: false });
+    window.addEventListener("mouseup", handleUp);
+    window.addEventListener("touchend", handleUp, { passive: false });
+    window.addEventListener("pointercancel", handleUp, { passive: false });
+    window.addEventListener("touchcancel", handleUp, { passive: false });
 
     const render = () => {
+      const lastPoint = points.current[points.current.length - 1];
+
       points.current.forEach((p) => {
         if (p.pinned) return;
         if (mouse.current.down && mouse.current.target === p) {
+          p.oldX = p.x;
+          p.oldY = p.y;
           p.x = clamp(mouse.current.x, 10, worldWidth - 10);
           p.y = clamp(mouse.current.y, 6, worldHeight - 10);
+          
+          if (p === lastPoint) {
+            const triggerY = worldHeight * 0.52;
+            if (p.y > triggerY) {
+              if (!hasToggled.current) {
+                setIsDark((prev) => {
+                  const next = !prev;
+                  isDarkRef.current = next;
+                  document.documentElement.classList.toggle("dark", next);
+                  hasToggled.current = true;
+                  return next;
+                });
+              }
+            } else {
+              hasToggled.current = false;
+            }
+          }
         } else {
           const vx = (p.x - p.oldX) * friction;
           const vy = (p.y - p.oldY) * friction;
@@ -164,6 +217,18 @@ const ThemeToggle = () => {
           p.y += vy + gravity;
         }
       });
+
+      if (!mouse.current.down) {
+        const dx = lastPoint.x - worldWidth / 2;
+        const dy = lastPoint.y - 0;
+        const dist = Math.hypot(dx, dy);
+        const restLen = segmentCount * segmentLen;
+        if (dist > restLen) {
+          const springForce = (dist - restLen) * 0.24;
+          lastPoint.x -= (dx / dist) * springForce;
+          lastPoint.y -= (dy / dist) * springForce;
+        }
+      }
 
       for (let i = 0; i < iterations; i++) {
         sticks.current.forEach((s) => {
@@ -186,84 +251,81 @@ const ThemeToggle = () => {
       }
 
       ctx.clearRect(0, 0, worldWidth, worldHeight);
-      colorT += (isDarkRef.current ? 1 : 0 - colorT) * 0.08;
+
+      colorT += ((isDarkRef.current ? 1 : 0) - colorT) * 0.15;
       const t = Math.max(0, Math.min(1, colorT));
-      const cordLight = hexToRgb("#cfcfcf");
-      const cordDark = hexToRgb("#3a3a3a");
-      const mountFillLight = hexToRgb("#e6e6e6");
-      const mountFillDark = hexToRgb("#2b2b2b");
-      const mountStrokeLight = hexToRgb("#c9c9c9");
-      const mountStrokeDark = hexToRgb("#4a4a4a");
-      const bodyTopLight = hexToRgb("#0f0f0f");
-      const bodyTopDark = hexToRgb("#f4f4f4");
-      const bodyBotLight = hexToRgb("#2a2a2a");
-      const bodyBotDark = hexToRgb("#cfcfcf");
-      const bodyStrokeLight = hexToRgb("#1f1f1f");
-      const bodyStrokeDark = hexToRgb("#d9d9d9");
-      const slotLight = hexToRgb("#151515");
-      const slotDark = hexToRgb("#aaaaaa");
-      const nubLight = hexToRgb("#f2f2f2");
-      const nubDark = hexToRgb("#2b2b2b");
-      const ledLight = hexToRgb("#00bcd4");
-      const ledDark = hexToRgb("#00e5ff");
 
-      // Ceiling mount
-      ctx.save();
-      ctx.translate(worldWidth / 2, 6);
-      ctx.fillStyle = toRgb(mix(mountFillLight, mountFillDark, t));
-      ctx.strokeStyle = toRgb(mix(mountStrokeLight, mountStrokeDark, t));
-      ctx.lineWidth = 1;
-      ctx.beginPath();
-      ctx.roundRect(-18, -4, 36, 10, 5);
-      ctx.fill();
-      ctx.stroke();
-      ctx.restore();
+      const cordLight = hexToRgb("#d4d4d8");
+      const cordDark = hexToRgb("#27272a");
 
-      // Cord
       ctx.beginPath();
       ctx.moveTo(points.current[0].x, points.current[0].y);
-      points.current.forEach((p) => ctx.lineTo(p.x, p.y));
+      for (let i = 1; i < points.current.length - 1; i++) {
+        const xc = (points.current[i].x + points.current[i + 1].x) / 2;
+        const yc = (points.current[i].y + points.current[i + 1].y) / 2;
+        ctx.quadraticCurveTo(points.current[i].x, points.current[i].y, xc, yc);
+      }
+      ctx.lineTo(lastPoint.x, lastPoint.y);
       ctx.strokeStyle = toRgb(mix(cordLight, cordDark, t));
-      ctx.lineWidth = 2;
-      ctx.lineCap = "round";
+      ctx.lineWidth = 1.2;
       ctx.stroke();
 
-      const last = points.current[points.current.length - 1];
-      const toggleY = Math.min(last.y, worldHeight - 70);
-      const bodyW = 24;
-      const bodyH = 36;
+      const pen = points.current[points.current.length - 2];
+      const angle = Math.atan2(lastPoint.x - pen.x, lastPoint.y - pen.y);
+      const toggleY = Math.min(lastPoint.y, worldHeight - 50);
+      const bodyW = 14;
+      const bodyH = 34;
+
       ctx.save();
-      ctx.translate(last.x, toggleY);
+      ctx.translate(lastPoint.x, toggleY);
+      ctx.rotate(angle);
 
-      // Toggle body with soft gradient
-      const bodyGrad = ctx.createLinearGradient(0, 0, 0, bodyH);
-      bodyGrad.addColorStop(0, toRgb(mix(bodyTopLight, bodyTopDark, t)));
-      bodyGrad.addColorStop(1, toRgb(mix(bodyBotLight, bodyBotDark, t)));
-      ctx.fillStyle = bodyGrad;
-      ctx.strokeStyle = toRgb(mix(bodyStrokeLight, bodyStrokeDark, t));
-      ctx.lineWidth = 1;
       ctx.beginPath();
-      ctx.roundRect(-bodyW / 2, 2, bodyW, bodyH, 10);
+      ctx.roundRect(-bodyW / 2, 0, bodyW, bodyH, 7);
+      ctx.fillStyle = isDarkRef.current ? "#ffffff" : "#09090b";
       ctx.fill();
+
+      ctx.strokeStyle = isDarkRef.current ? "rgba(0, 0, 0, 0.08)" : "rgba(255, 255, 255, 0.08)";
+      ctx.lineWidth = 1;
       ctx.stroke();
 
-      // Toggle slot
-      ctx.beginPath();
-      ctx.roundRect(-6, 10, 12, 18, 6);
-      ctx.fillStyle = toRgb(mix(slotLight, slotDark, t));
-      ctx.fill();
+      const cy = bodyH / 2;
+      const symbolColor = isDarkRef.current ? "#09090b" : "#ffffff";
 
-      // Toggle nub
-      ctx.beginPath();
-      ctx.arc(0, 16 + 10 * t, 5, 0, Math.PI * 2);
-      ctx.fillStyle = toRgb(mix(nubLight, nubDark, t));
-      ctx.fill();
+      if (t < 1) {
+        ctx.save();
+        ctx.globalAlpha = 1 - t;
+        ctx.strokeStyle = symbolColor;
+        ctx.fillStyle = symbolColor;
+        ctx.lineWidth = 1.0;
 
-      // Indicator LED
-      ctx.beginPath();
-      ctx.arc(0, bodyH - 6, 2, 0, Math.PI * 2);
-      ctx.fillStyle = toRgb(mix(ledLight, ledDark, t));
-      ctx.fill();
+        ctx.beginPath();
+        ctx.arc(0, cy, 3, 0, Math.PI * 2);
+        ctx.fill();
+
+        for (let i = 0; i < 8; i++) {
+          const a = (i * Math.PI) / 4;
+          ctx.beginPath();
+          ctx.moveTo(Math.cos(a) * 4.5, cy + Math.sin(a) * 4.5);
+          ctx.lineTo(Math.cos(a) * 6.5, cy + Math.sin(a) * 6.5);
+          ctx.stroke();
+        }
+        ctx.restore();
+      }
+
+      if (t > 0) {
+        ctx.save();
+        ctx.globalAlpha = t;
+        ctx.fillStyle = symbolColor;
+
+        ctx.beginPath();
+        ctx.arc(-0.8, cy, 4, -Math.PI / 1.8, Math.PI / 1.8, false);
+        ctx.arc(1.4, cy, 3.7, Math.PI / 2, -Math.PI / 2, true);
+        ctx.closePath();
+        ctx.fill();
+        ctx.restore();
+      }
+
       ctx.restore();
 
       requestAnimationFrame(render);
@@ -271,24 +333,24 @@ const ThemeToggle = () => {
 
     render();
     return () => {
-      if (supportsPointer) {
-        canvas.removeEventListener("pointerdown", onPointerDown);
-        window.removeEventListener("pointermove", onPointerMove);
-        window.removeEventListener("pointerup", onPointerUp);
-        window.removeEventListener("pointercancel", onPointerUp);
-      } else {
-        canvas.removeEventListener("touchstart", onPointerDown);
-        window.removeEventListener("touchmove", onPointerMove);
-        window.removeEventListener("touchend", onPointerUp);
-        window.removeEventListener("mousedown", onPointerDown);
-        window.removeEventListener("mousemove", onPointerMove);
-        window.removeEventListener("mouseup", onPointerUp);
-      }
+      canvas.removeEventListener("pointerdown", handleDown);
+      canvas.removeEventListener("mousedown", handleDown);
+      canvas.removeEventListener("touchstart", handleDown);
+      
+      window.removeEventListener("pointermove", handleMove);
+      window.removeEventListener("mousemove", handleMove);
+      window.removeEventListener("touchmove", handleMove);
+
+      window.removeEventListener("pointerup", handleUp);
+      window.removeEventListener("mouseup", handleUp);
+      window.removeEventListener("touchend", handleUp);
+      window.removeEventListener("pointercancel", handleUp);
+      window.removeEventListener("touchcancel", handleUp);
     };
   }, []);
 
   return (
-    <div className="fixed top-0 right-4 z-[999] pointer-events-none w-[160px] h-[260px]">
+    <div className="fixed top-0 right-6 z-[999] pointer-events-none w-[160px] h-[260px]">
       <canvas
         ref={canvasRef}
         className="pointer-events-auto w-full h-full block cursor-grab active:cursor-grabbing touch-none"
@@ -296,4 +358,5 @@ const ThemeToggle = () => {
     </div>
   );
 };
+
 export default ThemeToggle;
